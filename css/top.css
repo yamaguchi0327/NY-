@@ -9,12 +9,6 @@ body {
   font-weight: lighter;
 }
 
-@media screen and (max-width: 1024px) {
-  body {
-    font-size: 9px;
-  }
-}
-
 body p {
   margin: 0;
 }
@@ -52,8 +46,6 @@ body header nav li {
   list-style: none;
   margin-bottom: 24px;
   height: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -91,15 +83,9 @@ body .page-wrapper {
 }
 
 body .page-wrapper #first-view {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
@@ -169,8 +155,6 @@ body .page-wrapper #works-wrapper {
 
 body .page-wrapper #works-wrapper .works-main {
   background-color: #e9dfdb;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 80px 30px;
 }
@@ -266,11 +250,8 @@ body .page-wrapper #works-wrapper .works-main .wm-intro a {
 }
 
 body .page-wrapper #works-wrapper .sub-works-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 body .page-wrapper #works-wrapper .sub-works-wrapper .sub-work {
@@ -422,8 +403,6 @@ body .page-wrapper #about-wrapper {
 }
 
 body .page-wrapper #about-wrapper .about-frex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 48px;
 }
@@ -529,8 +508,6 @@ body .page-wrapper #about-wrapper .about-frex .about-intro .ai-sentence > p {
 }
 
 body .page-wrapper #about-wrapper .about-frex .about-intro .ai-sentence .ai-career {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -585,4 +562,3 @@ body footer {
     margin-top: 112px;
   }
 }
-/*# sourceMappingURL=top.css.map */
