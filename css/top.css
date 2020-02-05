@@ -7,6 +7,7 @@ body {
   font-size: 12px;
   line-height: 2.2em;
   font-weight: lighter;
+  word-break: break-all;
 }
 
 body p {
@@ -150,6 +151,7 @@ body .page-wrapper #works-wrapper {
 @media screen and (max-width: 480px) {
   body .page-wrapper #works-wrapper {
     width: 240px;
+    margin: 100px auto 100px;
   }
 }
 
@@ -193,13 +195,17 @@ body .page-wrapper #works-wrapper .works-main img {
 body .page-wrapper #works-wrapper .works-main .wm-intro {
   padding-top: 16px;
   text-align: left;
-  margin-left: 50px;
+  margin-left: 47px;
 }
 
 @media screen and (max-width: 480px) {
   body .page-wrapper #works-wrapper .works-main .wm-intro {
     margin-left: 12px;
   }
+}
+
+body .page-wrapper #works-wrapper .works-main .wm-intro a {
+  float: none;
 }
 
 body .page-wrapper #works-wrapper .works-main .wm-intro .wm-title {
@@ -228,6 +234,12 @@ body .page-wrapper #works-wrapper .works-main .wm-intro .wm-data, body .page-wra
   }
 }
 
+@media screen and (max-width: 480px) {
+  body .page-wrapper #works-wrapper .works-main .wm-intro .wm-data, body .page-wrapper #works-wrapper .works-main .wm-intro .wm-outline {
+    font-size: 11px;
+  }
+}
+
 body .page-wrapper #works-wrapper .works-main .wm-intro .wm-sentence {
   margin-bottom: 20px;
 }
@@ -239,14 +251,7 @@ body .page-wrapper #works-wrapper .works-main .wm-intro .wm-sentence {
 }
 
 body .page-wrapper #works-wrapper .works-main .wm-intro a {
-  float: right;
   color: #b96970;
-}
-
-@media screen and (max-width: 1024px) {
-  body .page-wrapper #works-wrapper .works-main .wm-intro a {
-    float: left;
-  }
 }
 
 body .page-wrapper #works-wrapper .sub-works-wrapper {
@@ -484,7 +489,7 @@ body .page-wrapper #about-wrapper .about-frex .about-intro {
 
 @media screen and (max-width: 1024px) {
   body .page-wrapper #about-wrapper .about-frex .about-intro {
-    width: 260px;
+    width: 303px;
     margin-top: 104px;
   }
 }
@@ -509,6 +514,12 @@ body .page-wrapper #about-wrapper .about-frex .about-intro .ai-sentence > p {
 
 body .page-wrapper #about-wrapper .about-frex .about-intro .ai-sentence .ai-career {
   display: flex;
+}
+
+@media screen and (max-width: 480px) {
+  body .page-wrapper #about-wrapper .about-frex .about-intro .ai-sentence .ai-career {
+    font-size: 10px;
+  }
 }
 
 body .page-wrapper #about-wrapper .about-frex .about-intro .ai-sentence .ai-career .ai-c-data {
@@ -539,14 +550,20 @@ body .page-wrapper #about-wrapper .name {
   }
 }
 
-body .page-wrapper #about-wrapper .ai-skills {
+body .page-wrapper .ai-skills {
   margin-top: 208px;
   color: #b96970;
 }
 
+@media screen and (max-width: 1024px) {
+  body .page-wrapper .ai-skills {
+    margin-top: 324px;
+  }
+}
+
 @media screen and (max-width: 480px) {
-  body .page-wrapper #about-wrapper .ai-skills {
-    margin-top: 320px;
+  body .page-wrapper .ai-skills {
+    margin-top: 416px;
   }
 }
 

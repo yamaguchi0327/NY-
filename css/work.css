@@ -45,8 +45,6 @@ body header nav li {
   list-style: none;
   margin-bottom: 24px;
   height: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -63,8 +61,7 @@ body header nav li img {
 body .page-wrapper .guides .guide {
   position: fixed;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   text-align: center;
 }
 
@@ -173,4 +170,3 @@ body .page-wrapper .main-wrapper .intro p {
   width: 23vw;
   margin: 0 auto;
 }
-/*# sourceMappingURL=work.css.map */

@@ -9,6 +9,7 @@ body{
     font-size: 12px;
     line-height: 2.2em;
     font-weight: lighter;
+    word-break: break-all;
 
     p{
         margin: 0;
@@ -136,6 +137,7 @@ body{
             }
             @media screen and (max-width: 480px) { 
                 width: 240px;
+                margin: 100px auto 100px;
             }
             .works-main{
                 background-color: #e9dfdb;
@@ -162,9 +164,12 @@ body{
                 .wm-intro{
                     padding-top: 16px;
                     text-align: left;
-                    margin-left: 50px;
+                    margin-left: 47px;
                     @media screen and (max-width: 480px) { 
                         margin-left: 12px;
+                    }
+                    a{
+                        float: none;
                     }
                     .wm-title{
                         font-size: 28px;
@@ -180,6 +185,9 @@ body{
                         @media screen and (max-width: 1024px) { 
                             margin-bottom: 16px;
                         }
+                        @media screen and (max-width: 480px) { 
+                            font-size: 11px;
+                        }
                     }
                     .wm-sentence{
                         margin-bottom: 20px;
@@ -188,10 +196,10 @@ body{
                         }
                     }
                     a{
-                        float: right;
+                        // float: right;
                         color: $pink-color;
                         @media screen and (max-width: 1024px) { 
-                            float: left;
+                            // float: left;
                         }
                     }
                 }
@@ -352,7 +360,7 @@ body{
                     text-align: left;
                     margin-top: 124px;
                     @media screen and (max-width: 1024px) { 
-                        width: 260px;
+                        width: 303px;
                         margin-top: 104px;
                     }
                     @media screen and (max-width: 480px) { 
@@ -369,6 +377,9 @@ body{
                         }
                         .ai-career{
                             display: flex;
+                            @media screen and (max-width: 480px) { 
+                                font-size: 10px;
+                            }
                             .ai-c-data{
                                 margin-right: 16px;
                             }
@@ -394,14 +405,17 @@ body{
                     margin-left: -39px;
                 }
             }
-            .ai-skills{
-                margin-top: 208px;
-                color: $pink-color;
-                @media screen and (max-width: 480px) { 
-                    margin-top: 320px;
-                }
-            }
             
+        }
+        .ai-skills{
+            margin-top: 208px;
+            color: $pink-color;
+            @media screen and (max-width: 1024px) { 
+                margin-top: 324px;
+            }
+            @media screen and (max-width: 480px) { 
+                margin-top: 416px;
+            }
         }
     }
     footer{
