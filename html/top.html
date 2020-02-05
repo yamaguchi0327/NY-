@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>nana yamaguch!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/top.css">
+</head>
+
+<body>
+
+    <header>
+        <img src = "../images/NY!@2x.png" alt = "">
+        <nav>
+            <li>
+                <!-- <div class = "maru"></div> -->
+                <a href = "#first-view" id="top_link_js"><img src = "../images/top@2x.png" alt = ""></a>
+            </li>
+            <li>
+                <a href = "#works-wrapper" id="works_link_js"><img src = "../images/works@2x.png" alt = ""></a>  
+            </li>
+            <li>
+                <a href = "#about-wrapper" id="about_link_js"><img src = "../images/about@2x.png" alt = ""></a>
+            </li>
+        </nav> 
+    </header>
+
+    <section class = "page-wrapper">
+        <section id = "first-view" class="position-now">
+            <div>
+                <img src = "../images/INY@2x.png" alt = "">
+                <img src = "../images/underbar@2x.png" alt = "">
+            </div>
+        </section>
+
+        <section id = "works-wrapper" class="position-now">
+            <img class = "title" src = "../images/works@2x.png" alt = "">
+            <div class = "works-main">
+                <img src = "../images/アセット 52@4x.png" alt = "">
+                <div class = "wm-intro">
+                    <p class = "wm-title"> NY!</p>
+                    <p class = "wm-data">2019.12</p>
+                    <p class = "wm-outline">担当：デザイン/コーディング<br>
+                        技術：Illustrator/Photoshop/HTML/css<br>
+                        URL：http:fas;mkjmer
+                    </p>
+                    <p class = "wm-sentence">就活に向けて制作したポートフォリオサイトです。</p>
+                    <a href = "#">read more >>></a>
+                </div>
+            </div>
+            <div class = "sub-works-wrapper">
+                <a class = "sub-work" href = "#">
+                    <p><img class = "sp-img" src = "../images/thumb_mm@2x.png" alt = ""></p>
+                    <p class = "sw-title">miniMom</p>
+                </a>
+                <a class = "sub-work" href = "#">
+                    <p><img src = "../images/thumb_ymgc@2x.png" alt = ""></p>
+                    <p class = "sw-title">ymgc</p>
+                </a>
+                <a class = "sub-work" href = "#">
+                    <p><img class = "sp-img" src = "../images/thumb_yubi@2x.png" alt = ""></p>
+                    <p class = "sw-title">指差しチェッカー</p>
+                </a>
+                <a class = "sub-work" href = "#">
+                    <p><img class = "teki-img" src = "../images/thumb_teki@2x.png" alt = ""></p>
+                    <p class = "sw-title">適部署チャート</p>
+                </a>
+                <a class = "sub-work" href = "#">
+                    <p><img class = "sp-img" src = "../images/thumb_fcl@2x.png" alt = ""></p>
+                    <p class = "sw-title">fuclo</p>
+                </a>
+                <a class = "sub-work" href = "#">
+                    <p><img src = "../images/thumb_pos@2x.png" alt = ""></p>
+                    <p class = "sw-title">ポスター</p>
+                </a>
+                <a class = "sub-work" href = "#">
+                    <p><img src = "../images/thumb_owl@2x.png" alt = ""></p>
+                    <p class = "sw-title">ふくろう</p>
+                </a>
+            </div>
+        </section>
+        <section id = "about-wrapper" class="position-now">
+            <img class = "title" src = "../images/about@2x.png" alt = "">
+            <div class="about-frex">
+                <div class = "about-imgs">
+                    <div class = "circle"></div>
+                    <img src = "../images/nana-img@2x.png" alt ="">
+                </div>
+                <div class = "about-intro">
+                    <div class = "ai-sentence">
+                        <p>名古屋市立大学芸術工学部情報環境デザイン学科3年
+                            webデザインを勉強中で、フロントも触れるようになりたい。
+                            学習塾でイラレ、フォトショを用いてポスターを制作するアルバイトをしています。
+                        </p>
+                        <div class = "ai-career">
+                            <p class = "ai-c-data">2019.09<br>
+                            2019.09<br><br>
+                            2019.11</p>
+                            <p class = "ai-c-details">
+                                株式会社エイチームサマーインターン参加<br>
+                                株式会社フリースタイルエンターテイメント<br>サマーインターン参加<br>
+                                OthloHack2019参加<br>クックパッド賞受賞<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class = "name" src = "../images/nana@2x.png">
+            <p class = "ai-skills">Illustrator/Photoshop/HTML/css/scss/XD/UIDesign/UXDesign</p>
+        </section>
+
+    </section>
+
+    <footer></footer>
+
+    <!-- jqueryの読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var set = 200;//ウインドウ上部からどれぐらいの位置で変化させるか
+            var boxTop = new Array;
+            var current = -1;
+            //各要素の位置
+            //position-nowは場所を取得したい対象の要素に付ける
+            $('.position-now').each(function (i) {
+                boxTop[i] = $(this).offset().top;
+            });
+            //最初の要素にclass="positiion-now"をつける
+            changeBox(0);
+            //スクロールした時の処理
+            $(window).scroll(function () {
+                scrollPosition = $(window).scrollTop();
+                for (var i = boxTop.length - 1; i >= 0; i--) {
+                if ($(window).scrollTop() > boxTop[i] - set) {
+                    changeBox(i);
+                    break;
+                }
+                };
+            });
+            //ナビの処理
+            function changeBox(secNum) {
+                if (secNum != current) {
+                current = secNum;
+                secNum2 = secNum + 1;//以下にクラス付与したい要素名と付与したいクラス名
+                $('nav li a').removeClass('link-current');
+
+                //位置によって個別に処理をしたい場合　
+                if (current == 0) {
+                    $('#top_link_js').addClass('link-current');
+                    // 現在地がsection1の場合の処理
+                } else if (current == 1) {
+                    $('#works_link_js').addClass('link-current');
+                    // 現在地がsection2の場合の処理
+                } else if (current == 2) {
+                    // 現在地がsection3の場合の処理
+                    $('#about_link_js').addClass('link-current');
+                }
+
+                }
+            };
+            });
+            $(function () {
+            $('a[href^="#"]').click(function () {
+                var adjust = 0;
+                var speed = 500;
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top + adjust;
+                $("html, body").animate({ scrollTop: position }, speed, "swing");
+                return false;
+            });
+            });
+    </script>
+
+</body>
+</html>

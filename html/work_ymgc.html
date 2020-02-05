@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ymgc</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/swiper.css">
+        <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+        <link rel="stylesheet" href="../css/work.css">
+    </head>
+
+    <body>
+        <header>
+            <img src = "../images/NY!@2x.png" alt = "">
+            <nav>
+                <li>
+                    <a href = "../html/top.html#first-view"><img src = "../images/top@2x.png" alt = ""></a>
+                </li>
+                <li>
+                    <a href = "../html/top.html#works-wrapper"><img src = "../images/works@2x.png" alt = ""></a>  
+                </li>
+                <li>
+                    <a href = "../html/top.html#about-wrapper"><img src = "../images/about@2x.png" alt = ""></a>
+                </li>
+            </nav> 
+        </header>
+        <section class = "page-wrapper">
+            <div class = "guides">
+                <a class = "guide previous" href = #>
+                    <img src = "../images/thumb_mm@2x.png" alt = "">
+                    <p>< previous</p>
+                </a>
+                <a class = "guide next" href = #>
+                    <img src = "../images/thumb_yubi@2x.png" alt = "">
+                    <p>next ></p>
+                </a>
+            </div>
+
+            <div class = "main-wrapper">
+                <section class = "work view">
+                    <div class = "wv-intro">
+                        <p class = "wv wv-title">ymgc</p>
+                        <p class = "wv wv-data">2019.07-2019.08</p>
+                        <!-- スライドショー -->
+                        <div class = "slidshow-wrapper">
+                            <div class = "swiper-parent">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="../images/アセット 61@4x.png" alt="Swiper01"></div>
+                                    <div class="swiper-slide"><img src="../images/アセット 59@4x.png" alt="Swiper02"></div>
+                                    <div class="swiper-slide"><img src="../images/アセット 60@4x.png" alt="Swiper03"></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            
+                            <img class = "device-img" src = "../images/pc-img.png" alt = "">
+                        </div>
+                        <!-- <img src = "../images/ぽ@4x.png" alt = ""> -->
+                        <!-- スライドショーここまで -->
+                        <p class = "wv-outline">担当：デザイン/コーディング<br>
+                            技術：Illustrator/Photoshop/HTML/css/jQuery<br>
+                            URL：<a href = "https://yamaguchi0327.github.io/yamaguchi.github.io/">https://yamaguchi0327.github.io/yamaguchi.github.io/</a>
+                        </p>
+                    </div>
+                </section>
+                <section class = "work intro">
+                    <p>
+                        就職活動にあたり、制作したポートフォリオサイトです。<br><br>
+                        このポートフォリオサイトを作るにあたって重要視したことは、見やすさと操作数の少なさです。ハンバーガーメニューではなく、メニューバーをページ上部に固定することで操作数を減らしています。また、メインカラーを彩度が低めな薄いラベンダーカラーにすることで作品を目立たせています。<br><br>
+                    </p>
+                    <p>また、芸術工学部で毎年行われる卓展で参加していたweb制作卓の作品としても展示しました。卓のテーマがアニメーションを使用したwebサイトだったので、アニメーションも使用しました。見やすさや操作性を重視しているため、アニメーション自体は控えめにしています。</p>
+                    
+                </section>
+            </div>
+        </section>
+        <footer></footer>
+
+        <script src="../js/swiper.js">
+        // <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                speed: 700,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: true
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true,
+                },
+            });
+        </script>
+    </body>
+</html>

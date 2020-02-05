@@ -1,0 +1,176 @@
+$pink-color:#b96970;
+$peal-pink-color:#e2d5d1;
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: #f4f3f0;
+    font-family: 'M PLUS Rounded 1c',sans-serif;
+    color: #251d1c;
+    margin: 0;
+    width: 100vw;
+    font-size: 12px;
+    line-height: 2.1em;
+    font-weight: lighter;
+
+    p{
+        margin: 0;
+    }
+
+    a{
+        text-decoration: none;
+        color: #1F0000;
+    }
+
+    header{
+        position: fixed;
+        z-index: 99;
+        left: 7vw;
+        top: 4vw;
+
+        >img{
+            width: auto;
+            height: 55px;
+            margin-bottom: 24px;
+        }
+        nav{
+            list-style: none;
+            
+            li{
+                list-style: none;
+                margin-bottom: 24px;
+                height: 20px;
+                display: flex;
+                a{
+                    display: block;
+                    width: 100%;
+                }
+                img{
+                    height: 20px;
+                    padding: 2px 6px;
+                }
+            }     
+        }
+        
+    }
+    .page-wrapper{
+        .guides{
+            .guide{
+                position: fixed;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: center;
+                p{
+                    line-height: 0;
+                    font-size: 11px;
+                }
+            }
+            img{
+                height: 80px;
+                margin-bottom: 5px;
+            }
+            .previous{
+                left: 7vw;
+            }
+            .next{
+                right: 7vw;
+            }
+        }
+        .main-wrapper{
+            width: 72vw;
+            padding: 124px 14vw 0;
+            margin: 0 auto;
+            // display: flex;
+            clear: both;
+            // .work{
+            //     width:50%;
+            //     height:100%;
+            // }
+            .view{
+                // width: 36vw;
+                background-color: #e8e5eb;
+                height: 69vh;
+                width: 42vw;
+                position: fixed;
+                float:left;
+                text-align: center;
+                padding-top: 40px;
+                // height: 100vw;
+                // position: fixed;
+                .wv-intro{
+                    position: relative;
+                    .wv{
+                        margin-left: 60px;
+                        text-align: left;
+                        font-size: 11px;
+                    }
+                    .wv-title{
+                        font-size: 28px;
+                        font-weight: 400;
+                        margin-bottom: 10px;
+                    }
+                    .wv-data{
+                        margin-bottom: 44px;
+                    }
+
+                    // スライドショー
+                    .slidshow-wrapper{
+                        position: relative;
+                        margin-bottom: 64px;
+                        /* Swiperの親要素 */
+                        .swiper-parent {
+                            // position: relative;
+                            /* Swiper本体 */
+                            .swiper-container {
+                                // padding-bottom: 5px;		/* ★ページネーション・スクロールバー分の余白50pxを下に取る */
+                                // box-sizing: content-box;
+                                img{
+                                    height: 19vw;
+                                }
+                            }
+                        }
+                        .device-img{
+                            position: absolute;
+                            height: 23vw;
+                            left: 0;
+                            right: 0;
+                            top: 3%;
+                            bottom: 0;
+                            margin: auto;
+                            z-index: 80;
+                            // margin-bottom: 44px;
+                        }
+                    }
+
+                    .swiper-pagination-bullet{
+                        margin: 0 3px;
+                        background: #251d1c;
+                    }
+
+                    // スライドショー終わり
+
+
+                    .wv-outline{
+                        text-align: left;
+                        margin-left: 60px;
+                        margin-top: 39px;
+                        font-size: 10px;
+                        line-height: 1.8em;
+                    }
+                }
+            }
+            .intro{
+                height: 69vh;
+                width: 30vw;
+                float: right;
+                overflow: scroll;
+                padding-top: 40px;
+                p{
+                    width: 23vw;
+                    margin: 0 auto;
+                }
+            }
+        }  
+    }
+}
