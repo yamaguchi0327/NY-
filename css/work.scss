@@ -1,5 +1,21 @@
 $pink-color:#b96970;
 $peal-pink-color:#e2d5d1;
+
+$tab: 1024px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
 html{
     width: 100%;
     height: 100%;
@@ -13,6 +29,7 @@ body{
     font-size: 12px;
     line-height: 2.1em;
     font-weight: lighter;
+    word-break: break-all;
 
     p{
         margin: 0;
@@ -20,7 +37,7 @@ body{
 
     a{
         text-decoration: none;
-        color: #1F0000;
+        color: $pink-color;
     }
 
     header{
@@ -28,11 +45,18 @@ body{
         z-index: 99;
         left: 7vw;
         top: 4vw;
+        @include sp { 
+            left: 4vw;
+        }
 
         >img{
             width: auto;
             height: 55px;
             margin-bottom: 24px;
+            @include sp { 
+                height: 40px;
+                margin-bottom: 40px;
+            }
         }
         nav{
             list-style: none;
@@ -42,6 +66,9 @@ body{
                 margin-bottom: 24px;
                 height: 20px;
                 display: flex;
+                @include sp { 
+                    margin-bottom: 10px;
+                }
                 a{
                     display: block;
                     width: 100%;
@@ -49,6 +76,9 @@ body{
                 img{
                     height: 20px;
                     padding: 2px 6px;
+                    @include sp { 
+                        height: 16px;
+                    }
                 }
             }     
         }
@@ -56,6 +86,12 @@ body{
     }
     .page-wrapper{
         .guides{
+            @include sp { 
+                display: none;
+            }
+            a{
+                color: #1F0000;
+            }
             .guide{
                 position: fixed;
                 top: 50%;
@@ -65,6 +101,7 @@ body{
                     line-height: 0;
                     font-size: 11px;
                 }
+                
             }
             img{
                 height: 80px;
@@ -83,10 +120,13 @@ body{
             margin: 0 auto;
             // display: flex;
             clear: both;
-            // .work{
-            //     width:50%;
-            //     height:100%;
-            // }
+            @include tab { 
+                width: 500px;
+            }
+            @include sp { 
+                width: 100%;
+                padding: 0;
+            }
             .view{
                 // width: 36vw;
                 background-color: #e8e5eb;
@@ -96,28 +136,61 @@ body{
                 float:left;
                 text-align: center;
                 padding-top: 40px;
-                // height: 100vw;
-                // position: fixed;
+                @include tab { 
+                    position: static;
+                    float: none;
+                    width: 100%;
+                    height: 440px;
+                    padding-top: 28px;
+                }
+                @include sp { 
+                    padding-top: 64px;
+                    height: 360px;
+                }
                 .wv-intro{
-                    position: relative;
+                    // position: relative;
+                    @include sp { 
+                        width: 250px;
+                        display: inline-block;
+                    }
                     .wv{
                         margin-left: 60px;
                         text-align: left;
                         font-size: 11px;
+                        @include tab { 
+                            margin-left: 40px;
+                        }
+                        @include sp { 
+                            margin-left: 17px;
+                        }
                     }
                     .wv-title{
                         font-size: 28px;
-                        font-weight: 400;
+                        // font-weight: 400;
                         margin-bottom: 10px;
+                        @include tab { 
+                            font-weight: 100;
+                            font-size: 20px;
+                            margin-bottom: 0px;
+                        }
+                        @include sp { 
+                            font-size: 17px;
+                        }
                     }
                     .wv-data{
                         margin-bottom: 44px;
+                        @include tab { 
+                            margin-bottom: 28px;
+                        }
                     }
 
                     // スライドショー
                     .slidshow-wrapper{
                         position: relative;
                         margin-bottom: 64px;
+                        @include tab { 
+                            margin-bottom: 48px;
+                        }
                         /* Swiperの親要素 */
                         .swiper-parent {
                             // position: relative;
@@ -127,6 +200,12 @@ body{
                                 // box-sizing: content-box;
                                 img{
                                     height: 19vw;
+                                    @include tab { 
+                                        height: 214px;
+                                    }
+                                    @include sp { 
+                                        height: 116px;
+                                    }
                                 }
                             }
                         }
@@ -139,7 +218,13 @@ body{
                             bottom: 0;
                             margin: auto;
                             z-index: 80;
-                            // margin-bottom: 44px;
+                            @include tab { 
+                                height: 260px;
+                            }
+                            @include sp { 
+                                height: 140px;
+                                top: 0;
+                            }
                         }
                     }
 
@@ -157,6 +242,14 @@ body{
                         margin-top: 39px;
                         font-size: 10px;
                         line-height: 1.8em;
+                        @include tab { 
+                            margin-left: 40px;
+                        }
+                        @include sp { 
+                            margin-left: 17px;
+                            width: 216px;
+
+                        }
                     }
                 }
             }
@@ -166,11 +259,30 @@ body{
                 float: right;
                 overflow: scroll;
                 padding-top: 40px;
+                @include tab { 
+                    float: none;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    margin-bottom: 100px;
+                }
                 p{
                     width: 23vw;
                     margin: 0 auto;
+                    @include tab { 
+                        width: 400px;
+                    }
+                    @include sp { 
+                        width: 200px;
+                    }
                 }
             }
         }  
+    }
+    footer{
+        @include sp { 
+            height: 48px;
+            background-color:$peal-pink-color;
+        }
     }
 }

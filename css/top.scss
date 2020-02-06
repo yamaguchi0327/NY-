@@ -29,6 +29,9 @@ body{
         z-index: 99;
         left: 7vw;
         top: 4vw;
+        @media screen and (max-width: 480px) { 
+            left: 4vw;
+        }
 
         >img{
             width: auto;
@@ -177,7 +180,7 @@ body{
                             font-size: 24px;
                         }
                         @media screen and (max-width: 480px) { 
-                            font-size: 15px;
+                            font-size: 20px;
                         }
                     }
                     .wm-data , .wm-outline{
@@ -414,7 +417,7 @@ body{
                 margin-top: 324px;
             }
             @media screen and (max-width: 480px) { 
-                margin-top: 416px;
+                margin-top: 480px;
             }
         }
     }
@@ -423,7 +426,7 @@ body{
         background-color:$peal-pink-color;
         margin-top: 136px;
         @media screen and (max-width: 480px) { 
-            height: 56px;
+            height: 48px;
             margin-top: 112px;
         }
     }

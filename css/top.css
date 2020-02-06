@@ -26,6 +26,12 @@ body header {
   top: 4vw;
 }
 
+@media screen and (max-width: 480px) {
+  body header {
+    left: 4vw;
+  }
+}
+
 body header > img {
   width: auto;
   height: 55px;
@@ -220,7 +226,7 @@ body .page-wrapper #works-wrapper .works-main .wm-intro .wm-title {
 
 @media screen and (max-width: 480px) {
   body .page-wrapper #works-wrapper .works-main .wm-intro .wm-title {
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 
@@ -563,7 +569,7 @@ body .page-wrapper .ai-skills {
 
 @media screen and (max-width: 480px) {
   body .page-wrapper .ai-skills {
-    margin-top: 416px;
+    margin-top: 480px;
   }
 }
 
@@ -575,7 +581,7 @@ body footer {
 
 @media screen and (max-width: 480px) {
   body footer {
-    height: 56px;
+    height: 48px;
     margin-top: 112px;
   }
 }
