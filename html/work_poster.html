@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ymgc</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/swiper.css">
+        <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+        <link rel="stylesheet" href="../css/work.css">
+    </head>
+
+    <body>
+        <header>
+            <img src = "../images/NY!@2x.png" alt = "">
+            <nav>
+                <li>
+                    <a href = "../html/top.html#first-view"><img src = "../images/top@2x.png" alt = ""></a>
+                </li>
+                <li>
+                    <a href = "../html/top.html#works-wrapper"><img src = "../images/works@2x.png" alt = ""></a>  
+                </li>
+                <li>
+                    <a href = "../html/top.html#about-wrapper"><img src = "../images/about@2x.png" alt = ""></a>
+                </li>
+            </nav> 
+        </header>
+        <section class = "page-wrapper">
+            <div class = "guides">
+                <a class = "guide previous" href = "work_fuclo.html">
+                    <img src = "../images/thumb_fcl@2x.png" alt = "">
+                    <p>< previous</p>
+                </a>
+                <a class = "guide next guide-yoko-img" href = "work_ny!.html">
+                    <img src = "../images/thumb_ny@2x.png" alt = "">
+                    <p>next ></p>
+                </a>
+            </div>
+
+            <div class = "main-wrapper">
+                <section class = "view pos">
+                    <div class = "wv-intro">
+                        <p class = "wv wv-title">ポスター</p>
+                        <p class = "wv wv-data">2017.07-</p>
+                        <!-- スライドショー -->
+                        <div class = "slidshow-wrapper sw-pos">
+                            <div class = "swiper-parent">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img class = "pos-slide" src="../images/pos_1.png" alt="Swiper01"></div>
+                                    <div class="swiper-slide"><img class = "pos-slide" src="../images/pos_2.png" alt="Swiper02"></div>
+                                    <div class="swiper-slide"><img class = "pos-slide" src="../images/pos_3.png" alt="Swiper03"></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <!-- <div class = "di-wrap">
+                                <img class = "device-img" src = "../images/pc-img.png" alt = "">
+                            </div> -->
+                        </div>
+                        <!-- <img src = "../images/ぽ@4x.png" alt = ""> -->
+                        <!-- スライドショーここまで -->
+                        <p class = "wv-outline pos-wv-o">担当：デザイン<br>
+                            技術：Illustrator/Photoshop<br>
+                            <!-- URL：<a href = "https://yamaguchi0327.github.io/yamaguchi.github.io/">https://yamaguchi0327.github.io/yamaguchi.github.io/</a> -->
+                        </p>
+                    </div>
+                </section>
+                <section class = "intro">
+                    <p>
+                        アルバイトで作成したポスター・ダイレクトメールの一部です。
+                    </p>
+                    <img class = "pos-intro-img" src = "../images/pos_1.png" alt = "">
+                    <p>
+                        梅雨をコンセプトにデザインした夏期講習のポスターです。掲示される時期が梅雨だったので「雨」と、
+                        テストがわからずに焦っていること(汗)をイメージしてデザインを行いました。
+                        しかし、あまり暗い印象にならないように、ストライプを用いて軽いイメージにしたり、色使いを工夫しました。
+                    </p>
+                    <img class = "pos-intro-img" src = "../images/pos_2.png" alt = "">
+                    <p>
+                        小学生向けの講座のポスターです。小学生対象だったので、読みやすく、楽しく読書をしながら力が身につくということを表現しました。
+                    </p>
+                    <img class = "pos-intro-img" src = "../images/pos_3.png" alt = "">
+                    <p>
+                        塾生や元塾生に送付する秋期講習についてのダイレクトメールのデザインです。
+                        高校3年生対象で、センター試験も近づいてくるということなので、真面目な印象のデザインを目指し、講座について詳しく説明しました。
+                    </p>
+                    
+                </section>
+            </div>
+            <a class = "all-view-works" href = "../html/top.html#works-wrapper">all wiew works</a>
+        </section>
+        <footer></footer>
+
+        <script src="../js/swiper.js">
+        // <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                speed: 700,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: true
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true,
+                },
+            });
+        </script>
+    </body>
+</html>

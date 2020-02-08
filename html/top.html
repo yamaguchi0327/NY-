@@ -7,6 +7,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/top.css">
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.9.1/rellax.min.js"></script> -->
 </head>
 
 <body>
@@ -29,10 +30,12 @@
 
     <section class = "page-wrapper">
         <section id = "first-view" class="position-now">
-            <div>
+            <div class = "fv-wrapper">
                 <img src = "../images/INY@2x.png" alt = "">
                 <img src = "../images/underbar@2x.png" alt = "">
             </div>
+            <!-- スクロール -->
+            <div class = "scroll"><span></span>Scroll</div>
         </section>
 
         <section id = "works-wrapper" class="position-now">
@@ -41,17 +44,17 @@
                 <img src = "../images/アセット 52@4x.png" alt = "">
                 <div class = "wm-intro">
                     <p class = "wm-title"> NY!</p>
-                    <p class = "wm-data">2019.12</p>
+                    <p class = "wm-data">2019.12-2020.02</p>
                     <p class = "wm-outline">担当：デザイン/コーディング<br>
                         技術：Illustrator/Photoshop/HTML/css<br>
                         URL：<a href = "https://yamaguchi0327.github.io/NY-/html/top.html">https://yamaguchi0327.github.io/NY-/html/top.html</a>
                     </p>
                     <p class = "wm-sentence">就活に向けて制作したポートフォリオサイトです。</p>
-                    <a class = ""href = "#">read more >>></a>
+                    <a class = ""href = "work_NY!.html">read more >>></a>
                 </div>
             </div>
             <div class = "sub-works-wrapper">
-                <a class = "sub-work" href = "#">
+                <a class = "sub-work" href = "work_miniMom.html">
                     <p><img class = "sp-img" src = "../images/thumb_mm@2x.png" alt = ""></p>
                     <p class = "sw-title">miniMom</p>
                 </a>
@@ -59,34 +62,34 @@
                     <p><img src = "../images/thumb_ymgc@2x.png" alt = ""></p>
                     <p class = "sw-title">ymgc</p>
                 </a>
-                <a class = "sub-work" href = "#">
+                <a class = "sub-work" href = "work_yubi.html">
                     <p><img class = "sp-img" src = "../images/thumb_yubi@2x.png" alt = ""></p>
                     <p class = "sw-title">指差しチェッカー</p>
                 </a>
-                <a class = "sub-work" href = "#">
+                <a class = "sub-work" href = "work_teki.html">
                     <p><img class = "teki-img" src = "../images/thumb_teki@2x.png" alt = ""></p>
                     <p class = "sw-title">適部署チャート</p>
                 </a>
-                <a class = "sub-work" href = "#">
+                <a class = "sub-work" href = "work_fuclo.html">
                     <p><img class = "sp-img" src = "../images/thumb_fcl@2x.png" alt = ""></p>
                     <p class = "sw-title">fuclo</p>
                 </a>
-                <a class = "sub-work" href = "#">
+                <a class = "sub-work" href = "work_poster.html">
                     <p><img src = "../images/thumb_pos@2x.png" alt = ""></p>
                     <p class = "sw-title">ポスター</p>
                 </a>
-                <a class = "sub-work" href = "#">
+                <!-- <a class = "sub-work" href = "#">
                     <p><img src = "../images/thumb_owl@2x.png" alt = ""></p>
                     <p class = "sw-title">ふくろう</p>
-                </a>
+                </a> -->
             </div>
         </section>
         <section id = "about-wrapper" class="position-now">
             <img class = "title" src = "../images/about@2x.png" alt = "">
             <div class="about-frex">
                 <div class = "about-imgs">
-                    <div class = "circle"></div>
-                    <img src = "../images/nana-img@2x.png" alt ="">
+                    <div class = "circle rellax" data-rellax-speed="0.1"></div>
+                    <img class="rellax" data-rellax-speed="-0.1" src = "../images/nana-img@2x.png" alt ="">
                 </div>
                 <div class = "about-intro">
                     <div class = "ai-sentence">
@@ -116,8 +119,10 @@
     <footer></footer>
 
     <!-- jqueryの読み込み -->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+        // var rellax = new Rellax('.rellax');
         $(function () {
             var set = 200;//ウインドウ上部からどれぐらいの位置で変化させるか
             var boxTop = new Array;
@@ -172,6 +177,9 @@
                 return false;
             });
             });
+            window.onload = function(){
+                document.getElementById('ub-anim').classList.add('is-show');
+            }
     </script>
 
 </body>

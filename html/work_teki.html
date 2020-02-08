@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ymgc</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/swiper.css">
+        <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+        <link rel="stylesheet" href="../css/work.css">
+    </head>
+
+    <body>
+        <header>
+            <img src = "../images/NY!@2x.png" alt = "">
+            <nav>
+                <li>
+                    <a href = "../html/top.html#first-view"><img src = "../images/top@2x.png" alt = ""></a>
+                </li>
+                <li>
+                    <a href = "../html/top.html#works-wrapper"><img src = "../images/works@2x.png" alt = ""></a>  
+                </li>
+                <li>
+                    <a href = "../html/top.html#about-wrapper"><img src = "../images/about@2x.png" alt = ""></a>
+                </li>
+            </nav> 
+        </header>
+        <section class = "page-wrapper">
+            <div class = "guides">
+                <a class = "guide previous" href = "work_yubi.html">
+                    <img src = "../images/thumb_yubi@2x.png" alt = "">
+                    <p>< previous</p>
+                </a>
+                <a class = "guide next" href = "work_fuclo.html">
+                    <img src = "../images/thumb_fcl@2x.png" alt = "">
+                    <p>next ></p>
+                </a>
+            </div>
+
+            <div class = "main-wrapper">
+                <section class = "view teki">
+                    <div class = "wv-intro">
+                        <p class = "wv wv-title">適部署チャート</p>
+                        <p class = "wv wv-data">2019.05-2019.06</p>
+                        <!-- スライドショー -->
+                        <div class = "slidshow-wrapper sp-yoko-s-w sw-pc">
+                            <div class = "swiper-parent">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img class = "sp-yoko-slide" src="../images/teki_1.jpg" alt="Swiper01"></div>
+                                    <div class="swiper-slide"><img class = "sp-yoko-slide" src="../images/teki_2.jpg" alt="Swiper02"></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class = "di-wrap">
+                                <img class = "device-img sp-yoko-img" src = "../images/sp-yoko-img@4x.png" alt = "">
+                            </div>
+                        </div>
+                        <!-- <img src = "../images/ぽ@4x.png" alt = ""> -->
+                        <!-- スライドショーここまで -->
+                        <p class = "wv-outline">担当：デザイン<br>
+                            技術：Illustrator/Photoshop<br>
+                            URL：<a href = "https://geikousai-ncu.com/chart/index.html">https://geikousai-ncu.com/chart/index.html</a><br>
+                            ※スマートフォンの横画面でご覧ください
+                        </p>
+                    </div>
+                </section>
+                <section class = "intro">
+                    <p>
+                        芸術工学部では、個性豊かな作品の展示、ステージ企画、模擬店、本格カフェなど芸術工学部の学生全員で作る学祭が行われます。
+                        自分が挑戦したいことに関する部署に各々が所属し、3年生を中心に活動します。
+                        私はweb部署に所属し、広報活動の一貫として、
+                        どの部署に入れば良いか分からない学生向けに適部署チャートのデザインを制作しました。
+                    </p>
+                    <img class = "teki-color-img" src = "../images/teki_3@4x.png" alt = "">
+                    <p>
+                        サブカラーを含む６色のメインカラーが決まっていたので、 その色をメインに使いデザインを始めました。 
+                        2019年の学祭のテーマが英語で咀嚼音を意味する"nomnom"だったので、 食べ物を連想できるようなデザインにしようと思い立ちます。
+                    </p>
+                    <div class = "t-d-i-wrap">
+                        <img class = "teki-design-img" src = "../images/teki_4@4x.png" alt = "">
+                        <img class = "teki-design-img" src = "../images/teki_5@4x.png" alt = "">
+                        <img class = "teki-design-img" src = "../images/teki_6@4x.png" alt = "">
+                    </div>
+                    <p>
+                        案をいくつか出し、決まった案をさらにブラッシュアップしました。
+                    </p>
+                    <p>
+                        適部署チャートの制作開始時点では、学祭のメインビジュアルや告知サイトの デザインなども決まっていなかったので少し苦戦しましたが、
+                        告知サイトのデザインを担当するweb部署のメンバーとイメージを擦り合わせながら作成しました。
+                        今回はコーディングは担当していないのですが、アニメーションをつけていただいたので、よりポップな印象になったと思います。
+                    </p>
+                </section>
+            </div>
+            <a class = "all-view-works" href = "../html/top.html#works-wrapper">all wiew works</a>
+        </section>
+        <footer></footer>
+
+        <script src="../js/swiper.js">
+        // <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                speed: 700,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: true
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true,
+                },
+            });
+        </script>
+    </body>
+</html>

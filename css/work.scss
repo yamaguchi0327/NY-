@@ -85,7 +85,14 @@ body{
         
     }
     .page-wrapper{
+        @include tab { 
+            text-align: center;
+            margin-bottom: 72px;
+        }
+
+        // 画面の左右の作品への誘導
         .guides{
+            z-index: 99;
             @include sp { 
                 display: none;
             }
@@ -113,7 +120,13 @@ body{
             .next{
                 right: 7vw;
             }
+            .guide-yoko-img{
+                img{
+                    height: 46px;
+                }
+            }
         }
+
         .main-wrapper{
             width: 72vw;
             padding: 124px 14vw 0;
@@ -127,6 +140,8 @@ body{
                 width: 100%;
                 padding: 0;
             }
+
+            // 作品の名前・制作期間・画像
             .view{
                 // width: 36vw;
                 background-color: #e8e5eb;
@@ -147,6 +162,7 @@ body{
                     padding-top: 64px;
                     height: 360px;
                 }
+        
                 .wv-intro{
                     // position: relative;
                     @include sp { 
@@ -165,7 +181,7 @@ body{
                         }
                     }
                     .wv-title{
-                        font-size: 28px;
+                        font-size: 21px;
                         // font-weight: 400;
                         margin-bottom: 10px;
                         @include tab { 
@@ -185,20 +201,36 @@ body{
                     }
 
                     // スライドショー
+
+                    // スマホ(縦)作品のときのスライドのマージン
+                    .sp-s-w{
+                        @include tab { 
+                            margin-top: 7vw;
+                            margin-bottom: 7vw;
+                        }
+                        @include sp { 
+                            margin-top: 56px;
+                        }
+                    }
+                    // スマホ(横)作品のときのスライドのマージン
+                    .sp-yoko-s-w{
+                        margin-top: 6vw;
+                    }
+
                     .slidshow-wrapper{
                         position: relative;
                         margin-bottom: 64px;
                         @include tab { 
-                            margin-bottom: 48px;
+                            margin-bottom: 60px;
                         }
                         /* Swiperの親要素 */
                         .swiper-parent {
-                            // position: relative;
                             /* Swiper本体 */
                             .swiper-container {
-                                // padding-bottom: 5px;		/* ★ページネーション・スクロールバー分の余白50pxを下に取る */
-                                // box-sizing: content-box;
+
+                                // パソコン作品のときのスライドの高さ
                                 img{
+                                    z-index: 40;
                                     height: 19vw;
                                     @include tab { 
                                         height: 214px;
@@ -207,8 +239,40 @@ body{
                                         height: 116px;
                                     }
                                 }
+                                // スマホ(縦)作品のときのスライドの高さ
+                                .sp-tate-slide{
+                                    height: 22.2vw;
+                                    @include tab { 
+                                        height: 30.2vw;
+                                    }
+                                    @include sp {
+                                        height: 45.6vw;
+                                    }
+                                }
+                                // スマホ(横)作品のときのスライドの高さ
+                                .sp-yoko-slide{
+                                    height: 14vw;
+                                    @include tab { 
+                                        height: 16.7vw;
+                                    }
+                                    @include sp {
+                                        height: 23vw;
+                                    }
+                                }
+
+                                .pos-slide{
+                                    height: 25vw;
+                                    @include tab { 
+                                        height: 250px;
+                                    }
+                                    @include sp {
+                                        height: 178px;
+                                    }
+                                }
+
                             }
                         }
+                        // パソコン作品のときの枠の大きさ・ずれの調整
                         .device-img{
                             position: absolute;
                             height: 23vw;
@@ -217,7 +281,7 @@ body{
                             top: 3%;
                             bottom: 0;
                             margin: auto;
-                            z-index: 80;
+                            z-index: 60;
                             @include tab { 
                                 height: 260px;
                             }
@@ -226,6 +290,52 @@ body{
                                 top: 0;
                             }
                         }
+                        // スマホ(縦)作品のときの枠の大きさ・ずれの調整
+                        .sp-img{
+                            height: 31.5vw;
+                            left: -0.5%;
+                            right: 0;
+                            top: -3.5%;
+                            @include tab { 
+                                height: 43vw;
+                                top: -4.5%;
+                            }
+                            @include sp {
+                                height: 65vw;
+                                left: -1%;
+                                top: -5%;
+                            }
+                        }
+
+                        // スマホ(横)作品のときの枠の大きさ・ずれの調整
+                        .sp-yoko-img{
+                            height: 17vw;
+                            left: -0.5%;
+                            right: 0;
+                            top: -2%;
+                            @include tab { 
+                                height: 20vw;
+                                top: -3.3%;
+                                left: -0.7%;
+                            }
+                            @include sp {
+                                height: 28vw;
+                                top: -6%;
+                            }
+                        }
+                    }
+                    .sw-pc{
+                        @include sp { 
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .sw-pos{
+                        margin-bottom: 0;
+                    }
+
+                    .swiper-pagination{
+                        z-index: 80;
                     }
 
                     .swiper-pagination-bullet{
@@ -240,7 +350,7 @@ body{
                         text-align: left;
                         margin-left: 60px;
                         margin-top: 39px;
-                        font-size: 10px;
+                        font-size: 11px;
                         line-height: 1.8em;
                         @include tab { 
                             margin-left: 40px;
@@ -248,27 +358,65 @@ body{
                         @include sp { 
                             margin-left: 17px;
                             width: 216px;
-
+                        }
+                    }
+                    .pos-wv-o{
+                        @include sp { 
+                            margin-top: 22px;
                         }
                     }
                 }
             }
+
+            // スマホ作品のときの背景の高さ
+            .sp-view{
+                @include tab { 
+                    height: 60vw;
+                }
+                @include sp { 
+                    height: 424px;
+                }
+            }
+
+            // 背景色変更
+            .yubi{
+                background-color: #efdcdc;
+            }
+            .teki{
+                background-color: #f2eadb;
+            }
+            .fuclo{
+                background-color: #ebecee;
+            }
+            .mini{
+                background-color: #ede3d4;
+            }
+            .ny{
+                background-color: #e9dfdb;
+            }
+            .pos{
+                background-color: #f0dddd;
+            }
+
+            // 作品の詳しい説明
             .intro{
                 height: 69vh;
                 width: 30vw;
                 float: right;
                 overflow: scroll;
                 padding-top: 40px;
+                text-align: center;
                 @include tab { 
                     float: none;
                     width: 100%;
                     height: 100%;
                     overflow: auto;
-                    margin-bottom: 100px;
+                    margin-bottom: 24px;
                 }
-                p{
+                >p{
                     width: 23vw;
-                    margin: 0 auto;
+                    margin: 0px auto 24px auto;
+                    text-align: left;
                     @include tab { 
                         width: 400px;
                     }
@@ -276,8 +424,81 @@ body{
                         width: 200px;
                     }
                 }
+                
+                // 説明文に用いるスマホ(縦)作品の大きさ
+                .sp-tate-img{
+                    height: 240px;
+                    margin: 6px 6px 30px 6px;
+                    @include sp {
+                        height: 171px;
+                        margin: 6px 3px 24px 3px;
+                    }
+                }
+                // 説明文に用いるXdのスクショの大きさ
+                .xd-img-wrap{
+                    margin-bottom: 24px;
+                    .xd-img{
+                        height: 116px;
+                        @include sp {
+                            height: 82px;
+                        }
+                    }
+                }
+
+                .xd-sp-img{
+                    height: 140px;
+                    margin-bottom: 24px;
+                    @include sp {
+                        height: 100px;
+                    }
+                }
+
+                .teki-color-img{
+                    height: 120px;
+                    margin-bottom: 30px;
+                    @include sp {
+                        height: 80px;
+                    }
+                }
+
+                .t-d-i-wrap{
+                    margin-bottom: 30px;
+                    @include sp {
+                        width: 200px;
+                        margin: 0 auto 30px auto;
+                    }
+                    .teki-design-img{
+                        height: 122px;
+                        @include sp {
+                            height: 88px;
+                        }
+                    }
+                }
+
+                .ny_intro_img{
+                    height: 250px;
+                    margin-bottom: 30px;
+                    @include sp {
+                        height: 144px;
+                    }
+                }
+                .ny_intro_yoko_img , .pos-intro-img{
+                    height: 190px;
+                    margin-bottom: 30px;
+                    @include sp {
+                        height: 128px;
+                    }
+                }
+                
             }
         }  
+        .all-view-works{
+            display: none;
+            @include tab { 
+                display: inline;
+                margin-bottom: 56px;
+            }
+        }
     }
     footer{
         @include sp { 
@@ -286,3 +507,57 @@ body{
         }
     }
 }
+
+/* アニメーション設定 */
+.arrowWrap {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 200px
+  }
+  
+  .arrowInner > p {
+    font-size: 12px;
+    text-align: end;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  
+  .arrow {
+    width: 1px;
+    height: 100px;
+    margin: 50px auto 0;
+    background-color: #eee;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .arrow::before {
+    content: '';
+    width: 1px;
+    height: 100px;
+    margin: 50px auto 0;
+    background-color: #000;
+    position: absolute;
+    top: -150px;
+    left: 0;
+    -webkit-animation: arrow 2.5s ease 0s infinite normal;
+    animation: arrow 2.5s ease 0s infinite normal;
+  }
+  
+  @keyframes arrow {
+    0% {
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+    }
+  
+    60% {
+      -webkit-transform: translate3d(-50%, 100px, 0);
+      transform: translate3d(-50%, 100px, 0);
+    }
+  
+    100% {
+      -webkit-transform: translate3d(-50%, 100px, 0);
+      transform: translate3d(-50%, 100px, 0);
+    }
+  }
