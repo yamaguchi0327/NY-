@@ -108,40 +108,44 @@ body .page-wrapper #first-view .fv-wrapper img {
 
 body .page-wrapper #first-view .fv-wrapper img:nth-child(1) {
   width: 30px;
-  margin-bottom: -2px;
+  margin-bottom: -17px;
 }
 
 @media screen and (max-width: 480px) {
   body .page-wrapper #first-view .fv-wrapper img:nth-child(1) {
     width: 19px;
+    margin-bottom: -10px;
   }
 }
 
-body .page-wrapper #first-view .fv-wrapper img:nth-child(2) {
+body .page-wrapper #first-view .fv-wrapper #svg_001 {
   z-index: 20;
   width: 400px;
 }
 
 @media screen and (max-width: 480px) {
-  body .page-wrapper #first-view .fv-wrapper img:nth-child(2) {
+  body .page-wrapper #first-view .fv-wrapper #svg_001 {
     width: 216px;
   }
 }
 
-body .page-wrapper #first-view .fv-wrapper img:nth-child(3) {
-  margin-top: -11px;
-  z-index: 10;
+body .page-wrapper #first-view .fv-wrapper #svg_002 {
+  margin-top: -88px;
+  z-index: -1;
   width: 400px;
+  position: relative;
 }
 
 @media screen and (max-width: 480px) {
-  body .page-wrapper #first-view .fv-wrapper img:nth-child(3) {
+  body .page-wrapper #first-view .fv-wrapper #svg_002 {
     width: 216px;
+    margin-bottom: 9px;
   }
 }
 
 body .page-wrapper #first-view .fv-wrapper .chon-img {
   animation: flicker 5s linear infinite;
+  visibility: hidden;
 }
 
 @keyframes flicker {
@@ -713,6 +717,17 @@ body footer {
   fill: none;
   stroke: #FFFFFF;
   stroke-width: 12;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+}
+
+.st1 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 50px;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
