@@ -109,7 +109,7 @@ body{
                     z-index: 20;
                     width: 400px;
                     @media screen and (max-width: 480px) { 
-                        width: 216px;
+                        width: 236px;
                     }
                 }
                 #svg_002{
@@ -118,7 +118,7 @@ body{
                     width: 400px;
                     position: relative;
                     @media screen and (max-width: 480px) { 
-                        width: 216px;
+                        width: 236px;
                         margin-bottom: 9px;
                     }
                 }
@@ -491,15 +491,16 @@ body{
     text-decoration: none;
     padding-top: 50px;
     @media screen and (max-width: 480px) { 
-        left: 47%;
+        left: 45%;
+        bottom: 0;
     }
 }
 .scroll span {
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
+    left: 48%;
+    width: 23px;
+    height: 23px;
     margin-left: -12px;
     border-left: 1.3px solid #251d1c;
     border-bottom: 1.3px solid #251d1c;
@@ -508,7 +509,13 @@ body{
     -webkit-animation: sdb 1.5s infinite;
     animation: sdb 2.5s infinite;
     box-sizing: border-box;
+    @media screen and (max-width: 480px) { 
+        width: 16px;
+        height: 16px;
+        margin-left: -7px;
+    }
 }
+
 @-webkit-keyframes sdb {
     0% {
       -webkit-transform: rotate(-45deg) translate(0, 0);
@@ -536,16 +543,6 @@ body{
     }
   }
 
-  @keyframes slideOut {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-100%);
-    }
-}
-
 
 // スライドローディングアニメーション
 // #loader {
@@ -572,6 +569,7 @@ body{
 //     }
 // }
 
+// svgアニメーション
 .st0{
     fill: none;
     stroke:#FFFFFF;
