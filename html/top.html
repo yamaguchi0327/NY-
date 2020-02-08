@@ -367,7 +367,7 @@
             stagger:400,
             easing: 'linear'
             });
-        $svg_logo.drawsvg('animate');
+        // $svg_logo.drawsvg('animate');
 
         var $svg_bar = $('#svg_002').drawsvg({
             duration: 1300,
@@ -375,10 +375,15 @@
             });
 
         $(function() {
-            setTimeout('ani1()', 3600); //3.3秒後に実行
-            setTimeout('ani2()', 5000); //3.7秒後に実行
+            setTimeout('ani3()', 700); //3.7秒後に実行
+            setTimeout('ani1()', 4200); //3.3秒後に実行
+            setTimeout('ani2()', 5700); //3.7秒後に実行
         });
             
+        function ani3() {
+            $svg_logo.drawsvg('animate');
+        }
+
         function ani1() {
             $svg_bar.drawsvg('animate');
         }
