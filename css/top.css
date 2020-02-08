@@ -21,7 +21,7 @@ body a {
 
 body header {
   position: fixed;
-  z-index: 99;
+  z-index: 90;
   left: 7vw;
   top: 4vw;
 }
@@ -103,23 +103,75 @@ body .page-wrapper #first-view .fv-wrapper {
 body .page-wrapper #first-view .fv-wrapper img {
   display: block;
   margin: 0 auto;
-  width: 400px;
   position: relative;
 }
 
+body .page-wrapper #first-view .fv-wrapper img:nth-child(1) {
+  width: 30px;
+  margin-bottom: -2px;
+}
+
 @media screen and (max-width: 480px) {
-  body .page-wrapper #first-view .fv-wrapper img {
+  body .page-wrapper #first-view .fv-wrapper img:nth-child(1) {
+    width: 19px;
+  }
+}
+
+body .page-wrapper #first-view .fv-wrapper img:nth-child(2) {
+  z-index: 20;
+  width: 400px;
+}
+
+@media screen and (max-width: 480px) {
+  body .page-wrapper #first-view .fv-wrapper img:nth-child(2) {
     width: 216px;
   }
 }
 
-body .page-wrapper #first-view .fv-wrapper img:nth-child(1) {
-  z-index: 20;
-}
-
-body .page-wrapper #first-view .fv-wrapper img:nth-child(2) {
+body .page-wrapper #first-view .fv-wrapper img:nth-child(3) {
   margin-top: -11px;
   z-index: 10;
+  width: 400px;
+}
+
+@media screen and (max-width: 480px) {
+  body .page-wrapper #first-view .fv-wrapper img:nth-child(3) {
+    width: 216px;
+  }
+}
+
+body .page-wrapper #first-view .fv-wrapper .chon-img {
+  animation: flicker 5s linear infinite;
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  58% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  68% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 body .page-wrapper .title {
@@ -611,8 +663,8 @@ body footer {
   width: 24px;
   height: 24px;
   margin-left: -12px;
-  border-left: 1px solid #251d1c;
-  border-bottom: 1px solid #251d1c;
+  border-left: 1.3px solid #251d1c;
+  border-bottom: 1.3px solid #251d1c;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: sdb 1.5s infinite;
@@ -646,4 +698,24 @@ body footer {
     transform: rotate(-45deg) translate(-15px, 15px);
     opacity: 0;
   }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.st0 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
 }
