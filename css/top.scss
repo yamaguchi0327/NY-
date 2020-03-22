@@ -1,7 +1,12 @@
 $pink-color:#b96970;
-$peal-pink-color:#e2d5d1;
+$peal-pink-color:#e1d7d3;
+$base-color:#f5f7f4;
+$mm-color:#e5dbc6;
+$yc-color:#e7d4d4;
+$yg-color:#e2dfe5;
+$f-color:#e3e4e6;
 body{
-    background-color: #f4f3f0;
+    background-color: $base-color;
     font-family: 'M PLUS Rounded 1c',sans-serif;
     color: #251d1c;
     margin: 0;
@@ -331,16 +336,16 @@ body{
                 .sub-work:nth-child(3){
                     background-color: #efdcdc;
                 }
+                // .sub-work:nth-child(4){
+                //     background-color: #f2eadb;
+                // }
                 .sub-work:nth-child(4){
-                    background-color: #f2eadb;
-                }
-                .sub-work:nth-child(5){
                     background-color: #ebecee;
                 }
-                .sub-work:nth-child(6){
+                .sub-work:nth-child(5){
                     background-color: #f0dddd;
                 }
-                .sub-work:nth-child(7){
+                .sub-work:nth-child(6){
                     background-color: #ebecee;
                 }
             }

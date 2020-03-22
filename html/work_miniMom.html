@@ -39,71 +39,138 @@
             </div>
 
             <div class = "main-wrapper">
-                <section class = "view sp-view mini">
-                    <div class = "wv-intro">
-                        <p class = "wv wv-title">miniMom</p>
-                        <p class = "wv wv-data">2019.11</p>
-                        <!-- スライドショー -->
-                        <div class = "slidshow-wrapper sp-s-w">
-                            <div class = "swiper-parent">
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img class = "sp-tate-slide" src="../images/mini_1.png" alt="Swiper01"></div>
-                                    <div class="swiper-slide"><img class = "sp-tate-slide" src="../images/mini_2.png" alt="Swiper02"></div>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
+                <section class = "main-view mm">
+                    <div class = "mv-summary">
+                        <p class = "mvs-title">miniMom</p>
+                        <p class = "mvs-date">2019.11</p>
+                        <p class = "mvs-outline">担当：デザイン<br>
+                            技術：Illustrator/Xd</p>
+                        <p class = "mvs-intro">ハッカソンで制作したアプリです。</p>
+                    </div>    
+                    <div class = "mv-img-wrap">
+                        <img class = "mv-img" src = "../imgs/mm_1.png">
+                    </div>
+                    
+                </section>
+
+
+                <div class = "main-intro">
+                    <section class = "part">
+                        <p class = "subtitle mm-subtitle">作品の概要</p>
+                        <p class = "description">OthloTechが開催したハッカソンで制作したIot家具miniMom(ミニマム)です。 <br>
+                            片付けが苦手な人のための、片付けの習慣付け、かついらないものを捨てて収納場所を確保するためのプロダクト(Iot棚)です。</p>
+                    </section>
+
+                    <section class = "part concept-part mm-concept">
+                        <p class = "concept-subtitle subtitle">コンセプト</p>
+                        <p class = "bold-description">きれいな部屋を身近にする</p>
+                    </section>
+
+                    <section class = "part">
+                        <p class = "subtitle mm-subtitle">ペルソナ</p>
+                        <div class = "persona">
+                            <img src = "../imgs/mm_2.png">
+                            <p>
+                                名前：伊藤花子さん<br>
+                                性別：女性<br>
+                                年齢：21歳<br>
+                                職業：大学生
+                            </p>
+                        </div>
+                        <p class = "center-description">
+                            大学生になってから下宿を始めた.<br>
+                            前まではお母さんが部屋を片付けてくれていたが、<br>
+                            だらしない性格の花子さんは片付けができない
+                        </p>
+                        <p class = "bold-description">
+                            でも片付けをして綺麗な部屋を保ちたいという気持ちはある<br>
+                            ↓<br>
+                            ゴール：片付けを習慣づけて、部屋をきれいに保つ
+                        </p>
+                    </section>
+                    <section class = "part">
+                        <p class = "subtitle mm-subtitle">作品について</p>
+                        <div class = "sub-part">
+                            <p class = "sub-subtitle">目的</p>
+                            <p class = "center-description">
+                                帰宅した瞬間に片付ける習慣をつける<br>
+                                いらないものを捨てて収納場所を確保する<br>
+                                ↓<br>
+                                まずはアクセサリーなどの小物類から片付ける習慣をつけて<br>
+                                徐々に部屋全体に広げていくきっかけを作る
+                            </p>
+                        </div>
+                        <div class = "sub-part">
+                            <p class = "sub-subtitle">使用の流れ</p>
+                            <div class = "sp-img-1">
+                                <img class = "tana" src = "../imgs/mm_3.png">
+                                <img src = "../imgs/mm_4.png">
                             </div>
-                            <div class = "di-wrap">
-                                <img class = "device-img sp-img" src = "../images/sp-img@4x.png" alt = "">
+                            <p class = "center-description">
+                                小型のセンサーが設置された棚とそれに連動したアプリです。<br>
+                                ユーザーはこの棚を設置するだけで使用できます。<br>
+                            </p>
+                            <p class = "center-description">↓</p>
+                            <p class = "center-description">
+                                棚に設置されたセンサーが、帰宅後すぐにアクセサリーなどの片付けができたかどうかを<br>センサーの位置で検知します。<br>
+                                （帰宅後３分以内に棚の所定の位置に戻さないとセンサーから音が鳴る）<br>
+                            </p class = "center-description">
+                            <p class = "center-description">↓</p>
+                            <div class = "sp-split">
+                                <img src = "../imgs/mm_4.png">
+                                <p class = "center-description">
+                                    帰宅後３分以内に片付けができたかどうかは、
+                                    アプリの”カレンダー”で確認することができます。<br>
+                                    ちゃんとアラームが鳴る前(帰宅後３分以内)に片付けられたら◯<br>
+                                    片付けられなかったら×が表示されます。<br>
+                                    <br>
+                                    このカレンダーを時々確認することで、ユーザーのモチベーションアップにつなげることを目的としています。
+                                </p>
+                            </div>
+                            <p class = "center-description">↓</p>
+                            <div class = "sp-split">
+                                <img src = "../imgs/mm.gif">
+                                <p class = "description">
+                                    また、アプリの”使用状況”という画面では、<br>棚についているセンサーの位置で使っていないものを判別することでしばらく使っていない（いらない）ものを可視化しものを捨てるきっかけを作ることを目的としています。
+                                </p>
                             </div>
                         </div>
-                        <!-- <img src = "../images/ぽ@4x.png" alt = ""> -->
-                        <!-- スライドショーここまで -->
-                        <p class = "wv-outline">担当：デザイン<br>
-                            技術：Illustrator/Xd<br>
-                            <!-- URL：<a href = "https://yamaguchi0327.github.io/yamaguchi.github.io/">https://yamaguchi0327.github.io/yamaguchi.github.io/</a> -->
-                        </p>
-                    </div>
-                </section>
-                <section class = "intro">
-                    <p>
-                        OthloTechが開催したハッカソンで制作したIot家具miniMom(ミニマム)です。
-                        片付けが苦手な人のための、片付けの習慣付け、かついらないものを捨てて収納場所を確保するためのプロダクト(Iot棚)です。
-                    </p>
-                    <img class = "sp-tate-img" src = "../images/mini_1.png" alt = "">
-                    <p>
-                        まず、棚に設置されたセンサーが、帰宅後すぐにアクセサリーなどの片付けができたかどうかを検知します。
-                        （帰宅後３分以内に所定の位置に戻さないとセンサーから音が鳴る。）
-                        そして、センサーに連動したアプリが片付けできたかできてないかをカレンダーに表示します。
-                        この機能は、帰宅してすぐに片付けをする習慣をつけるためのものです。
-                    </p>
-                    
-                    <p>
-                        また、アプリによってしばらく使っていない（いらない）ものを可視化することで、ものを捨てるきっかけを作ることを目的としています。
-                        (棚についているセンサーの位置で使っていないものを判別)
-                    </p>
-                    <img class = "sp-tate-img" src = "../images/mini_2.png" alt = "">
-                    
-                    <p>今回私はデザインのみを担当したのですが、アニメーションを利用したデザインがあったので、
-                        コーダーに自分のイメージを伝えるためにもXdを使用してデザインしました。
-                    </p>
-                    <div class = "xd-img-wrap">
-                        <img class = "xd-img" src = "../images/mini_4.png" alt = "">
-                    </div>
-                    <p>このプロダクトは部屋をきれいに・物を少なくすること(ミニマリストになる)ことが目的だったので、
-                        デザインもシンプルに、ミニマルなものになるように心がけました。
-                        また、比較的若い人向けのプロダクトだったので文字も少なめ、小さめにしました。
-                        清潔感を感じさせる青と、お母さんのような活発さを感じさせる黄色を使用しました。
-                    </p>
-                    <img class = "teki-color-img" src = "../images/mini_3.png" alt = "">
-                    <p>
-                        miniMomという名前は、ミニマムという言葉と、「片付けなさい！」と怒ってくれるお母さんをかけたミニマムという名前になりました。
-                    </p>
-                    
-                </section>
+                    </section>
+                    <section class = "part">
+                        <p class = "subtitle mm-subtitle">デザインについて</p>
+                        <div class = "sub-part">
+                            <p class = "sub-subtitle">サービス名</p>
+                            <img class = "logo-img" src = "../imgs/mm_6.png">
+                            <p class = "description">
+                                このアプリは、「片付けなさい！」と怒ってくれるお母さんのようなイメージで作りました。<br>
+                                なので、miniMomという名前は、ミニマム（物を最小限に)という言葉と<br>お母さん(マム)をかけたミニマムという名前になりました。
+                            </p>
+                        </div>
+                        <div class = "sub-part">
+                            <p class = "sub-subtitle">色</p>
+                            <img class = "color-img" src = "../imgs/mm_7.png">
+                            <p class = "description">
+                                お母さんのような活発さを感じさせる黄色と清潔感を感じさせる青を使用しました。
+                            </p>
+                        </div>
+                        <div class = "sub-part">
+                            <p class = "sub-subtitle">デザイン</p>
+                            <p class = "description">
+                                このプロダクトは部屋をきれいに・物を少なくすること(ミニマリストになる)ことが目的だったので<br>
+                                デザインもシンプルに、ミニマルなものになるように心がけました。 <br>
+                                また、比較的若い人向けのプロダクトだったので文字も少なめ、小さめにしました。<br>
+                                “使用状況”の画面では、棚をイメージした白い網のイラストとアニメーションを使用し<br>
+                                使っていないものが直感的にわかるようなデザインにしました。
+                            </p>
+                            <img class = "des-img" src = "../imgs/mm_4.png">
+                            <img class = "des-img" src = "../imgs/mm.gif">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
             </div>
-            <a class = "all-view-works" href = "../html/top.html#works-wrapper">view all works</a>
+
         </section>
         <footer></footer>
 
