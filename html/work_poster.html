@@ -26,6 +26,29 @@
                 </li>
             </nav> 
         </header>
+
+        <!-- ハンバーガーメニュー -->
+        <!--ハンバーガーボタン-->
+        <div class="el_humburger">
+            <div class="el_humburger_wrapper">
+              <span class="el_humburger_bar top"></span>
+              <span class="el_humburger_bar middle"></span>
+              <span class="el_humburger_bar bottom"></span>
+            </div>
+        </div>
+         <!--ナビゲーション-->
+        <div class="navi">
+            <div class="navi_inner">
+              <div class="navi_item"><a href = "../html/top.html#first-view"><img src = "../images/top@2x.png" alt = ""></a></div>
+              <div class="navi_item"><a href = "../html/top.html#works-wrapper"><img src = "../images/works@2x.png" alt = ""></a></div>
+              <div class="navi_item"><a href = "../html/top.html#about-wrapper"><img src = "../images/about@2x.png" alt = ""></a></div>
+            </div>
+        </div>
+
+        <!-- オーバーレイ -->
+        <div id="overlay"></div>
+
+
         <section class = "page-wrapper">
             <div class = "guides">
                 <a class = "guide previous" href = "work_fuclo.html">
@@ -47,8 +70,8 @@
                             技術：Illustrator/Photoshop</p>
                         <p class = "mvs-intro">アルバイトで作成した<br>ポスター・ダイレクトメールの一部です。</p>
                     </div>    
-                    <div class = "mv-img-wrap">
-                        <img class = "mv-pc-img" src = "../imgs/p_1.png">
+                    <div class = "mv-img-wrap mv-img-wrap-pos">
+                        <img class = "mv-pc-img mv-pos-img" src = "../imgs/p_1.png">
                     </div>
                     
                 </section>
@@ -79,25 +102,104 @@
                         </div>
                     </div>
                 </div>
+
+                <div class = "sp-guides">
+                    <a class = "sp-guide sp-previous" href = "work_fuclo.html">
+                        <img src = "../images/thumb_fcl@2x.png" alt = "">
+                        <p>< previous</p>
+                    </a>
+                    <a class = "sp-guide sp-next sp-guide-yoko-img" href = "work_ny!.html">
+                        <img src = "../images/thumb_ny@2x.png" alt = "">
+                        <p>next ></p>
+                    </a>
+                </div>
         </section>
         <footer></footer>
 
-        <script src="../js/swiper.js">
-        // <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <!-- <script src="../js/swiper.js"> -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+         <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
         <script>
-            var swiper = new Swiper('.swiper-container', {
-                loop: true,
-                speed: 700,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: true
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'bullets',
-                    clickable: true,
-                },
-            });
+            // var swiper = new Swiper('.swiper-container', {
+            //     loop: true,
+            //     speed: 700,
+            //     autoplay: {
+            //         delay: 3000,
+            //         disableOnInteraction: true
+            //     },
+            //     pagination: {
+            //         el: '.swiper-pagination',
+            //         type: 'bullets',
+            //         clickable: true,
+            //     },
+            // });
+
+            //変数定義
+            var navigationOpenFlag = false;
+            var navButtonFlag = true;
+            var focusFlag = false;
+            
+            //ハンバーガーメニュー
+                $(function(){
+            
+                $(document).on('click','.el_humburger',function(){
+                    if(navButtonFlag){
+                    spNavInOut.switch();
+                    //一時的にボタンを押せなくする
+                    setTimeout(function(){
+                        navButtonFlag = true;
+                    },200);
+                    navButtonFlag = false;
+                    }
+                });
+                $(document).on('click touchend', function(event) {
+                    if (!$(event.target).closest('.bl_header,.el_humburger').length && $('body').hasClass('js_humburgerOpen') && focusFlag) {
+                    focusFlag = false;
+                    //scrollBlocker(false);
+                    spNavInOut.switch();
+                    }
+                });
+                });
+            
+            //ナビ開く処理
+            function spNavIn(){
+                $('body').removeClass('js_humburgerClose');
+                $('body').addClass('js_humburgerOpen');
+                setTimeout(function(){
+                    focusFlag = true;
+                },200);
+                setTimeout(function(){
+                    navigationOpenFlag = true;
+                },200);
+
+                $('#overlay').fadeIn(200);
+            }
+            //ナビ閉じる処理
+            function spNavOut(){
+                $('body').removeClass('js_humburgerOpen');
+                $('body').addClass('js_humburgerClose');
+                setTimeout(function(){
+                    $(".uq_spNavi").removeClass("js_appear");
+                    focusFlag = false;
+                },200);
+                navigationOpenFlag = false;
+                $('#overlay').fadeOut(200);
+            }
+            
+            //ナビ開閉コントロール
+            var spNavInOut = {
+            switch:function(){
+                if($('body.spNavFreez').length){
+                return false;
+                }
+                if($('body').hasClass('js_humburgerOpen')){
+                spNavOut();
+                } else {
+                spNavIn();
+                }
+            }
+            };
+
         </script>
     </body>
 </html>

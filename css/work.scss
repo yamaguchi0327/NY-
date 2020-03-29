@@ -51,15 +51,12 @@ body{
         text-decoration: none;
         color: $pink-color;
     }
-
+    
     header{
         position: fixed;
         z-index: 99;
         left: 7vw;
         top: 4vw;
-        @include sp { 
-            left: 4vw;
-        }
 
         >img{
             width: auto;
@@ -72,6 +69,9 @@ body{
         }
         nav{
             list-style: none;
+            @include sp { 
+                display: none;
+            }
             
             li{
                 list-style: none;
@@ -88,9 +88,9 @@ body{
                 img{
                     height: 20px;
                     padding: 2px 6px;
-                    @include sp { 
-                        height: 16px;
-                    }
+                    // @include sp { 
+                    //     height: 16px;
+                    // }
                 }
             }     
         }
@@ -103,12 +103,13 @@ body{
 
         // 画面の左右の作品への誘導
         .guides{
-            z-index: 99.9;
+            position: absolute;
+            z-index: 99;
             @include sp { 
                 visibility:hidden;
             }
             a{
-                color: #1F0000;
+                // color: #1F0000;
             }
             .guide{
                 position: fixed;
@@ -117,7 +118,7 @@ body{
                 text-align: center;
                 p{
                     line-height: 0;
-                    font-size: 11px;
+                    font-size: 13px;
                 }
                 
             }
@@ -151,7 +152,9 @@ body{
 
                 @include sp { 
                     height: 400px;
+                    margin-bottom: 40px;
                 }
+
                 
                 .mv-img-wrap{
                     margin: 0 auto;
@@ -166,29 +169,55 @@ body{
                         margin-bottom: 20px;
                         width: 900px;
                         height: auto;
+                        opacity: 0.9;
                         @include tab { 
                             width: 1200px;
-                            opacity: 0.8;
+                            opacity: 0.6;
                         } 
                         @include sp { 
                             width: 150vw;
-                            opacity: 0.8;
+                            opacity: 0.6;
                         }   
                     }
                     .mv-pc-img{
+                        opacity: 0.9;
                         z-index: 90;
                         // width: 64vw;
                         width: 980px;
                         height: auto;
                         @include tab { 
-                            width:140vw;
-                            opacity: 0.8;
+                            width:158vw;
+                            opacity: 0.6;
                         }   
                         @include sp { 
-                            width: 150vw;
-                            opacity: 0.8;
+                            width: 185vw;
+                            opacity: 0.6;
                         }   
                         
+                    }
+                }
+                .mv-img-wrap-pos{
+                    @include tab { 
+                        width: 400px;
+                    }
+                    @include sp { 
+                        width: 210px;
+                    }
+                    .mv-pos-img{
+                        @include tab { 
+                            width: 110vw;
+                        }
+                        @include sp { 
+                            width: 700px;
+                        }
+                    }
+                }
+                .mv-img-wrap-sp{
+                    @include tab { 
+                        width: 700px;
+                    }
+                    @include sp { 
+                        width: 210px;
                     }
                 }
                 
@@ -523,10 +552,210 @@ body{
         .p{
             background-color: $yc-color;
         }
+
+        // スマホで見たときの画面下の作品への誘導
+        .sp-guides{
+            display: none;
+            @include sp{
+                display: flex;
+                z-index: 99;
+                margin: 0 auto;
+                width: 60vw;
+                padding-top: 60px;
+                a{
+                    // color: #1F0000;
+                }
+                .sp-guide{
+                    // top: 50%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                    p{
+                        line-height: 0;
+                        font-size: 11px;
+                    }
+                    
+                }
+                img{
+                    height: 80px;
+                    margin-bottom: 5px;
+                }
+                .sp-previous{
+                    margin: 0 auto;
+                    left: 7vw;
+                }
+                .sp-next{
+                    margin: 0 auto;
+                    right: 7vw;
+                }
+                .sp-guide-yoko-img{
+                    img{
+                        height: 50px;
+                        padding: 15px 0;
+                    }
+                }
+            }
+        }
     }
 
     footer{
-        height: 48px;
+        height: 56px;
         background-color:$peal-pink-color;
     }
+}
+
+
+/*ハンバーガーボタン*/
+.el_humburger {
+    display: none;
+}
+
+@include sp {
+    .el_humburger {
+        position: fixed;
+        display: block;
+        right: 0;
+        top: 0;
+        padding-top: 5vw;
+        width: 70px;
+        height: 70px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        pointer-events: auto;
+        color: #251d1c;
+        text-align: center;
+    }
+    #factory .el_humburger {
+        display: none; } 
+    }
+
+@include sp{
+    .el_humburger_wrapper {
+        display: inline-block;
+        margin-bottom: 5px;
+        width: 20px; } }
+
+.js_humburgerOpen .el_humburger_text.el_humburger_text__menu {
+    display: none; }
+
+.el_humburger_text.el_humburger_text__close {
+    display: none; }
+    
+    .js_humburgerOpen .el_humburger_text.el_humburger_text__close {
+    display: block; }
+    
+    
+    @media screen and (max-width: 840px) {
+    .el_humburger_text svg path {
+        -webkit-transition: all 200ms cubic-bezier(0.16, 0.52, 0.25, 1);
+        -o-transition: all 200ms cubic-bezier(0.16, 0.52, 0.25, 1);
+        transition: all 200ms cubic-bezier(0.16, 0.52, 0.25, 1);
+        fill: #000; } }
+    
+    @media screen and (max-width: 840px) {
+    .js_humburgerOpen .el_humburger_text svg path {
+        fill: #000; } }
+    
+    .el_humburger span.el_humburger_bar {
+    display: block;
+    width: 100%;
+    margin: 0 auto 9px;
+    height: 1px;
+    background: #251d1c;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out; }
+    
+    .el_humburger span.el_humburger_bar:last-child {
+    margin-bottom: 0; }
+    
+    .js_humburgerOpen .el_humburger span.el_humburger_bar {
+    background: #251d1c; }
+    
+    // @media screen and (max-width: 840px) {
+    // .el_humburger span.el_humburger_bar {
+    //     left: 0;
+    //     top: 0;
+    //     background: #000; } }
+    
+    .js_humburgerOpen .el_humburger span.el_humburger_bar.top {
+    -webkit-transform: translateY(9px) rotate(-45deg);
+    -ms-transform: translateY(9px) rotate(-45deg);
+    transform: translateY(9px) rotate(-45deg); }
+
+    .js_humburgerOpen .el_humburger span.el_humburger_bar.middle {
+        opacity: 0; }
+    
+    .js_humburgerOpen .el_humburger span.el_humburger_bar.bottom {
+    -webkit-transform: translateY(-11px) rotate(45deg);
+    -ms-transform: translateY(-11px) rotate(45deg);
+    transform: translateY(-11px) rotate(45deg); }
+    
+    .el_humburgerButton.el_humburgerButton__close {
+    top: 2%;
+    right: 2%; }
+    
+    .el_humburgerButton__close span.el_humburger_bar {
+    display: block;
+    width: 35px;
+    margin: 0 auto;
+    height: 4px;
+    background: #251d1c; }
+    
+    .el_humburgerButton__close span.el_humburger_bar.top {
+    -webkit-transform: translateY(5px) rotate(-45deg);
+    -ms-transform: translateY(5px) rotate(-45deg);
+    transform: translateY(5px) rotate(-45deg); }
+    
+    .el_humburgerButton__close span.el_humburger_bar.bottom {
+    -webkit-transform: translateY(-6px) rotate(45deg);
+    -ms-transform: translateY(-6px) rotate(45deg);
+    transform: translateY(-6px) rotate(45deg); }
+
+    .navi {
+        position: fixed;
+        right: 0;
+        height: 100%;
+        background-color:$base-color;
+        width: 0;
+        z-index: 998;
+        padding-top: 100px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 600ms ease-out;
+        -o-transition: all 600ms ease-out;
+        transition: all 600ms ease-out;
+        overflow: hidden; 
+    }
+        .js_humburgerOpen .navi {
+        width: 450px; 
+        }
+        @media screen and (max-width: 840px) {
+            .js_humburgerOpen .navi {
+            width: 45%;
+            padding: 100px 5% 0; 
+            } 
+        }
+    
+    .navi_item {
+        margin-bottom: 28px;
+        white-space: nowrap;
+        img{
+            height: 20px;
+            padding: 2px 6px;
+        }
+    }
+    .navi_item.op_innerLink {
+        cursor: pointer; 
+    }
+
+#overlay{
+    display: none;
+    transition: 0.3;
+    width:100vw;
+    height: 100vh;
+    z-index: 990;
+    background-color: rgba(37,29,28,0.6);
+    position: fixed;
 }

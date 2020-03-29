@@ -31,6 +31,27 @@
             </li>
         </nav> 
     </header>
+    <!-- ハンバーガーメニュー -->
+        <!--ハンバーガーボタン-->
+        <div class="el_humburger">
+            <div class="el_humburger_wrapper">
+              <span class="el_humburger_bar top"></span>
+              <span class="el_humburger_bar middle"></span>
+              <span class="el_humburger_bar bottom"></span>
+            </div>
+        </div>
+         <!--ナビゲーション-->
+        <div class="navi">
+            <div class="navi_inner">
+              <div class="navi_item"><a href = "#first-view" id="top_link_js"><img src = "../images/top@2x.png" alt = ""></a></div>
+              <div class="navi_item"><a href = "#works-wrapper" id="works_link_js"><img src = "../images/works@2x.png" alt = ""></a></div>
+              <div class="navi_item"><a href = "#about-wrapper" id="about_link_js"><img src = "../images/about@2x.png" alt = ""></a></div>
+            </div>
+        </div>
+
+        <!-- オーバーレイ -->
+        <div id="overlay"></div>
+
 
     <section class = "page-wrapper">
         <section id = "first-view" class="position-now">
@@ -456,6 +477,73 @@
             $(window).on('load', function(){
                 $('.loader-slide').addClass('open');
             });
+
+
+            //変数定義
+            var navigationOpenFlag = false;
+            var navButtonFlag = true;
+            var focusFlag = false;
+            
+            //ハンバーガーメニュー
+                $(function(){
+            
+                $(document).on('click','.el_humburger',function(){
+                    if(navButtonFlag){
+                    spNavInOut.switch();
+                    //一時的にボタンを押せなくする
+                    setTimeout(function(){
+                        navButtonFlag = true;
+                    },200);
+                    navButtonFlag = false;
+                    }
+                });
+                $(document).on('click touchend', function(event) {
+                    if (!$(event.target).closest('.bl_header,.el_humburger').length && $('body').hasClass('js_humburgerOpen') && focusFlag) {
+                    focusFlag = false;
+                    //scrollBlocker(false);
+                    spNavInOut.switch();
+                    }
+                });
+                });
+            
+            //ナビ開く処理
+            function spNavIn(){
+                $('body').removeClass('js_humburgerClose');
+                $('body').addClass('js_humburgerOpen');
+                setTimeout(function(){
+                    focusFlag = true;
+                },200);
+                setTimeout(function(){
+                    navigationOpenFlag = true;
+                },200);
+
+                $('#overlay').fadeIn(200);
+            }
+            //ナビ閉じる処理
+            function spNavOut(){
+                $('body').removeClass('js_humburgerOpen');
+                $('body').addClass('js_humburgerClose');
+                setTimeout(function(){
+                    $(".uq_spNavi").removeClass("js_appear");
+                    focusFlag = false;
+                },200);
+                navigationOpenFlag = false;
+                $('#overlay').fadeOut(200);
+            }
+            
+            //ナビ開閉コントロール
+            var spNavInOut = {
+            switch:function(){
+                if($('body.spNavFreez').length){
+                return false;
+                }
+                if($('body').hasClass('js_humburgerOpen')){
+                spNavOut();
+                } else {
+                spNavIn();
+                }
+            }
+            };
     </script>
 
 </body>
