@@ -1,10 +1,10 @@
-$pink-color:#b96970;
-$peal-pink-color:#e1d7d3;
-$base-color:#f5f7f4;
-$mm-color:#e5dbc6;
-$yc-color:#e7d4d4;
-$yg-color:#e2dfe5;
-$f-color:#e3e4e6;
+$base-color:#f7f7f7;
+$font-color:#152029;
+$yubi-color:#c05937;
+$mm-color:#4a62e5;
+$pos-color:#f2bc35;
+$ymgc-color:#c9bad6;
+$main-color:#dc726d;
 
 
 $tab: 1024px; // タブレット
@@ -28,580 +28,479 @@ html{
 }
 body{
     background-color: $base-color;
-    font-family: 'M PLUS Rounded 1c',sans-serif;
-    color: #251d1c;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: $font-color;
     margin: 0;
     width: 100vw;
-    font-size: 13px;
-    line-height: 2.1em;
-    font-weight: lighter;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: .75px;
+    font-weight: 400;
     word-break: break-all;
-    @include tab { 
-        font-size: 12px;
-        .sp_br{
-            display: none;
-        }
-    }
+    margin: 0;
+    padding: 0;
 
     p{
         margin: 0;
+        padding: 0;
+
     }
 
     a{
         text-decoration: none;
-        color: $pink-color;
+        color: $font-color;
     }
-    
+
+    a:visited{
+        color: $font-color;
+    }
+
     header{
         position: fixed;
-        z-index: 99;
-        left: 7vw;
-        top: 4vw;
-
-        >img{
-            width: auto;
-            height: 55px;
-            margin-bottom: 24px;
-            @include sp { 
-                height: 40px;
-                margin-bottom: 40px;
+        width: 100vw;
+        background-color: rgba(247,247,247,1);
+        z-index: 100;
+        height: 73px;
+        .nav-wrap{
+            // width: 1200px;
+            display: flex;
+            margin:auto 14vw;
+            .logo{
+                font-size: 40px;
+                // margin-left: 40px;
+                font-weight: 700;
+                color: $main-color;
             }
-        }
-        nav{
-            list-style: none;
-            @include sp { 
-                display: none;
-            }
-            
-            li{
-                list-style: none;
-                margin-bottom: 24px;
-                height: 20px;
+            nav{
                 display: flex;
-                @include sp { 
-                    margin-bottom: 10px;
+                margin: auto 40px auto auto;
+                li{
+                    list-style: none;
+                    padding: 0 30px;
+                    font-size: 20px;
+                    font-weight: 600;
                 }
-                a{
-                    display: block;
-                    width: 100%;
-                }
-                img{
-                    height: 20px;
-                    padding: 2px 6px;
-                    // @include sp { 
-                    //     height: 16px;
-                    // }
-                }
-            }     
+            }
         }
-        
     }
+
+    h2::before{
+        content: '';
+        display: block;
+        height: 3px;
+        width: 62px;
+        margin-bottom: 26px;
+        background-color: $yubi-color;
+        // background: linear-gradient(90deg,#f5e9ec, #e5e2f1);
+        // float: left;
+    }
+    h2{
+        font-weight: 700;
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    .h2-mm::before{
+        background-color: $mm-color;
+    }
+    .h2-pos::before{
+        background-color: $pos-color;
+    }
+    .h2-ymgc::before{
+        background-color: $ymgc-color;
+    }
+    .h2-n::before{
+        background-color: $main-color;
+    }
+
+
     .page-wrapper{
-        .sita{
-            font-weight: 400;
-        }
-
-        // 画面の左右の作品への誘導
-        .guides{
-            position: absolute;
-            z-index: 99;
-            @include sp { 
-                visibility:hidden;
-            }
-            a{
-                // color: #1F0000;
-            }
-            .guide{
-                position: fixed;
-                top: 50%;
-                transform: translateY(-50%);
-                text-align: center;
-                p{
-                    line-height: 0;
-                    font-size: 13px;
+        height: 100vw;
+        .first-view{
+            display: flex;
+            height: 39vw;
+            margin-bottom: 130px;
+            .fv-intro{
+                width: 26vw;
+                padding-top: 12vw;
+                margin-left: 14vw;
+                .outline::before{
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 62px;
+                    margin-bottom: 26px;
+                    background-color: $yubi-color;
+                    // background: linear-gradient(90deg,#f5e9ec, #e5e2f1);
+                    // float: left;
                 }
-                
-            }
-            img{
-                height: 80px;
-                margin-bottom: 5px;
-            }
-            .previous{
-                left: 7vw;
-            }
-            .next{
-                right: 7vw;
-            }
-            .guide-yoko-img{
-                img{
-                    height: 46px;
+                .outline{
+                    font-weight: 700;
+                    font-size: 16px;
+                    color: $yubi-color;
                 }
-            }
-        }
-
-        .main-wrapper{
-            
-            .main-view{
-                
-                height: 500px;
-                width: 100vw;
-                // background-color: $mm-color;
-                overflow:hidden;  
-                display: flex;
-                margin-bottom: 120px;
-
-                @include sp { 
-                    height: 400px;
+                .o-mm::before{
+                    background-color: $mm-color;
+                }
+                .o-mm{
+                    color: $mm-color;
+                }
+                .o-pos::before{
+                    background-color: $pos-color;
+                }
+                .o-pos{
+                    color: $pos-color;
+                }
+                .o-ymgc::before{
+                    background-color: $ymgc-color;
+                }
+                .o-ymgc{
+                    color: $ymgc-color;
+                }
+                .o-n::before{
+                    background-color: $main-color;
+                }
+                .o-n{
+                    color: $main-color;
+                }
+                h1{
+                    font-weight: 900;
+                    font-size: 33px;
+                    margin: 0;
+                }
+                .data{
+                    font-weight: 600;
                     margin-bottom: 40px;
                 }
-
-                
-                .mv-img-wrap{
-                    margin: 0 auto;
-                    width: 1240px;
-                    text-align: right;
-
-                    @include sp { 
-                        width: 275px;
-                    }
-                    .mv-img{
-                        z-index: 90;
-                        margin-bottom: 20px;
-                        width: 900px;
-                        height: auto;
-                        opacity: 0.9;
-                        @include tab { 
-                            width: 1200px;
-                            opacity: 0.6;
-                        } 
-                        @include sp { 
-                            width: 150vw;
-                            opacity: 0.6;
-                        }   
-                    }
-                    .mv-pc-img{
-                        opacity: 0.9;
-                        z-index: 90;
-                        // width: 64vw;
-                        width: 980px;
-                        height: auto;
-                        @include tab { 
-                            width:158vw;
-                            opacity: 0.6;
-                        }   
-                        @include sp { 
-                            width: 185vw;
-                            opacity: 0.6;
-                        }   
-                        
-                    }
-                }
-                .mv-img-wrap-pos{
-                    @include tab { 
-                        width: 400px;
-                    }
-                    @include sp { 
-                        width: 210px;
-                    }
-                    .mv-pos-img{
-                        @include tab { 
-                            width: 110vw;
-                        }
-                        @include sp { 
-                            width: 700px;
-                        }
-                    }
-                }
-                .mv-img-wrap-sp{
-                    @include tab { 
-                        width: 700px;
-                    }
-                    @include sp { 
-                        width: 210px;
-                    }
-                }
-                
-                .mv-summary{
-                    position: absolute;
-                    left: 20vw;
-                    top: 240px;
-                    z-index: 99;
-                    @include sp { 
-                        top: 170px;
-                    }
-                    .mvs-title{
-                        font-weight: 400;
-                        font-size: 32px;
-                        background-color: $base-color;
-                        display: inline-block;
-                    }
-                    .mvs-date , .mvs-outline{
-                        margin-bottom: 20px;
-                    }
+                p{
+                    width: 90%;
                 }
             }
-
-            .main-intro{          
-                text-align: center;
-                width: 60vw;
-                margin: 0 auto;
-                .concept-part{
-                    // background-color: $mm-color;
-                    width: 100vw;
-                    margin-left: calc(((100vw - 100%) / 2) * -1);
-                    margin-right: calc(((100vw - 100%) / 2) * -1);
-                    padding: 0 calc((100vw - 100%) / 2);
-                    .concept-subtitle{
-                        background-color: $base-color;
-                        
-                    }
-                    .bold-description{
-                        font-weight: 500;
-                    }
-
-                }
-                .part{
-                    padding: 60px 0 50px 0;
-                    .subtitle{
-                        font-weight: 500;
-                        font-size: 18px;
-                        display: inline-block;
-                        line-height: 1;
-                        margin-bottom: 60px;
-                        @include sp { 
-                            font-size: 17px;
-                        }
-                        
-                    }                
-                    .center-description{
-                        margin-bottom: 40px;
-                    }
-
-                    .bold-description{
-                        font-weight: 400;
-                        line-height: 1.7;
-                        @include sp { 
-                            width: 60vw;
-                            margin: 0 auto;
-                        }
-                    }
-
-                    .persona{
-                        display: flex;
-                        margin: 0 auto;
-                        justify-content: center;
-                        margin-bottom: 40px;
-                        @include sp { 
-                            display: block;
-                        }
-                        >img{
-                            width: 100px;
-                            margin-right: 30px;
-                            @include sp { 
-                                width: 90px;
-                                margin-right: 0;
-                            }
-                        }
-                        >p{
-                            text-align: left;
-                            margin-left: 30px;
-                            @include sp { 
-                                text-align: center;
-                                margin-left: 0;
-                            }
-                        }    
-                    }
-                    .sub-part{
-                        margin-bottom: 90px;
-                        @include sp { 
-                            margin-bottom: 0;
-                        }
-                        .ikkodake{
-                            @include tab { 
-                                margin-bottom: 20px;
-                            }
-                        }
-                        .sub-subtitle{
-                            font-size: 16px;
-                            font-weight: 500;
-                            margin-bottom: 30px;
-                            @include sp { 
-                                font-size: 15px;
-                            }
-                        }
-                        .ny-dis{
-                            margin-bottom: 80px;
-                            @include sp { 
-                                margin-bottom: 40px;
-                            }
-                        }
-                        .sp-img-1{
-                            margin-bottom: 60px;
-                            @include tab { 
-                                margin-bottom: 20px;
-                            }
-                            @include sp { 
-                                margin-bottom: 20px;
-                            }
-                            .tana{
-                                width: 350px;
-                                height: auto;
-                                margin-right: 30px;
-                                @include tab { 
-                                    width: 200px;
-                                    margin-right: 0;
-                                }
-                                @include sp { 
-                                    width: 130px;
-                                    margin-right: 0;
-                                }
-                            }
-                            
-                            img:nth-child(2){
-                                width: 120px;
-                                height: auto;
-                                top: -17px;
-                                margin-left: 30px;
-                                position: relative;
-                                @include tab { 
-                                    width: 50px;
-                                    margin-left: 0;
-                                }
-                                @include sp { 
-                                    width: 40px;
-                                    margin-left: 0;
-                                }
-                            }
-                        }
-                        .sp-img-2{
-                            margin-top: 70px;
-                            margin-bottom: 60px;
-                            @include sp { 
-                                margin-bottom: 0;
-                            }
-                            .yubi-img{
-                                width: 116px;
-                                margin-right: 30px;
-                                top: -39px;
-                                position: relative;
-                                @include sp { 
-                                    width: 60px;
-                                    margin-right: 2px;
-                                }
-                            }
-                            img:nth-child(2){
-                                width: 120px;
-                                height: auto;
-                                top: -17px;
-                                margin-left: 30px;
-                                position: relative;
-                                @include sp { 
-                                    width: 40px;
-                                    top: -40px;
-                                    margin-left: 2px;
-                                }
-                            }
-                        }
-                        .sp-split{
-                            display: flex;
-                            width: 45vw;
-                            margin: 0 auto;
-                            margin-bottom: 40px;
-                            // @include tab { 
-                            //     // width: 60vw;
-                            //     display: inline-block;
-                            //     margin-bottom: 10px;
-                            // }
-                            @include tab { 
-                                width: 60vw;
-                                display: inline-block;
-                                margin-bottom: 10px;
-                            }
-
-                            // @include sp { 
-                            //     width: 60vw;
-                            //     display: inline-block;
-                            //     margin-bottom: 10px;
-                            // }
-                            .pos-yoko{
-                                @include tab { 
-                                    width: 300px;
-                                }
-                                @include sp { 
-                                    width: 190px;
-                                }
-                            }
-                            >img{
-                                width: 220px;
-                                @include tab { 
-                                    width: 105px;
-                                    margin-bottom: 20px;
-                                }
-                            }
-                            .sp-s-img{
-                                width: 280px;
-                                @include sp { 
-                                    width: 190px;
-                                }
-                            }
-                            .sp-pc-img{
-                                width: 320px;
-                                @include tab { 
-                                    width: 400px;
-                                    margin-bottom: 10px;
-                                }
-                                @include sp { 
-                                    width: 190px
-                                }
-                            }
-                            >p{
-                                text-align: left;
-                                padding-left: 40px;
-                                @include tab { 
-                                    text-align: center;
-                                    padding-left: 0;
-                                }
-                            }
-                            .third-des{
-                                margin: 0 auto;
-                            }
-                        }
-                        .logo-img{
-                            width: 250px;
-                            margin-bottom: 20px;
-                            @include sp { 
-                                width: 160px;
-                            }
-                        }
-                        .color-img{
-                            width: 100px;
-                            margin-bottom: 20px;
-                        }
-                        .color-1-img{
-                            width: 50px;
-                            margin-bottom: 20px;
-                        }
-                        .color-yoko-img{
-                            width: 500px;
-                            margin-bottom: 20px;
-                            @include tab { 
-                                width: 300px
-                            }
-                            @include sp { 
-                                width: 190px
-                            }
-                        }
-                        .des-img{
-                            margin: 50px 5px;
-                            width: 170px;
-                            @include tab { 
-                                margin: 0 2px;
-                                width: 135px;
-                            }
-                            @include sp { 
-                                margin: 0 2px;
-                                width: 90px;
-                            }
-                        }
-                        .xd-img{
-                            width: 700px;
-                            @include tab { 
-                                margin: 0 2px;
-                                width: 400px;
-                            }
-                            @include sp { 
-                                margin-top: 20px;
-                                width: 190px;
-                            }
-                        }
-                    }
-
-                }
-            }
-
-        }
-        .sp-yoko-img{
-            width: 560px;
-            height: auto;
-            margin-bottom: 40px;
-            @include tab { 
-                width: 400px;
-                margin-bottom: 10px;
-            }
-            @include sp { 
-                width: 190px;
-                margin-bottom: 10px;
-            }
-        }
-        
-        .ny , .ny-concept , .ny-subtitle{
-            background-color: $peal-pink-color;
-        }
-        .mm , .mm-concept , .mm-subtitle{
-            background-color: $mm-color;
-        }
-        .yc , .yc-concept , .yc-subtitle{
-            background-color: $yc-color;
-        }
-        .f , .f-concept , .f-subtitle{
-            background-color: $f-color;
-        }
-        .yg , .yg-concept , .yg-subtitle{
-            background-color: $yg-color;
-        }
-        .p{
-            background-color: $yc-color;
-        }
-
-        // スマホで見たときの画面下の作品への誘導
-        .sp-guides{
-            display: none;
-            @include sp{
+            .fv-img{
+                overflow: hidden;
                 display: flex;
-                z-index: 99;
-                margin: 0 auto;
                 width: 60vw;
-                padding-top: 60px;
-                a{
-                    // color: #1F0000;
+                background-color: $yubi-color;
+                padding-top:73px;
+                img{
+                    height: 31vw;
+                    position: relative;
                 }
-                .sp-guide{
-                    // top: 50%;
-                    transform: translateY(-50%);
-                    text-align: center;
-                    p{
-                        line-height: 0;
-                        font-size: 11px;
+                .left{
+                    top: 1vw;
+                    margin: 0 1vw 0 auto;
+                }
+                .right{
+                    top: 9vw;
+                    margin: 0 auto 0 1vw;
+                }   
+            }
+            .fi-mm{
+                background-color: $mm-color;
+            }
+            .fi-pos{
+                background-color: $pos-color;
+            }
+            .fi-ymgc{
+                background-color: #e8e1ec;
+                .pc{
+                    height: 27vw;
+                    margin: auto;
+                }
+            }
+            .fi-n{
+                background-color: $main-color;
+                .pc{
+                    height: 27vw;
+                    margin: auto;
+                }
+            }
+            
+        }
+
+        .main-wrap{
+            margin: 0 14vw 120px 14vw;
+            .cans{
+                margin-bottom: 200px;
+                .can-wrap{
+                    display: flex;
+                    .can:nth-child(1){
+                        margin: 0 5vw 0 auto;
                     }
+                    .can:nth-child(2){
+                        margin: 0 auto 0 5vw;
+                    }
+                    .can{
+                        width: 23vw;
+                        .img-wrap{
+                            text-align: center;
+                            margin: auto;
+                            img{
+                                width: 20vw;
+                                margin-bottom: 20px;
+                            }
+                        }
+                        .can-big{
+                            font-size: 19px;
+                            font-weight: 600;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+
+            .background{
+                margin-bottom: 200px;
+                .concept-big{
+                    font-weight: 600;
+                    font-size:25px;
+                    color: $ymgc-color;
+                    margin-bottom: 20px;
+                }
+                .n{
+                    color: $main-color;
+                }
+                .concept-p{
+                    width: 50%;
+                }
+            }
+
+            .persona{
+                display: flex;
+                margin-bottom: 200px;
+                .img-wrap{
+                    width: 50%;
+                    text-align: center;
+                    margin: auto;
+                    img{
+                        height: 18vw;
+                        margin-top: 20px;
+                    }
+                }
+                .persona-intro{
+                    width: 50%;
+                    .persona-big{
+                        font-weight: 600;
+                        font-size:25px;
+                        color: $yubi-color;
+                        margin-bottom: 20px;
+                    }
+                    .pg-mm{
+                        color: $mm-color;
+                    }
+                }
+            }
+
+            .use{
+                margin-bottom: 200px;
+                .use-wrap{
+                    display: flex;
+                    margin-bottom: 150px;
+                    .use-intro{
+                        width: 50%;
+                        img{
+                            width: 35px;
+                        }
+                        .use-big{
+                            font-size: 19px;
+                            font-weight: 600;
+                            margin-bottom: 30px;
+                        }
+                        p{
+                            width: 90%;
+                        }
+                    }
+                    .use-img{
+                        width: 50%;
+                        display: flex;
+                        .illust{
+                            height: 8vw;
+                            margin: auto 2vw auto auto;
+                        }
+                        .illust-mm{
+                            height: 20vw;
+                            margin: auto;
+                        }
+                        .sp{
+                            height:23vw;
+                            margin: auto auto auto 2vw;
+                        }
+                        .ar-sp:nth-of-type(1){
+                            height:23vw;
+                            margin: 0 0 0 auto;
+                        }
+                        .ar-sp:nth-of-type(2){
+                            height:23vw;
+                            margin: 0 auto 0 0;
+                        }
+                        .arrow-wrap{
+                            margin: auto 0;
+                            .arrow{
+                                height: 1.5vw;
+                                margin: 0 2vw;
+                            }
+                        }
+                        .center-sp{
+                            margin: auto;
+                            img{
+                                margin: 0;
+                            }
+                        }
+                        .pos{
+                            width: 20vw;
+                            margin: auto;
+                        }
+                        .n{
+                            width: 32vw;
+                        }
+                    }
+                }
+                .uw-n{
+                    margin-bottom: 50px;
+                }
+            }
+
+            .design{
+                margin-bottom: 250px;
+                .design-wrap{
+                    display: flex;
+                    margin-bottom: 120px;
+                    .design-intro{
+                        width: 50%;
+                        .design-big{
+                            font-weight: 600;
+                            font-size:25px;
+                            color: $yubi-color;
+                            margin-bottom: 20px;
+                        }
+                        .db-mm{
+                            color: $mm-color;
+                        }
+                        .img-wrap{
+                            text-align: center;
+                            margin-bottom: 30px;
+                            width: 90%;
+                            img{
+                                height: 7vw;
+                            }
+                        }
+                        p{
+                            margin-bottom: 50px;
+                            padding-right: 40px;
+                        }
+                    }
+                    .design-img{
+                        width: 50%;
+                        margin: auto;
+                        // text-align: center;
+                        .img-wrap{
+                            display: flex;
+                            img{
+                                margin: auto 1vw;
+                            }
+                            .sp{
+                                height: 23vw;
+                            }
+                            .color-wrap{
+                                margin: auto 0 0 0;
+                                .color{
+                                    width: 4vw;
+                                }
+                            }
+                            .mm{
+                                height: 14vw;
+                                margin: 6vw auto 0 auto;
+                            }
+                            .pos{
+                                width: 33vw;
+                            }
+                            .ymgc-1{
+                                height: 30vw;
+                                margin: 160px 0 0 0;
+                            }
+                            .ymgc-2{
+                                height: 30vw;
+                            }
+                            .n-1{
+                                height: 19vw;
+                                margin: 160px 0 0 0;
+                            }
+                            .n-2{
+                                height: 33vw;
+                                margin: 0;
+                            }
+                        }
+                        .xd{
+                            width: 30vw;
+                        }
+                    }
+                }
+            }
+        }
+        .page-nation{
+            text-align: center;
+            margin-bottom: 200px;
+            a{
+                color: $main-color;
+            }
+            .buttons{
+                display: flex;
+                margin-bottom: 50px;
+                .tsugi::before{
+                    display: block;
+                    content: "";
+                    position: relative;
+                    top: 45%;
+                    right: -120px;
+                    width: 0;
+                    height: 0;
+                    margin-top: -6px;
+                    border: 6px solid transparent;
+                    border-left: 6px solid #dc726d;
+                }
+                .mae::before{
+                    display: block;
+                    content: "";
+                    position: relative;
+                    top: 45%;
+                    left: -60px;
+                    width: 0;
+                    height: 0;
+                    margin-top: -6px;
+                    border: 6px solid transparent;
+                    border-right: 6px solid #dc726d;
+                }
+                .button{
+                    display: flex;
+                    font-weight: 600;
+                    color: $main-color;
+                    padding: 11px 84px;
+                    // width: 228px;
+                    text-align: center;
+                    border-radius: 5px;
+                    box-shadow: 0px 3px 13px rgba(220, 114, 109, 0.3);                  
+                }
+                .button:nth-of-type(1){
+                    text-align: center;
+                    margin: 0 15px 0 auto;
                     
                 }
-                img{
-                    height: 80px;
-                    margin-bottom: 5px;
-                }
-                .sp-previous{
-                    margin: 0 auto;
-                    left: 7vw;
-                }
-                .sp-next{
-                    margin: 0 auto;
-                    right: 7vw;
-                }
-                .sp-guide-yoko-img{
-                    img{
-                        height: 50px;
-                        padding: 15px 0;
-                    }
+                .button:nth-of-type(2){
+                    text-align: center;
+                    margin: 0 auto 0 15px;
+                    
                 }
             }
         }
+        footer{
+            height: 56px;
+            background-color:$font-color;
+        } 
     }
-
-    footer{
-        height: 56px;
-        background-color:$peal-pink-color;
-    }
+    
 }
+
+
+
 
 
 /*ハンバーガーボタン*/
@@ -636,11 +535,11 @@ body{
         margin-bottom: 5px;
         width: 20px; } }
 
-.js_humburgerOpen .el_humburger_text.el_humburger_text__menu {
-    display: none; }
+    .js_humburgerOpen .el_humburger_text.el_humburger_text__menu {
+        display: none; }
 
-.el_humburger_text.el_humburger_text__close {
-    display: none; }
+    .el_humburger_text.el_humburger_text__close {
+        display: none; }
     
     .js_humburgerOpen .el_humburger_text.el_humburger_text__close {
     display: block; }

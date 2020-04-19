@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ymgc</title>
+        <title>nana yamaguch!</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 
@@ -13,18 +13,20 @@
 
     <body>
         <header>
-            <img src = "../images/NY!@2x.png" alt = "">
-            <nav>
-                <li>
-                    <a href = "../html/top.html#first-view"><img src = "../images/top@2x.png" alt = ""></a>
-                </li>
-                <li>
-                    <a href = "../html/top.html#works-wrapper"><img src = "../images/works@2x.png" alt = ""></a>  
-                </li>
-                <li>
-                    <a href = "../html/top.html#about-wrapper"><img src = "../images/about@2x.png" alt = ""></a>
-                </li>
-            </nav> 
+            <div class = "nav-wrap">
+                <a class = "logo" href = "top.html" alt = "">N!</a>
+                <nav>
+                    <li>
+                        <a href = "../html/top.html#first-view" id="top_link_js">top</a>
+                    </li>
+                    <li>
+                        <a href = "../html/top.html#works-wrapper" id="works_link_js">work</a>  
+                    </li>
+                    <li>
+                        <a href = "../html/top.html#about-wrapper" id="about_link_js">about</a>
+                    </li>
+                </nav> 
+            </div>
         </header>
 
         <!-- ハンバーガーメニュー -->
@@ -48,250 +50,251 @@
         <!-- オーバーレイ -->
         <div id="overlay"></div>
 
-
         <section class = "page-wrapper">
-            <div class = "guides">
-                <a class = "guide previous guide-yoko-img" href = "work_ny!.html">
-                    <img src = "../images/thumb_ny@2x.png" alt = "">
-                    <p>< previous</p>
-                </a>
-                <a class = "guide next guide-yoko-img" href = "work_ymgc.html">
-                    <img src = "../images/thumb_ymgc@2x.png" alt = "">
-                    <p>next ></p>
-                </a>
+            <div class = "first-view">
+                <div class = "fv-intro">
+                    <p class = "outline o-mm">片付けを習慣づけて<br>
+                        きれいな部屋を身近に</p>
+                    <h1>miniMom</h1>
+                    <p class = "data">2019　UI・UXデザイン</p>
+                    <p>OthloTech開催した「〇〇を身近にする」というテーマのハッカソンで制作しました。
+                        私たちのチームは「きれいな部屋を身近にする」というテーマで5人で制作し、私はUIデザインを担当しました。
+                </div>
+                <div class = "fv-img fi-mm">
+                    <img class = "left" src = "../new_imgs/mm_1.png" alt = "">
+                    <img class = "right" src = "../new_imgs/mm_2.png" alt = "">
+                </div>
             </div>
 
-            <div class = "main-wrapper">
-                <section class = "main-view mm">
-                    <div class = "mv-summary">
-                        <p class = "mvs-title">miniMom</p>
-                        <p class = "mvs-date">2019.11</p>
-                        <p class = "mvs-outline">担当：デザイン<br>
-                            技術：Illustrator/Xd</p>
-                        <p class = "mvs-intro">ハッカソンで制作したアプリです。</p>
-                    </div>    
-                    <div class = "mv-img-wrap mv-img-wrap-sp">
-                        <img class = "mv-img" src = "../imgs/mm_1.png">
+            <div class = "main-wrap">
+                <div class = "cans">
+                    <h2 class = "h2-mm">できること</h2>
+                    <div class = "can-wrap">
+                        <div class = "can">
+                            <div class = "img-wrap">
+                                <img src = "../new_imgs/mm_3.png" alt = "">
+                            </div>
+                            <p class = "can-big">帰宅後すぐの<br>
+                                片付けを習慣づける
+                            <p class = "can-small">このサービスでは、まずはアクセサリーなどの小物類を片付ける習慣をつけて、徐々に部屋全体に広げていくきっかけを作ることができます。</p>
+                        </div>
+                        <div class = "can">
+                            <div class = "img-wrap">
+                                <img src = "../new_imgs/mm_4.png" alt = "">
+                            </div>
+                            <p class = "can-big">使っていないものを可視化して<br>
+                                きれいな部屋に近づける<br>
+                            <p>使っていないものをアプリで可視化することで、不要なものを減らす手助けをします。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "persona">
+                    <div class = "img-wrap">
+                        <img src = "../new_imgs/mm_5.png" alt = "">
+                    </div>
+                    <div class = "persona-intro">
+                        <h2 class = "h2-mm">ペルソナ</h2>
+                        <p class = "persona-big pg-mm">きれいな部屋を保ちたいけど<br>
+                            なかなか片付けができない女子大生</p>
+                        <p>愛知県名古屋市に住む21歳女性の伊藤花子さん。
+                            大学生になってから一人暮らしを始めた。
+                            おしゃれが好きでアクセサリーをたくさん持っている。
+                            前まではお母さんが部屋を片付けてくれていたが、だらしない性格の花子さんは片付けができない。
+                            ただ、片付けをして綺麗な部屋を保ちたいという気持ちはある。
+                            </p>
+                    </div>
+                </div>
+
+                <div class = "use">
+                    <h2 class = "h2-mm">使い方</h2>
+                    <div class = "use-wrap">
+                        <div class = "use-intro">
+                            <img src = "../new_imgs/1.png" alt = "">
+                            <p class = "use-big">小型のセンサーが設置された棚を<br>
+                                部屋に設置</p>
+                            <p>小型のセンサーが設置された棚とそれに連動したアプリです。
+                                ユーザーはこの棚を設置するだけで使用できます。
+                                </p>
+                        </div>
+                        <div class = "use-img">
+                            <img class = "sp" src = "../new_imgs/mm_1.png" alt = "">
+                            <img class = "illust-mm" src = "../new_imgs/mm_6.png" alt = "">
+                        </div>
+                    </div>
+                    <div class = "use-wrap">
+                        <div class = "use-img">
+                            <img class = "illust-mm" src = "../new_imgs/mm_7.png" alt = "">
+                        </div>
+                        <div class = "use-intro">
+                            <img src = "../new_imgs/2.png" alt = "">
+                            <p class = "use-big">帰宅後すぐに棚にアクセサリーを戻す</p>
+                            <p>棚に設置されたセンサーが帰宅後すぐにアクセサリーの片付けができたかどうかを検知します。</p>
+                            <p>帰宅後３分以内に棚に戻さないと棚のセンサーから音が鳴ります。</p>
+
+                        </div>
+                    </div>
+                    <div class = "use-wrap">
+                        <div class = "use-intro">
+                            <img src = "../new_imgs/3.png" alt = "">
+                            <p class = "use-big">片付けがアプリに記録される</p>
+                            <p>帰宅後すぐに片付けができたかどうかは、 アプリのカレンダーで確認することができます。
+                            ちゃんとアラームが鳴る前に片付けられたら◯<br>
+                            片付けられなかったら×が表示されます。</p>
+                            <p>このカレンダーを時々確認することで、片付けのモチベーションアップにつなげることを目的としています。</p>
+                        </div>
+                        <div class = "use-img">
+                            <div class = "center-sp">
+                                <img class = "sp" src = "../new_imgs/mm_1.png" alt = "">
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "use-wrap">
+                        <div class = "use-img">
+                            <div class = "center-sp">
+                                <img class = "sp" src = "../new_imgs/mm_2.png" alt = "">
+                            </div>
+                        </div>
+                        <div class = "use-intro">
+                            <img src = "../new_imgs/4.png" alt = "">
+                            <p class = "use-big">使っていないものが可視化される</p>
+                            <p>またアプリの使用状況という画面では、棚についているセンサーの位置で使っていないものを判別します。</p>
+                            <p>しばらく使っていない（いらない）ものを可視化し、ものを捨てるきっかけを作ることを目的としています。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "design">
+                    <div class = "design-wrap">
+                        <div class = "design-intro">
+                            <h2 class = "h2-mm">サービス名・デザイン</h2>
+                            <p>このアプリは「片付けなさい！」と怒ってくれるお母さんのようなイメージで作りました。なので、ミニマム（物を最小限に)という言葉とお母さん(マム)をかけたミニマムというサービス名になりました。</p>
+                        </div>
+                        <div class = "design-img">
+                            <div class = "img-wrap">
+                                <img class = "mm" src = "../new_imgs/mm_8.png" alt = "">
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "design-wrap">
+                        <div class = "design-img">
+                            <div class = "img-wrap">
+                                <div class = "color-wrap">
+                                    <img class = "color" src = "../new_imgs/mm_9.png" alt = "">
+                                </div>
+                                <img class = "sp" src = "../new_imgs/mm_1.png" alt = "">
+                                <img class = "sp" src = "../new_imgs/mm_2.png" alt = "">
+                            </div>
+                        </div>
+                        <div class = "design-intro">
+                            <p class = "design-big db-mm">シンプルでミニマルなデザイン</p>
+                            <p>このサービスは部屋をきれいに・物を少なくすること(ミニマリストになる)ことが目的だったので、デザインもシンプルに、ミニマルなものになるように心がけました。
+                                文字も少なめ、小さめで最低限の情報だけ配置しています。
+                                使用状況では、棚をイメージした白い網のイラストとアニメーションを使用し、使っていないものが直感的にわかるようなデザインにしました。<br><br>
+                                
+                                サービスの目的とイメージから、お母さんのような活発さを感じさせる黄色と清潔感を感じさせる青を使用しました。</p>
+                        </div>
                     </div>
                     
-                </section>
-
-
-                <div class = "main-intro">
-                    <section class = "part">
-                        <p class = "subtitle mm-subtitle">作品の概要</p>
-                        <p class = "description">OthloTechが開催したハッカソンで制作したIot家具miniMom(ミニマム)です。<br class="sp_br">
-                            片付けが苦手な人のための、片付けの習慣付け、かついらないものを捨てて収納場所を確保するためのプロダクト(Iot棚)です。</p>
-                    </section>
-
-                    <section class = "part concept-part mm-concept">
-                        <p class = "concept-subtitle subtitle">コンセプト</p>
-                        <p class = "bold-description">きれいな部屋を身近にする</p>
-                    </section>
-
-                    <section class = "part">
-                        <p class = "subtitle mm-subtitle">ペルソナ</p>
-                        <div class = "persona">
-                            <img src = "../imgs/mm_2.png">
-                            <p>
-                                名前：伊藤花子さん<br>
-                                性別：女性<br>
-                                年齢：21歳<br>
-                                職業：大学生
-                            </p>
-                        </div>
-                        <p class = "center-description">
-                            大学生になってから下宿を始めた.<br class="sp_br">
-                            前まではお母さんが部屋を片付けてくれていたが、<br class="sp_br">
-                            だらしない性格の花子さんは片付けができない
-                        </p>
-                        <p class = "bold-description">
-                            でも片付けをして綺麗な部屋を保ちたいという気持ちはある<br>
-                            ↓<br>
-                            ゴール：片付けを習慣づけて、部屋をきれいに保つ
-                        </p>
-                    </section>
-                    <section class = "part">
-                        <p class = "subtitle mm-subtitle">作品について</p>
-                        <div class = "sub-part">
-                            <p class = "sub-subtitle">目的</p>
-                            <p class = "center-description">
-                                帰宅した瞬間に片付ける習慣をつける<br>
-                                いらないものを捨てて収納場所を確保する<br>
-                                ↓<br>
-                                まずはアクセサリーなどの小物類から片付ける習慣をつけて<br class="sp_br">
-                                徐々に部屋全体に広げていくきっかけを作る
-                            </p>
-                        </div>
-                        <div class = "sub-part">
-                            <p class = "sub-subtitle">使用の流れ</p>
-                            <div class = "sp-img-1">
-                                <img class = "tana" src = "../imgs/mm_3.png">
-                                <img src = "../imgs/mm_4.png">
-                            </div>
-                            <p class = "center-description">
-                                小型のセンサーが設置された棚とそれに連動したアプリです。<br class="sp_br">
-                                ユーザーはこの棚を設置するだけで使用できます。
-                            </p>
-                            <p class = "center-description">↓</p>
-                            <p class = "center-description">
-                                棚に設置されたセンサーが、帰宅後すぐにアクセサリーなどの片付けができたかどうかを<br class="sp_br">センサーの位置で検知します。<br class="sp_br">
-                                （帰宅後３分以内に棚の所定の位置に戻さないとセンサーから音が鳴る）
-                            </p class = "center-description">
-                            <p class = "center-description">↓</p>
-                            <div class = "sp-split">
-                                <img src = "../imgs/mm_4.png">
-                                <p class = "center-description">
-                                    帰宅後３分以内に片付けができたかどうかは、
-                                    アプリの”カレンダー”で確認することができます。<br class="sp_br">
-                                    ちゃんとアラームが鳴る前(帰宅後３分以内)に片付けられたら◯<br>
-                                    片付けられなかったら×が表示されます。<br>
-                                    <br>
-                                    このカレンダーを時々確認することで、ユーザーのモチベーションアップにつなげることを目的としています。
-                                </p>
-                            </div>
-                            <p class = "center-description">↓</p>
-                            <div class = "sp-split">
-                                <img src = "../imgs/mm.gif">
-                                <p class = "center-description">
-                                    また、アプリの”使用状況”という画面では、<br class="sp_br">棚についているセンサーの位置で使っていないものを判別することでしばらく使っていない（いらない）ものを可視化しものを捨てるきっかけを作ることを目的としています。
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                    <section class = "part">
-                        <p class = "subtitle mm-subtitle">デザインについて</p>
-                        <div class = "sub-part">
-                            <p class = "sub-subtitle">サービス名</p>
-                            <img class = "logo-img" src = "../imgs/mm_6.png">
-                            <p class = "center-description">
-                                このアプリは、「片付けなさい！」と怒ってくれるお母さんのようなイメージで作りました。<br class="sp_br">
-                                なので、miniMomという名前は、ミニマム（物を最小限に)という言葉と<br class="sp_br">お母さん(マム)をかけたミニマムという名前になりました。
-                            </p>
-                        </div>
-                        <div class = "sub-part">
-                            <p class = "sub-subtitle">色</p>
-                            <img class = "color-img" src = "../imgs/mm_7.png">
-                            <p class = "center-description">
-                                お母さんのような活発さを感じさせる黄色と清潔感を感じさせる青を使用しました。
-                            </p>
-                        </div>
-                        <div class = "sub-part">
-                            <p class = "sub-subtitle">デザイン</p>
-                            <p class = "center-description">
-                                このプロダクトは部屋をきれいに・物を少なくすること(ミニマリストになる)ことが目的だったので<br class="sp_br">
-                                デザインもシンプルに、ミニマルなものになるように心がけました。 <br class="sp_br">
-                                また、比較的若い人向けのプロダクトだったので文字も少なめ、小さめにしました。<br class="sp_br">
-                                “使用状況”の画面では、棚をイメージした白い網のイラストとアニメーションを使用し<br class="sp_br">
-                                使っていないものが直感的にわかるようなデザインにしました。
-                            </p>
-                            <img class = "des-img" src = "../imgs/mm_4.png">
-                            <img class = "des-img" src = "../imgs/mm.gif">
-                            </div>
-                        </div>
-                    <!-- </section> -->
                 </div>
-                
             </div>
 
-            <div class = "sp-guides">
-                <a class = "sp-guide sp-previous sp-guide-yoko-img" href = "work_ny!.html">
-                    <img src = "../images/thumb_ny@2x.png" alt = "">
-                    <p>< previous</p>
-                </a>
-                <a class = "sp-guide sp-next sp-guide-yoko-img" href = "work_ymgc.html">
-                    <img src = "../images/thumb_ymgc@2x.png" alt = "">
-                    <p>next ></p>
-                </a>
+            <div class = "page-nation">
+                <div class = "buttons">
+                    <a class = "mae button" href = "./work_yubi.html">前の作品</a>
+                    <a class = "tsugi button" href = "./work_ymgc.html">次の作品</a>
+                </div>                
+                <a href = "../html/top.html#works-wrapper">作品一覧に戻る</a>
             </div>
+            
+            <footer></footer>
 
         </section>
-        <footer></footer>
 
-        <!-- <script src="../js/swiper.js"> -->
-            <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-            <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
-           <script>
-               // var swiper = new Swiper('.swiper-container', {
-               //     loop: true,
-               //     speed: 700,
-               //     autoplay: {
-               //         delay: 3000,
-               //         disableOnInteraction: true
-               //     },
-               //     pagination: {
-               //         el: '.swiper-pagination',
-               //         type: 'bullets',
-               //         clickable: true,
-               //     },
-               // });
-   
-               //変数定義
-               var navigationOpenFlag = false;
-               var navButtonFlag = true;
-               var focusFlag = false;
-               
-               //ハンバーガーメニュー
-                   $(function(){
-               
-                   $(document).on('click','.el_humburger',function(){
-                       if(navButtonFlag){
-                       spNavInOut.switch();
-                       //一時的にボタンを押せなくする
-                       setTimeout(function(){
-                           navButtonFlag = true;
-                       },200);
-                       navButtonFlag = false;
-                       }
-                   });
-                   $(document).on('click touchend', function(event) {
-                       if (!$(event.target).closest('.bl_header,.el_humburger').length && $('body').hasClass('js_humburgerOpen') && focusFlag) {
-                       focusFlag = false;
-                       //scrollBlocker(false);
-                       spNavInOut.switch();
-                       }
-                   });
-                   });
-               
-               //ナビ開く処理
-               function spNavIn(){
-                   $('body').removeClass('js_humburgerClose');
-                   $('body').addClass('js_humburgerOpen');
-                   setTimeout(function(){
-                       focusFlag = true;
-                   },200);
-                   setTimeout(function(){
-                       navigationOpenFlag = true;
-                   },200);
-   
-                   $('#overlay').fadeIn(200);
-               }
-               //ナビ閉じる処理
-               function spNavOut(){
-                   $('body').removeClass('js_humburgerOpen');
-                   $('body').addClass('js_humburgerClose');
-                   setTimeout(function(){
-                       $(".uq_spNavi").removeClass("js_appear");
-                       focusFlag = false;
-                   },200);
-                   navigationOpenFlag = false;
-                   $('#overlay').fadeOut(200);
-               }
-               
-               //ナビ開閉コントロール
-               var spNavInOut = {
-               switch:function(){
-                   if($('body.spNavFreez').length){
-                   return false;
-                   }
-                   if($('body').hasClass('js_humburgerOpen')){
-                   spNavOut();
-                   } else {
-                   spNavIn();
-                   }
-               }
-               };
-   
-           </script>
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
+        <script>
+            // var swiper = new Swiper('.swiper-container', {
+            //     loop: true,
+            //     speed: 700,
+            //     autoplay: {
+            //         delay: 3000,
+            //         disableOnInteraction: true
+            //     },
+            //     pagination: {
+            //         el: '.swiper-pagination',
+            //         type: 'bullets',
+            //         clickable: true,
+            //     },
+            // });
+
+            //変数定義
+            var navigationOpenFlag = false;
+            var navButtonFlag = true;
+            var focusFlag = false;
+            
+            //ハンバーガーメニュー
+                $(function(){
+            
+                $(document).on('click','.el_humburger',function(){
+                    if(navButtonFlag){
+                    spNavInOut.switch();
+                    //一時的にボタンを押せなくする
+                    setTimeout(function(){
+                        navButtonFlag = true;
+                    },200);
+                    navButtonFlag = false;
+                    }
+                });
+                $(document).on('click touchend', function(event) {
+                    if (!$(event.target).closest('.bl_header,.el_humburger').length && $('body').hasClass('js_humburgerOpen') && focusFlag) {
+                    focusFlag = false;
+                    //scrollBlocker(false);
+                    spNavInOut.switch();
+                    }
+                });
+                });
+            
+            //ナビ開く処理
+            function spNavIn(){
+                $('body').removeClass('js_humburgerClose');
+                $('body').addClass('js_humburgerOpen');
+                setTimeout(function(){
+                    focusFlag = true;
+                },200);
+                setTimeout(function(){
+                    navigationOpenFlag = true;
+                },200);
+
+                $('#overlay').fadeIn(200);
+            }
+            //ナビ閉じる処理
+            function spNavOut(){
+                $('body').removeClass('js_humburgerOpen');
+                $('body').addClass('js_humburgerClose');
+                setTimeout(function(){
+                    $(".uq_spNavi").removeClass("js_appear");
+                    focusFlag = false;
+                },200);
+                navigationOpenFlag = false;
+                $('#overlay').fadeOut(200);
+            }
+            
+            //ナビ開閉コントロール
+            var spNavInOut = {
+            switch:function(){
+                if($('body.spNavFreez').length){
+                return false;
+                }
+                if($('body').hasClass('js_humburgerOpen')){
+                spNavOut();
+                } else {
+                spNavIn();
+                }
+            }
+            };
+
+        </script>
     </body>
 </html>

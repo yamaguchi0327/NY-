@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ymgc</title>
+        <title>nana yamaguch!</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 
@@ -13,18 +13,20 @@
 
     <body>
         <header>
-            <img src = "../images/NY!@2x.png" alt = "">
-            <nav>
-                <li>
-                    <a href = "../html/top.html#first-view"><img src = "../images/top@2x.png" alt = ""></a>
-                </li>
-                <li>
-                    <a href = "../html/top.html#works-wrapper"><img src = "../images/works@2x.png" alt = ""></a>  
-                </li>
-                <li>
-                    <a href = "../html/top.html#about-wrapper"><img src = "../images/about@2x.png" alt = ""></a>
-                </li>
-            </nav> 
+            <div class = "nav-wrap">
+                <a class = "logo" href = "top.html" alt = "">N!</a>
+                <nav>
+                    <li>
+                        <a href = "../html/top.html#first-view" id="top_link_js">top</a>
+                    </li>
+                    <li>
+                        <a href = "../html/top.html#works-wrapper" id="works_link_js">work</a>  
+                    </li>
+                    <li>
+                        <a href = "../html/top.html#about-wrapper" id="about_link_js">about</a>
+                    </li>
+                </nav> 
+            </div>
         </header>
 
         <!-- ハンバーガーメニュー -->
@@ -49,261 +51,254 @@
         <div id="overlay"></div>
 
         <section class = "page-wrapper">
-            <div class = "guides">
-                <a class = "guide previous guide-yoko-img" href = "work_ymgc.html">
-                    <img src = "../images/thumb_ymgc@2x.png" alt = "">
-                    <p>< previous</p>
-                </a>
-                <a class = "guide next" href = "work_fuclo.html">
-                    <img src = "../images/thumb_fcl@2x.png" alt = "">
-                    <p>next ></p>
-                </a>
+            <div class = "first-view">
+                <div class = "fv-intro">
+                    <p class = "outline">指差し確認の習慣づけで<br>
+                        認知症を予防する</p>
+                    <h1>指差しチェッカー</h1>
+                    <p class = "data">2019　UI・UXデザイン</p>
+                    <p>ハッカソン形式の授業で制作したIoTアプリです。<br>
+                        5人のチームで制作し、私はUIデザインを担当しました。</p>
+                </div>
+                <div class = "fv-img">
+                    <img class = "left" src = "../new_imgs/yubi_1.png" alt = "">
+                    <img class = "right" src = "../new_imgs/yubi_5.png" alt = "">
+                </div>
             </div>
 
-            <div class = "main-wrapper">
-                <section class = "main-view yc">
-                    <div class = "mv-summary">
-                        <p class = "mvs-title">指差しチェッカー</p>
-                        <p class = "mvs-date">2019.04-06</p>
-                        <p class = "mvs-outline">担当：デザイン<br>
-                            技術：Illustrator/Xd</p>
-                        <p class = "mvs-intro">ハッカソン形式の授業で制作したアプリです。</p>
-                    </div>    
-                    <div class = "mv-img-wrap mv-img-wrap-sp">
-                        <img class = "mv-img" src = "../imgs/yc_1.png">
+            <div class = "main-wrap">
+                <div class = "cans">
+                    <h2>できること</h2>
+                    <div class = "can-wrap">
+                        <div class = "can">
+                            <div class = "img-wrap">
+                                <img src = "../new_imgs/yubi_6.png" alt = "">
+                            </div>
+                            <p class = "can-big">指差し確認を記録して<br>
+                                認知症予防&外出先での不安解消</p>
+                            <p class = "can-small">認知症予防に効果があるとされている指差し確認の習慣づけと、外出先での「電気消したっけ？」のような不安を解消することができます。</p>
+                        </div>
+                        <div class = "can">
+                            <div class = "img-wrap">
+                                <img src = "../new_imgs/yubi_7.png" alt = "">
+                            </div>
+                            <p class = "can-big">外出した時間を記録して<br>
+                                孤独死を防止する</p>
+                            <p>玄関の指差し確認をした時間がカレンダーに記録されるので、このアプリを家族間で共有する事で孤独死を防止することができます。</p>
+                        </div>
                     </div>
-                    
-                </section>
-
-
-                <div class = "main-intro">
-                    <section class = "part">
-                        <p class = "subtitle yc-subtitle">作品の概要</p>
-                        <p class = "description">実習のグループ課題でSONYの”MESH”を使ってIoTアプリを制作しました。<br class="sp_br">
-                            指差し確認による認知症対策などの目的で作りました。                             
-                        </p>
-                    </section>
-
-                    <section class = "part concept-part yc-concept">
-                        <p class = "concept-subtitle subtitle">コンセプト</p>
-                        <p class = "bold-description">無意識を形にする</p>
-                    </section>
-
-                    <section class = "part">
-                        <p class = "subtitle yc-subtitle">ペルソナ</p>
-                        <div class = "persona">
-                            <img src = "../imgs/yc_2.png">
-                            <p>
-                                名前： 今井たけしさん<br>
-                                性別：男性<br>
-                                年齢：56歳<br>
-                                生活：一人暮らし<br>
-                                性格：心配性<br>
-                                家族構成：娘と息子が1人ずつ（別居）
-                            </p>
-                        </div>
-                        <p class = "center-description">
-                            父が最近認知症になり、<br>
-                            自分もいつか認知症になるのではないかと心配している。
-                        </p>
-                    </section>
-                    <section class = "part">
-                        <p class = "subtitle yc-subtitle">作品について</p>
-                        <div class = "sub-part">
-                            <p class = "sub-subtitle">制作の背景</p>
-                            <p class = "center-description">
-                                2040年には、日本の一人暮らし高齢者は896万人にも及ぶと言われており、<br class="sp_br">
-                                一人暮らしの高齢者の課題の一つが孤独死です。<br class="sp_br">
-                                また、2050年には65歳以上の5人に1人が認知症を発症すると言われています。<br class="sp_br">
-                                これらの近い将来大きな問題となるであろう課題を解決するために制作を始めました。<br class="sp_br">
-                            </p>
-                        </div>
-                        <div class = "sub-part">
-                            <p class = "sub-subtitle">目的</p>
-                            <p class = "center-description">
-                                認知症予防や確認ミスの防止に効果があるとされている<br>
-                                指差し呼称を記録する<br>
-                                ↓<br>
-                                指差し呼称を習慣化し認知症対策を図る<br>
-                                指差しの記録を親しい人（親族など）と共有し、孤独死を防止する<br>
-
-                            </p>
-                        </div>
-                        <div class = "sub-part">
-                            <p class = "sub-subtitle">使用の流れ</p>
-                            <div class = "sp-img-2">
-                                <img class = "yubi-img" src = "../imgs/yc_3.png">
-                                <img src = "../imgs/yc_7.png">
-                            </div>
-                            <p class = "center-description">
-                                人差し指に付けるリング型のセンサーとそれに連動したアプリです。<br class="sp_br">
-                                ユーザーはこの指輪を身に着けるだけで使用できます。
-                            </p>
-                            <p class = "center-description sita">↓</p>
-                            <p class = "center-description">
-                                ユーザーは外出前にリングをつけながら各部屋の電気・ガスなどを消したことを指差し確認します。<br class="sp_br">
-                                （加速度および人感センサーにより確認したということをアプリに送信する）
-                            </p class = "center-description">
-                            <p class = "center-description sita">↓</p>
-                            <div class = "sp-split">
-                                <img class = "sp-s-img" src = "../imgs/yc_4.png">
-                                <p class = "center-description">
-                                    アプリでは指差し確認を完了するとアイコンの色がグレーに変わります。<br class="sp_br">
-                                    “チェックリスト”を見ることで、家の全ての項目をチェックしたかを確認することができ、
-                                    外出時の「電気消したっけ？」のような不安も解消することができます。
-                                </p>
-                            </div>
-                            <p class = "center-description sita">↓</p>
-                            <div class = "sp-split">
-                                <img class = "sp-s-img" src = "../imgs/yc_5.png">
-                                <p class = "description">
-                                    また、部屋内の確認項目が全て終わった時、メインの画面であるチェックリスト内のアイコンも同様にグレーになります。
-                                    家の全ての項目をチェックすると「指差し確認が全て終わりました」という表記が出ます。<br class="sp_br">
-                                    次にアプリを使用するときはリセットボタンを押してから使用します。
-                                </p>
-                            </div>
-                            <p class = "center-description sita">↓</p>
-                            <div class = "sp-split">
-                                <img src = "../imgs/yc_6.png">
-                                <p class = "center-description">
-                                    玄関の指差し確認が終わる（外出する）と、”カレンダー”に指差し確認をした時間が記録されます。このアプリを家族間などで共有することで、孤独死を防止することがカレンダー機能の目的です。
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                    <section class = "part">
-                        <p class = "subtitle yc-subtitle">デザインについて</p>
-                        <div class = "sub-part">
-                            <p class = "sub-subtitle">色</p>
-                            <img class = "color-1-img" src = "../imgs/yc_9.png">
-                            <p class = "center-description">
-                                ペルソナが高齢の方だったので、くすんだ赤を使用しはっきりと見やすいデザインにしました。<br class="sp_br">
-                                チェック項目のアイコンは、赤単色だと寂しく感じたので、項目にあった差し色を使いました。
-                            </p>
-                        </div>
-                        <div class = "sub-part">
-                            <p class = "sub-subtitle">デザイン</p>
-                            <p class = "center-description">
-                                見やすさ・理解性の高さに重点を置いたデザインを行いました。<br class="sp_br">
-                                確認後のアイコンは色をグレーに、チェックしたということを示すためにチェックマークを追加し、<br class="sp_br">確認済みということを二重に表現しました。
-                                また、アイコンの下に文字を配置し理解性を高めました。<br class="sp_br">
-                                実装が間に合わなかった部分はXdでプロトタイプを作成し、アプリに対するイメージを掴みやすくしています。
-                            </p>
-                            <img class = "des-img" src = "../imgs/yc_7.png">
-                            <img class = "des-img" src = "../imgs/yc_8.png">
-                            <img class = "des-img" src = "../imgs/yc_6.png">
-                            <img class = "xd-img" src = "../imgs/yc_10.png">
-                            <img class = "xd-img" src = "../imgs/yc_11.png">
-                            </div>
-                        </div>
-                    <!-- </section> -->
                 </div>
 
-                
-                
+                <div class = "background">
+                    <h2>制作背景</h2>
+                    <p>2040年には、日本の一人暮らし高齢者は896万人にも及ぶと言われており、一人暮らしの高齢者の課題の一つが孤独死です。<br>
+                        また、2050年には65歳以上の5人に1人が認知症を発症すると言われています。<br>
+                        これらの近い将来大きな問題となるであろう課題を解決するために制作を始めました。</p>
+                </div>
+
+                <div class = "persona">
+                    <div class = "img-wrap">
+                        <img src = "../new_imgs/yubi_8.png" alt = "">
+                    </div>
+                    <div class = "persona-intro">
+                        <h2>ペルソナ</h2>
+                        <p class = "persona-big">将来が不安なサラリーマン</p>
+                        <p>愛知県名古屋市に住む56歳男性の今井たけしさん。
+                            娘と息子が1人ずついるが一緒には住んでいない。
+                            最近父が認知症になったことで自分も将来認知症になってしまうのではないかと心配している。</p>
+                    </div>
+                </div>
+
+                <div class = "use">
+                    <h2>使い方</h2>
+                    <div class = "use-wrap">
+                        <div class = "use-intro">
+                            <img src = "../new_imgs/1.png" alt = "">
+                            <p class = "use-big">リング型のセンサーを着けて<br>
+                                外出する前に指差し確認</p>
+                            <p>人差し指に付けるリング型のセンサーとそれに連動したアプリです。この指輪を身に着けるだけで使用できます。
+                                外出前にリングをつけながら各部屋の電気・ガスなどを消したことを指差し確認をしてください。</p>
+                        </div>
+                        <div class = "use-img">
+                            <img class = "illust" src = "../new_imgs/yubi_9.png" alt = "">
+                            <img class = "sp" src = "../new_imgs/yubi_1.png" alt = "">
+                        </div>
+                    </div>
+                    <div class = "use-wrap">
+                        <div class = "use-img">
+                            <img class = "ar-sp" src = "../new_imgs/yubi_3.png" alt = "">
+                            <div class = "arrow-wrap">
+                                <img class = "arrow" src = "../new_imgs/yubi_10.png" alt = "">
+                            </div>
+                            <img class = "ar-sp" src = "../new_imgs/yubi_4.png" alt = "">
+                        </div>
+                        <div class = "use-intro">
+                            <img src = "../new_imgs/2.png" alt = "">
+                            <p class = "use-big">チェックリストに指差し確認が記録される</p>
+                            <p>指差し確認が完了するとアプリのアイコンの色がグレーに変わります。
+                                チェックリストを見ることで、家の全ての項目をチェックしたかを確認することができ、 外出時の「電気消したっけ？」のような不安も解消することができます。</p>
+                        </div>
+                    </div>
+                    <div class = "use-wrap">
+                        <div class = "use-intro">
+                            <img src = "../new_imgs/3.png" alt = "">
+                            <p class = "use-big">指差し確認終了</p>
+                            <p>部屋内の確認項目が全て終わった時、メインの画面であるチェックリスト内のアイコンも同様にグレーになります。 全ての項目をチェックすると「指差し確認が全て終わりました」という表記が出ます。
+                                次にアプリを使用するときはリセットボタンを押してから使用します。</p>
+                        </div>
+                        <div class = "use-img">
+                            <img class = "ar-sp" src = "../new_imgs/yubi_1.png" alt = "">
+                            <div class = "arrow-wrap">
+                                <img class = "arrow" src = "../new_imgs/yubi_10.png" alt = "">
+                            </div>
+                            <img class = "ar-sp" src = "../new_imgs/yubi_2.png" alt = "">
+                        </div>
+                    </div>
+                    <div class = "use-wrap">
+                        <div class = "use-img">
+                            <div class = "center-sp">
+                                <img class = "sp" src = "../new_imgs/yubi_5.png" alt = "">
+                            </div>
+                        </div>
+                        <div class = "use-intro">
+                            <img src = "../new_imgs/4.png" alt = "">
+                            <p class = "use-big">カレンダーに指差し確認を行った時間が記録される</p>
+                            <p>玄関の指差し確認が終わる（外出する）と、カレンダーに指差し確認をした時間が記録されます。このアプリを家族間などで共有することで、孤独死を防止することがカレンダー機能の目的です。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "design">
+                    <div class = "design-wrap">
+                        <div class = "design-intro">
+                            <h2>デザイン</h2>
+                            <p class = "design-big">見やすさ・わかりやすさに<br>
+                                重点をおいたデザイン</p>
+                            <p>ペルソナが高齢の方だったので、くすんだ赤を使用しはっきりと見やすいデザインに。チェック項目のアイコンは赤単色だと寂しく感じたので、項目にあった差し色を使っています。</p>
+                            <div class = "img-wrap">
+                                <img src = "../new_imgs/yubi_12.png" alt = "">
+                            </div>
+                            <p>確認後のアイコンは色をグレーに、チェックしたということを示すためにチェックマークを追加し、確認済みということを二重に表現しました。 また、アイコンの下に文字を配置し理解性を高めました。</p>
+                        </div>
+                        <div class = "design-img">
+                            <div class = "img-wrap">
+                                <div class = "color-wrap">
+                                    <img class = "color" src = "../new_imgs/yubi_11.png" alt = "">
+                                </div>
+                                <img class = "sp" src = "../new_imgs/yubi_1.png" alt = "">
+                                <img class = "sp" src = "../new_imgs/yubi_5.png" alt = "">
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "design-wrap">
+                        <div class = "design-img">
+                            <img class = "xd" src = "../new_imgs/yubi_13.png" alt = "">
+                            <img class = "xd" src = "../new_imgs/yubi_14.png" alt = "">
+                        </div>
+                        <div class = "design-intro">
+                            <p>実装が間に合わなかった部分はXdでプロトタイプを作成し、アプリに対するイメージを掴みやすくしました。</p>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
 
-            <div class = "sp-guides">
-                <a class = "sp-guide sp-previous sp-guide-yoko-img" href = "work_ymgc.html">
-                    <img src = "../images/thumb_ymgc@2x.png" alt = "">
-                    <p>< previous</p>
-                </a>
-                <a class = "sp-guide sp-next" href = "work_fuclo.html">
-                    <img src = "../images/thumb_fcl@2x.png" alt = "">
-                    <p>next ></p>
-                </a>
+            <div class = "page-nation">
+                <div class = "buttons">
+                    <a class = "mae button" href = "./work_ny!.html">前の作品</a>
+                    <a class = "tsugi button" href = "./work_miniMom.html">次の作品</a>
+                </div>                
+                <a href = "../html/top.html#works-wrapper">作品一覧に戻る</a>
             </div>
-
             
+            <footer></footer>
+
         </section>
 
-        
-        <footer></footer>
 
-        <!-- <script src="../js/swiper.js"> -->
-            <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-            <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
-           <script>
-               // var swiper = new Swiper('.swiper-container', {
-               //     loop: true,
-               //     speed: 700,
-               //     autoplay: {
-               //         delay: 3000,
-               //         disableOnInteraction: true
-               //     },
-               //     pagination: {
-               //         el: '.swiper-pagination',
-               //         type: 'bullets',
-               //         clickable: true,
-               //     },
-               // });
-   
-               //変数定義
-               var navigationOpenFlag = false;
-               var navButtonFlag = true;
-               var focusFlag = false;
-               
-               //ハンバーガーメニュー
-                   $(function(){
-               
-                   $(document).on('click','.el_humburger',function(){
-                       if(navButtonFlag){
-                       spNavInOut.switch();
-                       //一時的にボタンを押せなくする
-                       setTimeout(function(){
-                           navButtonFlag = true;
-                       },200);
-                       navButtonFlag = false;
-                       }
-                   });
-                   $(document).on('click touchend', function(event) {
-                       if (!$(event.target).closest('.bl_header,.el_humburger').length && $('body').hasClass('js_humburgerOpen') && focusFlag) {
-                       focusFlag = false;
-                       //scrollBlocker(false);
-                       spNavInOut.switch();
-                       }
-                   });
-                   });
-               
-               //ナビ開く処理
-               function spNavIn(){
-                   $('body').removeClass('js_humburgerClose');
-                   $('body').addClass('js_humburgerOpen');
-                   setTimeout(function(){
-                       focusFlag = true;
-                   },200);
-                   setTimeout(function(){
-                       navigationOpenFlag = true;
-                   },200);
-   
-                   $('#overlay').fadeIn(200);
-               }
-               //ナビ閉じる処理
-               function spNavOut(){
-                   $('body').removeClass('js_humburgerOpen');
-                   $('body').addClass('js_humburgerClose');
-                   setTimeout(function(){
-                       $(".uq_spNavi").removeClass("js_appear");
-                       focusFlag = false;
-                   },200);
-                   navigationOpenFlag = false;
-                   $('#overlay').fadeOut(200);
-               }
-               
-               //ナビ開閉コントロール
-               var spNavInOut = {
-               switch:function(){
-                   if($('body.spNavFreez').length){
-                   return false;
-                   }
-                   if($('body').hasClass('js_humburgerOpen')){
-                   spNavOut();
-                   } else {
-                   spNavIn();
-                   }
-               }
-               };
-   
-           </script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
+        <script>
+            // var swiper = new Swiper('.swiper-container', {
+            //     loop: true,
+            //     speed: 700,
+            //     autoplay: {
+            //         delay: 3000,
+            //         disableOnInteraction: true
+            //     },
+            //     pagination: {
+            //         el: '.swiper-pagination',
+            //         type: 'bullets',
+            //         clickable: true,
+            //     },
+            // });
+
+            //変数定義
+            var navigationOpenFlag = false;
+            var navButtonFlag = true;
+            var focusFlag = false;
+            
+            //ハンバーガーメニュー
+                $(function(){
+            
+                $(document).on('click','.el_humburger',function(){
+                    if(navButtonFlag){
+                    spNavInOut.switch();
+                    //一時的にボタンを押せなくする
+                    setTimeout(function(){
+                        navButtonFlag = true;
+                    },200);
+                    navButtonFlag = false;
+                    }
+                });
+                $(document).on('click touchend', function(event) {
+                    if (!$(event.target).closest('.bl_header,.el_humburger').length && $('body').hasClass('js_humburgerOpen') && focusFlag) {
+                    focusFlag = false;
+                    //scrollBlocker(false);
+                    spNavInOut.switch();
+                    }
+                });
+                });
+            
+            //ナビ開く処理
+            function spNavIn(){
+                $('body').removeClass('js_humburgerClose');
+                $('body').addClass('js_humburgerOpen');
+                setTimeout(function(){
+                    focusFlag = true;
+                },200);
+                setTimeout(function(){
+                    navigationOpenFlag = true;
+                },200);
+
+                $('#overlay').fadeIn(200);
+            }
+            //ナビ閉じる処理
+            function spNavOut(){
+                $('body').removeClass('js_humburgerOpen');
+                $('body').addClass('js_humburgerClose');
+                setTimeout(function(){
+                    $(".uq_spNavi").removeClass("js_appear");
+                    focusFlag = false;
+                },200);
+                navigationOpenFlag = false;
+                $('#overlay').fadeOut(200);
+            }
+            
+            //ナビ開閉コントロール
+            var spNavInOut = {
+            switch:function(){
+                if($('body.spNavFreez').length){
+                return false;
+                }
+                if($('body').hasClass('js_humburgerOpen')){
+                spNavOut();
+                } else {
+                spNavIn();
+                }
+            }
+            };
+
+        </script>
     </body>
 </html>

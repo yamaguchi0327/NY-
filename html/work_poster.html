@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ymgc</title>
+        <title>nana yamaguch!</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
 
@@ -13,18 +13,20 @@
 
     <body>
         <header>
-            <img src = "../images/NY!@2x.png" alt = "">
-            <nav>
-                <li>
-                    <a href = "../html/top.html#first-view"><img src = "../images/top@2x.png" alt = ""></a>
-                </li>
-                <li>
-                    <a href = "../html/top.html#works-wrapper"><img src = "../images/works@2x.png" alt = ""></a>  
-                </li>
-                <li>
-                    <a href = "../html/top.html#about-wrapper"><img src = "../images/about@2x.png" alt = ""></a>
-                </li>
-            </nav> 
+            <div class = "nav-wrap">
+                <a class = "logo" href = "top.html" alt = "">N!</a>
+                <nav>
+                    <li>
+                        <a href = "../html/top.html#first-view" id="top_link_js">top</a>
+                    </li>
+                    <li>
+                        <a href = "../html/top.html#works-wrapper" id="works_link_js">work</a>  
+                    </li>
+                    <li>
+                        <a href = "../html/top.html#about-wrapper" id="about_link_js">about</a>
+                    </li>
+                </nav> 
+            </div>
         </header>
 
         <!-- ハンバーガーメニュー -->
@@ -48,77 +50,78 @@
         <!-- オーバーレイ -->
         <div id="overlay"></div>
 
-
         <section class = "page-wrapper">
-            <div class = "guides">
-                <a class = "guide previous" href = "work_fuclo.html">
-                    <img src = "../images/thumb_fcl@2x.png" alt = "">
-                    <p>< previous</p>
-                </a>
-                <a class = "guide next guide-yoko-img" href = "work_ny!.html">
-                    <img src = "../images/thumb_ny@2x.png" alt = "">
-                    <p>next ></p>
-                </a>
+            <div class = "first-view">
+                <div class = "fv-intro">
+                    <p class = "outline o-pos"></p>
+                    <h1>ポスター</h1>
+                    <p class = "data">2017-　デザイン</p>
+                    <p>アルバイトで作成したポスター・ダイレクトメールの一部です。</p>
+                </div>
+                <div class = "fv-img fi-pos">
+                    <img class = "left" src = "../new_imgs/pos_2.png" alt = "">
+                    <img class = "right" src = "../new_imgs/pos_1.png" alt = "">
+                </div>
             </div>
 
-            <div class = "main-wrapper">
-                <section class = "main-view p">
-                    <div class = "mv-summary">
-                        <p class = "mvs-title">ポスター</p>
-                        <p class = "mvs-date">2017.07-</p>
-                        <p class = "mvs-outline">担当：デザイン<br>
-                            技術：Illustrator/Photoshop</p>
-                        <p class = "mvs-intro">アルバイトで作成した<br>ポスター・ダイレクトメールの一部です。</p>
-                    </div>    
-                    <div class = "mv-img-wrap mv-img-wrap-pos">
-                        <img class = "mv-pc-img mv-pos-img" src = "../imgs/p_1.png">
+            <div class = "main-wrap">
+                <div class = "use">
+                    <h2 class = "h2-pos">ポスター</h2>
+                    <div class = "use-wrap">
+                        <div class = "use-intro">
+                            <p>梅雨をコンセプトにデザインした夏期講習のポスターです。<br>
+                                掲示される時期が梅雨だったので「雨」と、 テストがわからずに焦っていること(汗)をイメージしてデザインを行いました。
+                                しかし、あまり暗い印象にならないようにストライプを用いて軽いイメージにしたり
+                                明るくポップな色使いにするなどの工夫を行いました。</p>
+                        </div>
+                        <div class = "use-img">
+                            <img class = "pos" src = "../new_imgs/pos_1.png" alt = "">
+                        </div>
                     </div>
-                    
-                </section>
-                <div class = "main-intro">
-                    <div class = "part">
-                        <div class = "sub-part">
-                            <div class = "sp-split">
-                                <img class = "sp-s-img" src = "../imgs/p_2.png">
-                                <p class = "center-description">
-                                    梅雨をコンセプトにデザインした夏期講習のポスターです。<br class="sp_br">掲示される時期が梅雨だったので「雨」と、 テストがわからずに焦っていること(汗)をイメージしてデザインを行いました。<br class="sp_br">
-                                    しかし、あまり暗い印象にならないようにストライプを用いて軽いイメージにしたり<br class="sp_br">明るくポップな色使いにするなどの工夫を行いました。
-                                </p>
-                            </div>
-                            <div class = "sp-split">
-                                <img class = "sp-s-img" src = "../imgs/p_3.png">
-                                <p class = "center-description">
-                                    小学生向けの講座のポスターです。<br class="sp_br">
-                                    小学生対象だったので、読みやすく楽しく読書をしながら力が身につくということを表現しました。
-                                </p>
-                            </div>
-                            <div class = "sp-split">
-                                <img class = "sp-yoko-img pos-yoko" src = "../imgs/p_4.png">
-                                <p class = "center-description">
-                                    塾生や元塾生に送付する秋期講習についてのダイレクトメールのデザインです。<br class="sp_br">
-                                    高校3年生対象でセンター試験も近づいてくるということなので真面目な印象のデザインを目指し、<br class="sp_br">講座について詳しく説明しました。
-                                </p>
-                            </div>
+                    <div class = "use-wrap">
+                        <div class = "use-img">
+                            <img class = "pos" src = "../new_imgs/pos_2.png" alt = "">
+                        </div>
+                        <div class = "use-intro">
+                            <p>小学生向けの講座のポスターです。<br>
+                                小学生対象だったので、読みやすく楽しく読書をしながら力が身につくということを表現しました。</p>
+
                         </div>
                     </div>
                 </div>
-
-                <div class = "sp-guides">
-                    <a class = "sp-guide sp-previous" href = "work_fuclo.html">
-                        <img src = "../images/thumb_fcl@2x.png" alt = "">
-                        <p>< previous</p>
-                    </a>
-                    <a class = "sp-guide sp-next sp-guide-yoko-img" href = "work_ny!.html">
-                        <img src = "../images/thumb_ny@2x.png" alt = "">
-                        <p>next ></p>
-                    </a>
+                <div class = "design">
+                    <div class = "design-wrap">
+                        <div class = "design-intro">
+                            <h2 class = "h2-pos">ダイレクトメール</h2>
+                            <p>塾生や元塾生に送付する秋期講習についてのダイレクトメールのデザインです。<br>
+                                高校3年生対象でセンター試験も近づいてくるということなので真面目な印象のデザインを目指し、講座について詳しく説明しました。</p>
+                        </div>
+                        <div class = "design-img">
+                            <div class = "img-wrap">
+                                <img class = "pos" src = "../new_imgs/pos_3.png" alt = "">
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-        </section>
-        <footer></footer>
+            </div>
 
-        <!-- <script src="../js/swiper.js"> -->
+            <div class = "page-nation">
+                <div class = "buttons">
+                    <a class = "mae button" href = "./work_ymgc.html">前の作品</a>
+                    <a class = "tsugi button" href = "./work_n!.html">次の作品</a>
+                </div>                
+                <a href = "../html/top.html#works-wrapper">作品一覧に戻る</a>
+            </div>
+            
+
+            <footer></footer>
+        </section>
+        
+
+
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-         <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
+        <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
         <script>
             // var swiper = new Swiper('.swiper-container', {
             //     loop: true,
