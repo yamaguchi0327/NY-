@@ -39,11 +39,11 @@
             </div>
         </div>
          <!--ナビゲーション-->
-        <div class="navi">
+         <div class="navi">
             <div class="navi_inner">
-              <div class="navi_item"><a href = "../html/top.html#first-view"><img src = "../images/top@2x.png" alt = ""></a></div>
-              <div class="navi_item"><a href = "../html/top.html#works-wrapper"><img src = "../images/works@2x.png" alt = ""></a></div>
-              <div class="navi_item"><a href = "../html/top.html#about-wrapper"><img src = "../images/about@2x.png" alt = ""></a></div>
+                <div class="navi_item"><a href = "../html/top.html#first-view" id="top_link_js">top</a></div>
+                <div class="navi_item"><a href = "../html/top.html#works-wrapper" id="works_link_js">work</a></div>
+                <div class="navi_item"><a href = "../html/top.html#about-wrapper" id="about_link_js">about</a></div>
             </div>
         </div>
 
@@ -52,12 +52,27 @@
 
         <section class = "page-wrapper">
             <div class = "first-view">
+                <!-- スマホのファーストビュー -->
+                <div class = "fv-img fv-i-sp">
+                    <img class = "left" src = "../new_imgs/yubi_1.png" alt = "">
+                    <img class = "right" src = "../new_imgs/yubi_5.png" alt = "">
+                    <div class = "fv-intro">
+                        <p class = "outline">指差し確認の習慣づけで<br>
+                            認知症を予防する</p>
+                        <h1>指差しチェッカー</h1>
+                        <p class = "data">2019　UI・UXデザイン</p>
+                        <p>ハッカソン形式の授業で制作したIoTアプリです。
+                            5人のチームで制作し、私はUIデザインを担当しました。</p>
+                    </div>
+                </div>
+
+                <!-- pc・タブレットのファーストビュー -->
                 <div class = "fv-intro">
                     <p class = "outline">指差し確認の習慣づけで<br>
                         認知症を予防する</p>
                     <h1>指差しチェッカー</h1>
                     <p class = "data">2019　UI・UXデザイン</p>
-                    <p>ハッカソン形式の授業で制作したIoTアプリです。<br>
+                    <p>ハッカソン形式の授業で制作したIoTアプリです。
                         5人のチームで制作し、私はUIデザインを担当しました。</p>
                 </div>
                 <div class = "fv-img">
@@ -97,11 +112,12 @@
                 </div>
 
                 <div class = "persona">
+                    <h2 class = "h2 h2-sp">ペルソナ</h2>
                     <div class = "img-wrap">
                         <img src = "../new_imgs/yubi_8.png" alt = "">
                     </div>
                     <div class = "persona-intro">
-                        <h2>ペルソナ</h2>
+                        <h2 class = "h2">ペルソナ</h2>
                         <p class = "persona-big">将来が不安なサラリーマン</p>
                         <p>愛知県名古屋市に住む56歳男性の今井たけしさん。
                             娘と息子が1人ずついるが一緒には住んでいない。
@@ -112,6 +128,10 @@
                 <div class = "use">
                     <h2>使い方</h2>
                     <div class = "use-wrap">
+                        <div class = "use-img sp-ui">
+                            <img class = "illust" src = "../new_imgs/yubi_9.png" alt = "">
+                            <img class = "sp" src = "../new_imgs/yubi_1.png" alt = "">
+                        </div>
                         <div class = "use-intro">
                             <img src = "../new_imgs/1.png" alt = "">
                             <p class = "use-big">リング型のセンサーを着けて<br>
@@ -119,11 +139,12 @@
                             <p>人差し指に付けるリング型のセンサーとそれに連動したアプリです。この指輪を身に着けるだけで使用できます。
                                 外出前にリングをつけながら各部屋の電気・ガスなどを消したことを指差し確認をしてください。</p>
                         </div>
-                        <div class = "use-img">
+                        <div class = "use-img  pc-ui">
                             <img class = "illust" src = "../new_imgs/yubi_9.png" alt = "">
                             <img class = "sp" src = "../new_imgs/yubi_1.png" alt = "">
                         </div>
                     </div>
+                    
                     <div class = "use-wrap">
                         <div class = "use-img">
                             <img class = "ar-sp" src = "../new_imgs/yubi_3.png" alt = "">
@@ -139,14 +160,22 @@
                                 チェックリストを見ることで、家の全ての項目をチェックしたかを確認することができ、 外出時の「電気消したっけ？」のような不安も解消することができます。</p>
                         </div>
                     </div>
+
                     <div class = "use-wrap">
+                        <div class = "use-img sp-ui">
+                            <img class = "ar-sp" src = "../new_imgs/yubi_1.png" alt = "">
+                            <div class = "arrow-wrap">
+                                <img class = "arrow" src = "../new_imgs/yubi_10.png" alt = "">
+                            </div>
+                            <img class = "ar-sp" src = "../new_imgs/yubi_2.png" alt = "">
+                        </div>
                         <div class = "use-intro">
                             <img src = "../new_imgs/3.png" alt = "">
                             <p class = "use-big">指差し確認終了</p>
                             <p>部屋内の確認項目が全て終わった時、メインの画面であるチェックリスト内のアイコンも同様にグレーになります。 全ての項目をチェックすると「指差し確認が全て終わりました」という表記が出ます。
                                 次にアプリを使用するときはリセットボタンを押してから使用します。</p>
                         </div>
-                        <div class = "use-img">
+                        <div class = "use-img pc-ui">
                             <img class = "ar-sp" src = "../new_imgs/yubi_1.png" alt = "">
                             <div class = "arrow-wrap">
                                 <img class = "arrow" src = "../new_imgs/yubi_10.png" alt = "">
@@ -170,6 +199,16 @@
 
                 <div class = "design">
                     <div class = "design-wrap">
+                        <h2 class = "h2-sp">デザイン</h2>
+                        <div class = "design-img sp-di">
+                            <div class = "img-wrap im-yubi">
+                                <div class = "color-wrap">
+                                    <img class = "color" src = "../new_imgs/yubi_11.png" alt = "">
+                                </div>
+                                <img class = "sp" src = "../new_imgs/yubi_1.png" alt = "">
+                                <img class = "sp" src = "../new_imgs/yubi_5.png" alt = "">
+                            </div>
+                        </div>
                         <div class = "design-intro">
                             <h2>デザイン</h2>
                             <p class = "design-big">見やすさ・わかりやすさに<br>
@@ -180,7 +219,7 @@
                             </div>
                             <p>確認後のアイコンは色をグレーに、チェックしたということを示すためにチェックマークを追加し、確認済みということを二重に表現しました。 また、アイコンの下に文字を配置し理解性を高めました。</p>
                         </div>
-                        <div class = "design-img">
+                        <div class = "design-img pc-di">
                             <div class = "img-wrap im-yubi">
                                 <div class = "color-wrap">
                                     <img class = "color" src = "../new_imgs/yubi_11.png" alt = "">

@@ -39,11 +39,11 @@
             </div>
         </div>
          <!--ナビゲーション-->
-        <div class="navi">
+         <div class="navi">
             <div class="navi_inner">
-              <div class="navi_item"><a href = "../html/top.html#first-view"><img src = "../images/top@2x.png" alt = ""></a></div>
-              <div class="navi_item"><a href = "../html/top.html#works-wrapper"><img src = "../images/works@2x.png" alt = ""></a></div>
-              <div class="navi_item"><a href = "../html/top.html#about-wrapper"><img src = "../images/about@2x.png" alt = ""></a></div>
+                <div class="navi_item"><a href = "../html/top.html#first-view" id="top_link_js">top</a></div>
+                <div class="navi_item"><a href = "../html/top.html#works-wrapper" id="works_link_js">work</a></div>
+                <div class="navi_item"><a href = "../html/top.html#about-wrapper" id="about_link_js">about</a></div>
             </div>
         </div>
 
@@ -52,6 +52,21 @@
 
         <section class = "page-wrapper">
             <div class = "first-view">
+                <!-- スマホのファーストビュー -->
+                <div class = "fv-img fi-mm fv-i-sp">
+                    <img class = "left" src = "../new_imgs/mm_1.png" alt = "">
+                    <img class = "right" src = "../new_imgs/mm_2.png" alt = "">
+                    <div class = "fv-intro">
+                        <p class = "outline o-mm">片付けを習慣づけて<br>
+                            きれいな部屋を身近に</p>
+                        <h1>miniMom</h1>
+                        <p class = "data">2019　UI・UXデザイン</p>
+                        <p>OthloTechが開催した「〇〇を身近にする」というテーマのハッカソンで制作。
+                            私たちのチームは「きれいな部屋を身近にする」というテーマで5人で制作し、私はUIデザインを担当しました。
+                    </div>
+                </div>
+
+                <!-- pc・タブレットのファーストビュー -->
                 <div class = "fv-intro">
                     <p class = "outline o-mm">片付けを習慣づけて<br>
                         きれいな部屋を身近に</p>
@@ -74,7 +89,7 @@
                             <div class = "img-wrap">
                                 <img src = "../new_imgs/mm_3.png" alt = "">
                             </div>
-                            <p class = "can-big">帰宅後すぐの<br>
+                            <p class = "can-big cb-mm">帰宅後すぐの<br>
                                 片付けを習慣づける
                             <p class = "can-small">このサービスでは、まずはアクセサリーなどの小物類を片付ける習慣をつけて、徐々に部屋全体に広げていくきっかけを作ることができます。</p>
                         </div>
@@ -82,7 +97,7 @@
                             <div class = "img-wrap">
                                 <img src = "../new_imgs/mm_4.png" alt = "">
                             </div>
-                            <p class = "can-big">使っていないものを可視化して<br>
+                            <p class = "can-big cb-mm">使っていないものを可視化して<br>
                                 きれいな部屋に近づける<br>
                             <p>使っていないものをアプリで可視化することで、不要なものを減らす手助けをします。</p>
                         </div>
@@ -90,6 +105,7 @@
                 </div>
 
                 <div class = "persona">
+                    <h2 class = "h2-mm h2-sp">ペルソナ</h2>
                     <div class = "img-wrap">
                         <img src = "../new_imgs/mm_5.png" alt = "">
                     </div>
@@ -109,6 +125,10 @@
                 <div class = "use">
                     <h2 class = "h2-mm">使い方</h2>
                     <div class = "use-wrap">
+                        <div class = "use-img sp-ui">
+                            <img class = "sp" src = "../new_imgs/mm_1.png" alt = "">
+                            <img class = "illust-mm" src = "../new_imgs/mm_6.png" alt = "">
+                        </div>
                         <div class = "use-intro">
                             <img src = "../new_imgs/1.png" alt = "">
                             <p class = "use-big">小型のセンサーが設置された棚を<br>
@@ -117,7 +137,7 @@
                                 ユーザーはこの棚を設置するだけで使用できます。
                                 </p>
                         </div>
-                        <div class = "use-img">
+                        <div class = "use-img pc-ui">
                             <img class = "sp" src = "../new_imgs/mm_1.png" alt = "">
                             <img class = "illust-mm" src = "../new_imgs/mm_6.png" alt = "">
                         </div>
@@ -130,20 +150,25 @@
                             <img src = "../new_imgs/2.png" alt = "">
                             <p class = "use-big">帰宅後すぐに棚にアクセサリーを戻す</p>
                             <p>棚に設置されたセンサーが帰宅後すぐにアクセサリーの片付けができたかどうかを検知します。</p>
-                            <p>帰宅後３分以内に棚に戻さないと棚のセンサーから音が鳴ります。</p>
+                            <p class = "ui-mm"><br>帰宅後３分以内に棚に戻さないと棚のセンサーから音が鳴ります。</p>
 
                         </div>
                     </div>
                     <div class = "use-wrap">
+                        <div class = "use-img sp-ui">
+                            <div class = "center-sp">
+                                <img class = "sp" src = "../new_imgs/mm_1.png" alt = "">
+                            </div>
+                        </div>
                         <div class = "use-intro">
                             <img src = "../new_imgs/3.png" alt = "">
                             <p class = "use-big">片付けがアプリに記録される</p>
                             <p>帰宅後すぐに片付けができたかどうかは、 アプリのカレンダーで確認することができます。
                             ちゃんとアラームが鳴る前に片付けられたら◯<br>
                             片付けられなかったら×が表示されます。</p>
-                            <p>このカレンダーを時々確認することで、片付けのモチベーションアップにつなげることを目的としています。</p>
+                            <p class = "ui-mm"><br>このカレンダーを時々確認することで、片付けのモチベーションアップにつなげることを目的としています。</p>
                         </div>
-                        <div class = "use-img">
+                        <div class = "use-img pc-ui">
                             <div class = "center-sp">
                                 <img class = "sp" src = "../new_imgs/mm_1.png" alt = "">
                             </div>
@@ -159,26 +184,32 @@
                             <img src = "../new_imgs/4.png" alt = "">
                             <p class = "use-big">使っていないものが可視化される</p>
                             <p>またアプリの使用状況という画面では、棚についているセンサーの位置で使っていないものを判別します。</p>
-                            <p>しばらく使っていない（いらない）ものを可視化し、ものを捨てるきっかけを作ることを目的としています。</p>
+                            <p class = "ui-mm"><br>しばらく使っていない（いらない）ものを可視化し、ものを捨てるきっかけを作ることを目的としています。</p>
                         </div>
                     </div>
                 </div>
 
                 <div class = "design">
                     <div class = "design-wrap">
+                        <h2 class = "h2-sp h2-mm">サービス名・デザイン</h2>
+                        <div class = "design-img sp-di">
+                            <div class = "img-wrap">
+                                <img class = "mm" src = "../new_imgs/mm_8.png" alt = "">
+                            </div>
+                        </div>
                         <div class = "design-intro">
                             <h2 class = "h2-mm">サービス名・デザイン</h2>
                             <p>このアプリは「片付けなさい！」と怒ってくれるお母さんのようなイメージで作りました。なので、ミニマム（物を最小限に)という言葉とお母さん(マム)をかけたミニマムというサービス名になりました。</p>
                         </div>
-                        <div class = "design-img">
+                        <div class = "design-img pc-di">
                             <div class = "img-wrap">
                                 <img class = "mm" src = "../new_imgs/mm_8.png" alt = "">
                             </div>
                         </div>
                     </div>
                     <div class = "design-wrap">
-                        <div class = "design-img">
-                            <div class = "img-wrap">
+                        <div class = "design-img sp-im-mm-wrap">
+                            <div class = "img-wrap sp-im-mm">
                                 <div class = "color-wrap">
                                     <img class = "color" src = "../new_imgs/mm_9.png" alt = "">
                                 </div>

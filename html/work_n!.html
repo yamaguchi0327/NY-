@@ -39,11 +39,11 @@
             </div>
         </div>
          <!--ナビゲーション-->
-        <div class="navi">
+         <div class="navi">
             <div class="navi_inner">
-              <div class="navi_item"><a href = "../html/top.html#first-view"><img src = "../images/top@2x.png" alt = ""></a></div>
-              <div class="navi_item"><a href = "../html/top.html#works-wrapper"><img src = "../images/works@2x.png" alt = ""></a></div>
-              <div class="navi_item"><a href = "../html/top.html#about-wrapper"><img src = "../images/about@2x.png" alt = ""></a></div>
+                <div class="navi_item"><a href = "../html/top.html#first-view" id="top_link_js">top</a></div>
+                <div class="navi_item"><a href = "../html/top.html#works-wrapper" id="works_link_js">work</a></div>
+                <div class="navi_item"><a href = "../html/top.html#about-wrapper" id="about_link_js">about</a></div>
             </div>
         </div>
 
@@ -52,6 +52,18 @@
 
         <section class = "page-wrapper">
             <div class = "first-view">
+                <!-- スマホのファーストビュー -->
+                <div class = "fv-img fi-n fv-i-sp fv-i-sp-no-outline">
+                    <img class = "pc" src = "../new_imgs/n_1.png" alt = "">
+                    <div class = "fv-intro">
+                        <p class = "outline o-n"></p>
+                        <h1>N!</h1>
+                        <p class = "data">2019-　UI・UXデザイン/コーディング</p>
+                        <p>就職活動に向けて制作したポートフォリオサイトです。以前制作したポートフォリオサイトの課題を解決することから始めました。デザインからコーディングまで1人で行いました。日々改良を続けています。</p>
+                    </div>
+                </div>
+
+                <!-- pc・タブレットのファーストビュー -->
                 <div class = "fv-intro">
                     <p class = "outline o-n"></p>
                     <h1>N!</h1>
@@ -67,11 +79,12 @@
                 <div class = "background">
                     <h2 class = "h2-n">コンセプト</h2>
                     <p class = "concept-big n">作品の説明を詳しく<br>
-                        分かりやすく、このサイトを見る人が迷わないデザイン</p>
+                        このサイトを見る人が迷わないデザイン</p>
                     <p class = "concept-p">前回のポートフォリオサイトの改善点として、作品の説明が簡潔すぎるという点とシンプルすぎて個性がないという点がありました。なので作品の説明を詳しく、でも読むのが苦にならないようなデザインを目指しました。</p>
                 </div>
                 <div class = "design">
                     <div class = "design-wrap">
+                        <h2 class = "h2-n h2-sp">デザイン</h2>
                         <div class = "design-img">
                             <div class = "img-wrap">
                                 <img class = "n-1" src = "../new_imgs/n_2.png" alt = "">
@@ -85,13 +98,18 @@
                         </div>
                     </div>
                     <div class = "design-wrap">
+                        <div class = "design-img sp-di">
+                            <div class = "img-wrap">
+                                <img class = "n-2" src = "../new_imgs/n_3.png" alt = "">
+                            </div>
+                        </div>
                         <div class = "design-intro">
                             <p>作品のページではサービスならまず「できること」を示すことで、サービスを理解しやすくしています。
                                 また、読むのが苦にならないように小見出しをつける・わかりづらい部分はイラストを使用する・画像と文字を交互に配するなどの工夫をしました。
                                 作品一覧に戻って作品を見るという動作が手間だと感じたので、「前・次の作品」「作品一覧へ戻る」の３種類のリンクをページの最後に設置しています。
                             </p>
                         </div>
-                        <div class = "design-img">
+                        <div class = "design-img pc-di">
                             <div class = "img-wrap">
                                 <img class = "n-2" src = "../new_imgs/n_3.png" alt = "">
                             </div>
@@ -114,6 +132,9 @@
                         </div>
                     </div>
                     <div class = "use-wrap">
+                        <div class = "use-img sp-ui">
+                            <img class = "n" src = "../new_imgs/n_5.png" alt = "">
+                        </div>
                         <div class = "use-intro">
                             <img src = "../new_imgs/2.png" alt = "">
                             <p class = "use-big">個性は出たが、作品が霞んだ</p>
@@ -121,7 +142,7 @@
                                 色味やフォントで少し私らしさが出たとは思うのですが、 作品の印象が薄くなってしまったと感じました。</p>
 
                         </div>
-                        <div class = "use-img">
+                        <div class = "use-img pc-ui">
                             <img class = "n" src = "../new_imgs/n_5.png" alt = "">
                         </div>
                     </div>

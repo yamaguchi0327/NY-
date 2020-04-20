@@ -2,7 +2,7 @@ $base-color:#f7f7f7;
 $font-color:#152029;
 $yubi-color:#c05937;
 $mm-color:#4a62e5;
-$pos-color:#f2bc35;
+$pos-color:#f2b43f;
 $ymgc-color:#c9bad6;
 $main-color:#dc726d;
 
@@ -39,6 +39,12 @@ body{
     word-break: break-all;
     margin: 0;
     padding: 0;
+    @include tab{
+        font-size: 11px;
+    }
+    @include sp{
+        font-size: 13px;
+    }
 
     p{
         margin: 0;
@@ -65,6 +71,9 @@ body{
             // width: 1200px;
             display: flex;
             margin:auto 14vw;
+            @include tab{
+                margin: auto 5vw;
+            }
             .logo{
                 font-size: 40px;
                 // margin-left: 40px;
@@ -79,6 +88,9 @@ body{
                     padding: 0 30px;
                     font-size: 20px;
                     font-weight: 600;
+                }
+                @include tab{
+                    display: none;
                 }
             }
         }
@@ -98,6 +110,13 @@ body{
         font-weight: 700;
         font-size: 30px;
         margin-bottom: 50px;
+        @include tab{
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        @include sp{
+            font-size: 17px;
+        }
     }
     .h2-mm::before{
         background-color: $mm-color;
@@ -119,24 +138,44 @@ body{
             display: flex;
             height: 39vw;
             margin-bottom: 130px;
+            
+            @include tab{
+                margin-bottom: 100px;
+                height: 50vw;
+            }
+            @include sp{
+                height: 83vh;
+                display: block;
+            }
+            .outline::before{
+                content: '';
+                display: block;
+                height: 3px;
+                width: 62px;
+                margin-bottom: 26px;
+                background-color: $yubi-color;
+                // background: linear-gradient(90deg,#f5e9ec, #e5e2f1);
+                // float: left;
+            }
+            .outline{
+                font-weight: 700;
+                font-size: 16px;
+                color: $yubi-color;
+                @include tab{
+                    font-size: 14px;
+                }
+            }
+
             .fv-intro{
                 width: 26vw;
                 padding-top: 12vw;
                 margin-left: 14vw;
-                .outline::before{
-                    content: '';
-                    display: block;
-                    height: 3px;
-                    width: 62px;
-                    margin-bottom: 26px;
-                    background-color: $yubi-color;
-                    // background: linear-gradient(90deg,#f5e9ec, #e5e2f1);
-                    // float: left;
+                @include tab{
+                    margin-left: 10vw;
+                    width: 35vw;
                 }
-                .outline{
-                    font-weight: 700;
-                    font-size: 16px;
-                    color: $yubi-color;
+                @include sp{
+                    display: none;
                 }
                 .o-mm::before{
                     background-color: $mm-color;
@@ -166,6 +205,9 @@ body{
                     font-weight: 900;
                     font-size: 33px;
                     margin: 0;
+                    @include tab{
+                        font-size: 31px;
+                    }
                 }
                 .data{
                     font-weight: 600;
@@ -181,9 +223,19 @@ body{
                 width: 60vw;
                 background-color: $yubi-color;
                 padding-top:73px;
+                @include tab{
+                    width: 55vw;
+                }
+                @include sp{
+                    display: none;
+                    padding-top:90px;
+                }
                 img{
                     height: 31vw;
                     position: relative;
+                    @include sp{
+                        height: 30vh;
+                    }
                 }
                 .left{
                     top: 1vw;
@@ -202,6 +254,9 @@ body{
             }
             .fi-ymgc{
                 background-color: #e8e1ec;
+                @include sp{
+                    background-color: $ymgc-color;
+                }
                 .pc{
                     height: 27vw;
                     margin: auto;
@@ -214,35 +269,117 @@ body{
                     margin: auto;
                 }
             }
+
+            // スマホの時のファーストビュー
+            .fv-i-sp{
+                display: none;
+                @include sp{
+                    display: block;
+                    width: 100vw;
+                    height: 75vh;
+                    text-align: center;
+                    .pc{
+                        height: 50vw;
+                        margin-top: 6vh;
+                    }
+                }
+                .fv-intro{
+                    @include sp{
+                        display: block;
+                        color: $base-color;
+                        margin-left: 0;
+                        width: 80vw;
+                        text-align: left;
+                        padding: 0 10vw;
+                    }
+                    .outline{
+                        @include sp{
+                            color: $base-color;
+                        }
+                    }
+                    p{
+                        @include sp{
+                            width: 100%;
+                        }
+                    }
+                    .data{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .fv-i-sp-no-outline{
+                .outline::before{
+                    @include sp{
+                        display: none;
+                    }
+                }
+            }
             
         }
 
         .main-wrap{
             margin: 0 14vw 120px 14vw;
+            @include tab{
+                margin: 0 10vw 120px 10vw;
+            }
             .cans{
                 margin-bottom: 200px;
+                @include tab{
+                    margin-bottom: 150px;
+                }
+                @include sp{
+                    margin-bottom: 120px;
+                }
                 .can-wrap{
                     display: flex;
+                    @include sp{
+                        display: block;
+                    }
                     .can:nth-child(1){
                         margin: 0 5vw 0 auto;
+                        @include sp{
+                            margin: auto auto 80px auto;
+                        }
                     }
                     .can:nth-child(2){
                         margin: 0 auto 0 5vw;
+                        @include sp{
+                            margin: auto auto 80px auto;
+                        }
                     }
                     .can{
                         width: 23vw;
+                        @include tab{
+                            width: 32vw;
+                        }
+                        @include sp{
+                            width: 100%;
+                        }
                         .img-wrap{
                             text-align: center;
                             margin: auto;
                             img{
                                 width: 20vw;
                                 margin-bottom: 20px;
+                                @include sp{
+                                    width: 60%;
+                                }
                             }
                         }
                         .can-big{
                             font-size: 19px;
                             font-weight: 600;
                             margin-bottom: 10px;
+                            color: $yubi-color;
+                            @include tab{
+                                font-size: 15px;
+                            }
+                            @include sp{
+                                font-size: 5vw;
+                            }
+                        }
+                        .cb-mm{
+                            color: $mm-color;
                         }
                     }
                 }
@@ -250,39 +387,86 @@ body{
 
             .background{
                 margin-bottom: 200px;
+                @include tab{
+                    margin-bottom: 150px;
+                }
+                @include sp{
+                    margin-bottom: 120px;
+                }
                 .concept-big{
                     font-weight: 600;
                     font-size:25px;
                     color: $ymgc-color;
                     margin-bottom: 20px;
+                    @include tab{
+                        font-size: 2.5vw;
+                    }
+                    @include sp{
+                        font-size: 5vw;
+                    }
                 }
                 .n{
                     color: $main-color;
                 }
                 .concept-p{
                     width: 50%;
+                    @include tab{
+                        width: 90%;
+                    }
+                    @include sp{
+                        width: 100%;
+                    }
                 }
             }
 
             .persona{
                 display: flex;
                 margin-bottom: 200px;
+                @include tab{
+                    margin-bottom: 150px;
+                }
+                @include sp{
+                    margin-bottom: 120px;
+                    display: block;
+                }
                 .img-wrap{
                     width: 50%;
                     text-align: center;
                     margin: auto;
+                    @include sp{
+                        width: 100%;
+                    }
                     img{
                         height: 18vw;
                         margin-top: 20px;
+                        @include sp{
+                            height: 40vw;
+                            margin-top: 0;
+                            margin-bottom: 20px;
+                        }
                     }
                 }
                 .persona-intro{
                     width: 50%;
+                    @include sp{
+                        width: 100%;
+                    }
+                    h2{
+                        @include sp{
+                            display: none;
+                        }
+                    }
                     .persona-big{
                         font-weight: 600;
                         font-size:25px;
                         color: $yubi-color;
                         margin-bottom: 20px;
+                        @include tab{
+                            font-size: 17px;
+                        }
+                        @include sp{
+                            font-size: 5vw;
+                        }
                     }
                     .pg-mm{
                         color: $mm-color;
@@ -292,51 +476,100 @@ body{
 
             .use{
                 margin-bottom: 200px;
+                @include tab{
+                    margin-bottom: 150px;
+                }
+                @include sp{
+                    margin-bottom: 120px;
+                }
                 .use-wrap{
                     display: flex;
                     margin-bottom: 150px;
+                    @include tab{
+                        margin-bottom: 120px;
+                    }
+                    @include sp{
+                        display: block;
+                        margin-bottom: 80px;
+                    }
                     .use-intro{
                         width: 50%;
+                        @include sp{
+                            width: 100%;
+                        }
                         img{
                             width: 35px;
+                            @include tab{
+                                width: 25px;
+                            }
                         }
                         .use-big{
                             font-size: 19px;
                             font-weight: 600;
                             margin-bottom: 30px;
+                            @include tab{
+                                font-size: 16px;
+                                margin-bottom: 20px;
+                            }
+                            @include sp{
+                                font-size: 4.5vw;
+                            }
                         }
-                        p{
-                            width: 90%;
+                        .ui-mm{
+                            color: $mm-color;
                         }
                     }
                     .use-img{
                         width: 50%;
                         display: flex;
+                        @include sp{
+                            width: 100%;
+                            text-align: center;
+                            margin-bottom: 30px;
+                        }
                         .illust{
                             height: 8vw;
                             margin: auto 2vw auto auto;
+                            @include sp{
+                                height: 20vw;
+                            }
                         }
                         .illust-mm{
                             height: 20vw;
                             margin: auto;
+                            @include sp{
+                                height: 40vw;
+                            }
                         }
                         .sp{
                             height:23vw;
                             margin: auto auto auto 2vw;
+                            @include sp{
+                                height: 50vw;
+                            }
                         }
                         .ar-sp:nth-of-type(1){
                             height:23vw;
                             margin: 0 0 0 auto;
+                            @include sp{
+                                height: 50vw;
+                            }
                         }
                         .ar-sp:nth-of-type(2){
                             height:23vw;
                             margin: 0 auto 0 0;
+                            @include sp{
+                                height: 50vw;
+                            }
                         }
                         .arrow-wrap{
                             margin: auto 0;
                             .arrow{
                                 height: 1.5vw;
                                 margin: 0 2vw;
+                                @include sp{
+                                    height: 4vw;
+                                }
                             }
                         }
                         .center-sp{
@@ -344,13 +577,40 @@ body{
                             img{
                                 margin: 0;
                             }
+                            .n{
+                                @include sp{
+                                    width: 100%;
+                                }
+                            }
+                            .ps{
+                                @include sp{
+                                    height: 50vw;
+                                } 
+                            }
                         }
                         .pos{
                             width: 20vw;
                             margin: auto;
+                            @include sp{
+                                width: 60vw;
+                            }
                         }
                         .n{
                             width: 32vw;
+                            @include sp{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .sp-ui{
+                        display: none;
+                        @include sp{
+                            display: flex;
+                        }
+                    }
+                    .pc-ui{
+                        @include sp{
+                            display: none;
                         }
                     }
                 }
@@ -361,16 +621,40 @@ body{
 
             .design{
                 margin-bottom: 250px;
+                @include tab{
+                    margin-bottom: 180px;
+                }
+                @include sp{
+                    margin-bottom: 120px;
+                }
                 .design-wrap{
                     display: flex;
                     margin-bottom: 120px;
+                    @include sp{
+                        display: block;
+                        margin-bottom: 80px;
+                    }
                     .design-intro{
                         width: 50%;
+                        @include sp{
+                            width: 100%;
+                        }
+                        h2{
+                            @include sp{
+                                display: none;
+                            }
+                        }
                         .design-big{
                             font-weight: 600;
                             font-size:25px;
                             color: $yubi-color;
                             margin-bottom: 20px;
+                            @include tab{
+                                font-size: 17px;
+                            }
+                            @include sp{
+                                font-size: 5vw;
+                            }
                         }
                         .db-mm{
                             color: $mm-color;
@@ -381,17 +665,25 @@ body{
                             width: 90%;
                             img{
                                 height: 7vw;
+                                @include sp{
+                                    height: 20vw;
+                                }
                             }
                         }
                         p{
                             margin-bottom: 50px;
-                            padding-right: 40px;
+                            // padding-right: 40px;
                         }
                     }
+                    
                     .design-img{
                         width: 50%;
                         margin: auto;
                         // text-align: center;
+                        @include sp{
+                            width: 100%;
+                            text-align: center;
+                        }
                         .img-wrap{
                             display: flex;
                             img{
@@ -399,44 +691,142 @@ body{
                             }
                             .sp{
                                 height: 23vw;
+                                @include sp{
+                                    height: 50vw;
+                                }
                             }
                             .color-wrap{
                                 margin: auto 0 0 0;
                                 .color{
                                     width: 4vw;
+                                    @include sp{
+                                        width: 10vw;
+                                    }
                                 }
                             }
                             .mm{
                                 height: 14vw;
                                 margin: 6vw auto 0 auto;
+                                @include sp{
+                                    height: 30vw;
+                                    margin: auto;
+                                }
                             }
                             .pos{
                                 width: 33vw;
+                                @include sp{
+                                    width: 60vw;
+                                    margin: auto auto 30px auto;
+                                }
                             }
                             .ymgc-1{
                                 height: 30vw;
                                 margin: 160px 0 0 0;
+                                margin: 0 auto;
+                                @include tab{
+                                    height: 35vw;
+                                    margin: 100px auto 0 auto;
+                                }
+                                @include sp{
+                                    height: 60vw;
+                                    margin: auto auto 30px auto;
+                                }
                             }
                             .ymgc-2{
                                 height: 30vw;
+                                margin: 0 auto;
+                                @include tab{
+                                    height: 35vw;
+                                }
+                                @include sp{
+                                    height: 60vw;
+                                    margin: auto auto 30px auto;
+                                }
                             }
                             .n-1{
                                 height: 19vw;
                                 margin: 160px 0 0 0;
+                                @include tab{
+                                    margin: 12vw 0 0 0;
+                                    height: 20vw;
+                                }
+                                @include sp{
+                                    height: 46vw;
+                                    margin-bottom: 30px;
+                                }
                             }
                             .n-2{
                                 height: 33vw;
                                 margin: 0;
+                                @include tab{
+                                    height: 35vw;
+                                }
+                                @include sp{
+                                    height: 76vw;
+                                    margin-bottom: 30px;
+                                }
                             }
                         }
                         .xd{
                             width: 30vw;
+                            @include sp{
+                                width: 80%;
+                                margin-bottom: 30px;
+                            }
                         }
                         .im-yubi{
                             margin-top: 170px;
+                            @include sp{
+                                margin: auto auto 30px auto;
+                            }
+                        }
+                        .sp-im-mm{
+                            @include sp{
+                                margin: auto auto 30px auto;
+                            }
+                        }
+                    }
+                    .sp-di{
+                        display: none;
+                        @include sp{
+                            display: flex;
+                            margin-bottom: 30px;
+                        }
+                        .img-wrap{
+                            @include sp{
+                                margin: auto;
+                            }
+                        }
+                    }
+                    .pc-di{
+                        @include sp{
+                            display: none;
+                        }
+                    }
+                    .sp-ui{
+                        display: none;
+                        @include sp{
+                            display: flex;
+                        }
+                    }
+                    .pc-ui{
+                        @include sp{
+                            display: none;
+                        }
+                    }
+
+                    .sp-im-mm-wrap{
+                        @include sp{
+                            display: flex;
                         }
                     }
                 }
+            }
+        }
+        .h2-sp{
+            display: none;
+            @include sp{
+                display: block;
             }
         }
         .page-nation{
@@ -448,17 +838,20 @@ body{
             .buttons{
                 display: flex;
                 margin-bottom: 50px;
-                .tsugi::before{
+                .tsugi::after{
                     display: block;
                     content: "";
                     position: relative;
                     top: 45%;
-                    right: -120px;
+                    right: -60px;
                     width: 0;
                     height: 0;
                     margin-top: -6px;
                     border: 6px solid transparent;
                     border-left: 6px solid #dc726d;
+                    @include sp{
+                        right: -25px;
+                    }
                 }
                 .mae::before{
                     display: block;
@@ -471,16 +864,29 @@ body{
                     margin-top: -6px;
                     border: 6px solid transparent;
                     border-right: 6px solid #dc726d;
+                    @include sp{
+                        left: -25px;
+                    }
                 }
                 .button{
                     display: flex;
                     font-weight: 600;
                     color: $main-color;
                     padding: 11px 84px;
+                    // padding: 1.2vw 4vw;
                     // width: 228px;
                     text-align: center;
-                    border-radius: 5px;
-                    box-shadow: 0px 3px 13px rgba(220, 114, 109, 0.3);                  
+                    border-radius: 2px;
+                    transition: .4s;
+                    // box-shadow: 0px 3px 13px rgba(220, 114, 109, 0.3);       
+                    border: solid 0.6px #dc726d;   
+                    @include sp{
+                        padding: 2.2vw 10vw;
+                    }      
+                }
+                .button:hover {
+                    background: $main-color;
+                    color: $base-color;
                 }
                 .button:nth-of-type(1){
                     text-align: center;
@@ -511,13 +917,14 @@ body{
     display: none;
 }
 
-@include sp {
+@include tab {
     .el_humburger {
         position: fixed;
         display: block;
         right: 0;
         top: 0;
-        padding-top: 5vw;
+        padding-top: 2.2vw;
+        padding-right: 5vw;
         width: 70px;
         height: 70px;
         -webkit-box-sizing: border-box;
@@ -525,18 +932,21 @@ body{
         z-index: 999;
         cursor: pointer;
         pointer-events: auto;
-        color: #251d1c;
+        color: $font-color;
         text-align: center;
+        @include sp{
+            padding-top: 6vw;
+        }
     }
     #factory .el_humburger {
         display: none; } 
     }
 
-@include sp{
+@include tab{
     .el_humburger_wrapper {
         display: inline-block;
         margin-bottom: 5px;
-        width: 20px; } }
+        width: 23px; } }
 
     .js_humburgerOpen .el_humburger_text.el_humburger_text__menu {
         display: none; }
@@ -553,18 +963,18 @@ body{
         -webkit-transition: all 200ms cubic-bezier(0.16, 0.52, 0.25, 1);
         -o-transition: all 200ms cubic-bezier(0.16, 0.52, 0.25, 1);
         transition: all 200ms cubic-bezier(0.16, 0.52, 0.25, 1);
-        fill: #000; } }
+        fill: $font-color; } }
     
     @media screen and (max-width: 840px) {
     .js_humburgerOpen .el_humburger_text svg path {
-        fill: #000; } }
+        fill: $font-color; } }
     
     .el_humburger span.el_humburger_bar {
     display: block;
     width: 100%;
     margin: 0 auto 9px;
-    height: 1px;
-    background: #251d1c;
+    height: 2px;
+    background: $font-color;
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out; }
@@ -573,26 +983,28 @@ body{
     margin-bottom: 0; }
     
     .js_humburgerOpen .el_humburger span.el_humburger_bar {
-    background: #251d1c; }
+    background: $font-color; }
     
-    // @media screen and (max-width: 840px) {
-    // .el_humburger span.el_humburger_bar {
-    //     left: 0;
-    //     top: 0;
-    //     background: #000; } }
     
     .js_humburgerOpen .el_humburger span.el_humburger_bar.top {
-    -webkit-transform: translateY(9px) rotate(-45deg);
-    -ms-transform: translateY(9px) rotate(-45deg);
-    transform: translateY(9px) rotate(-45deg); }
+        -webkit-transform: translateY(13px) rotate(-45deg);
+        -ms-transform: translateY(13px) rotate(-45deg);
+        transform: translateY(13px) rotate(-45deg); 
+        @include sp{
+            -webkit-transform: translateY(11px) rotate(-45deg);
+            -ms-transform: translateY(11px) rotate(-45deg);
+            transform: translateY(11px) rotate(-45deg); 
+        }
+    }
 
     .js_humburgerOpen .el_humburger span.el_humburger_bar.middle {
         opacity: 0; }
     
     .js_humburgerOpen .el_humburger span.el_humburger_bar.bottom {
-    -webkit-transform: translateY(-11px) rotate(45deg);
-    -ms-transform: translateY(-11px) rotate(45deg);
-    transform: translateY(-11px) rotate(45deg); }
+        -webkit-transform: translateY(-11px) rotate(45deg);
+        -ms-transform: translateY(-11px) rotate(45deg);
+        transform: translateY(-11px) rotate(45deg); 
+    }
     
     .el_humburgerButton.el_humburgerButton__close {
     top: 2%;
@@ -603,7 +1015,7 @@ body{
     width: 35px;
     margin: 0 auto;
     height: 4px;
-    background: #251d1c; }
+    background: $font-color; }
     
     .el_humburgerButton__close span.el_humburger_bar.top {
     -webkit-transform: translateY(5px) rotate(-45deg);
@@ -622,30 +1034,38 @@ body{
         background-color:$base-color;
         width: 0;
         z-index: 998;
-        padding-top: 100px;
+        padding-top: 150px;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         -webkit-transition: all 600ms ease-out;
         -o-transition: all 600ms ease-out;
         transition: all 600ms ease-out;
         overflow: hidden; 
+        @include sp{
+
+        }
+        .navi_inner{
+            margin-left: 120px;
+            @include sp{
+                margin-left: 10vw;
+            }
+        }
     }
-        .js_humburgerOpen .navi {
+    .js_humburgerOpen .navi {
         width: 450px; 
+        @include sp{
+            width: 65vw;
         }
-        @media screen and (max-width: 840px) {
-            .js_humburgerOpen .navi {
-            width: 45%;
-            padding: 100px 5% 0; 
-            } 
-        }
+    }
     
     .navi_item {
-        margin-bottom: 28px;
+        margin-bottom: 50px;
         white-space: nowrap;
-        img{
-            height: 20px;
-            padding: 2px 6px;
+        font-size: 30px;
+        font-weight: 600;
+        @include sp{
+            margin-bottom: 30px;
+            font-size: 20px;
         }
     }
     .navi_item.op_innerLink {
@@ -658,6 +1078,6 @@ body{
     width:100vw;
     height: 100vh;
     z-index: 990;
-    background-color: rgba(37,29,28,0.6);
+    background-color: rgba(21,32,41,0.6);
     position: fixed;
 }
