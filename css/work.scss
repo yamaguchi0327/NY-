@@ -1057,9 +1057,6 @@ body{
         -o-transition: all 600ms ease-out;
         transition: all 600ms ease-out;
         overflow: hidden; 
-        @include sp{
-
-        }
         .navi_inner{
             margin-left: 120px;
             @include sp{
