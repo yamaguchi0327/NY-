@@ -242,12 +242,13 @@ body .page-wrapper #works-wrapper .first-work {
 }
 
 body .page-wrapper #works-wrapper .first-work img {
-  width: 42vw;
+  height: 26vw;
 }
 
 @media (max-width: 480px) {
   body .page-wrapper #works-wrapper .first-work img {
     width: 100%;
+    height: auto;
     margin-bottom: 20px;
   }
 }

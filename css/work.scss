@@ -482,6 +482,9 @@ body{
                 @include sp{
                     margin-bottom: 120px;
                 }
+                // _::-webkit-full-page-media, _:future, :root .use-wrap{
+                //     display: flex;
+                // }
                 .use-wrap{
                     display: flex;
                     margin-bottom: 150px;
@@ -595,12 +598,22 @@ body{
                                 width: 60vw;
                             }
                         }
+                        // _::-webkit-full-page-media, _:future, :root .pos{
+                        //     width: 100px;
+                        //     margin: 0;
+                        // }
                         .n{
                             width: 32vw;
                             @include sp{
                                 width: 100%;
                             }
                         }
+                        
+                        // /* safari */
+                        // _::-webkit-full-page-media, _:future, :root .n{
+                        //     height: 30px;
+                        //     width: auto;
+                        // }
                     }
                     .sp-ui{
                         display: none;

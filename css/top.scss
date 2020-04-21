@@ -224,9 +224,10 @@ body{
                     display: block;
                 }
                 img{
-                    width: 42vw;
+                    height: 26vw;
                     @include sp{
                         width: 100%;
+                        height: auto;
                         margin-bottom: 20px;
                     }
                 }
