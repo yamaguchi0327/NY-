@@ -808,8 +808,8 @@ body .page-wrapper .main-wrap .use .use-wrap .use-img .pos {
 
 @media (max-width: 480px) {
   body .page-wrapper .main-wrap .use .use-wrap .use-img .pos {
-    width: 60vw;
-    height: auto;
+    width: 60vw !important;
+    height: auto !important;
   }
 }
 
@@ -819,8 +819,8 @@ body .page-wrapper .main-wrap .use .use-wrap .use-img .n {
 
 @media (max-width: 480px) {
   body .page-wrapper .main-wrap .use .use-wrap .use-img .n {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
   }
 }
 
