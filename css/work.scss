@@ -596,6 +596,7 @@ body{
                             margin: auto;
                             @include sp{
                                 width: 60vw;
+                                height: auto;
                             }
                         }
                         // _::-webkit-full-page-media, _:future, :root .pos{
@@ -606,6 +607,7 @@ body{
                             width: 32vw;
                             @include sp{
                                 width: 100%;
+                                height: auto;
                             }
                         }
                         
