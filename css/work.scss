@@ -133,7 +133,7 @@ body{
 
 
     .page-wrapper{
-        height: 100vw;
+        // height: 100vw;
         .first-view{
             display: flex;
             height: 39vw;
@@ -144,7 +144,7 @@ body{
                 height: 50vw;
             }
             @include sp{
-                height: 83vh;
+                height: auto;
                 display: block;
             }
             .outline::before{
@@ -276,7 +276,7 @@ body{
                 @include sp{
                     display: block;
                     width: 100vw;
-                    height: 75vh;
+                    // height: 75vh;
                     text-align: center;
                     .pc{
                         height: 50vw;
@@ -290,7 +290,22 @@ body{
                         margin-left: 0;
                         width: 80vw;
                         text-align: left;
-                        padding: 0 10vw;
+                        padding: 0 10vw 40px 10vw;
+                    }
+                    .fi-mm-sp{
+                        background: $mm-color;
+                    }
+                    .fi-n-sp{
+                        background: $main-color;
+                    }
+                    .fi-pos-sp{
+                        background: $pos-color;
+                    }
+                    .fi-ymgc-sp{
+                        background: $ymgc-color;
+                    }
+                    .fi-yubi-sp{
+                        background: $yubi-color;
                     }
                     .outline{
                         @include sp{
@@ -847,9 +862,13 @@ body{
         .page-nation{
             text-align: center;
             margin-bottom: 200px;
+            @include sp{
+                margin-bottom: 100px;
+            }
             a{
                 color: $main-color;
             }
+
             .buttons{
                 display: flex;
                 margin-bottom: 50px;

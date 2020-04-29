@@ -420,6 +420,7 @@ body{
         display: flex;
         @include sp{
             display: block;
+            margin: 0 14vw 100px 14vw;
         }
         .about-sp{
             display: none;

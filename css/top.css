@@ -512,6 +512,7 @@ body #about-wrapper {
 @media (max-width: 480px) {
   body #about-wrapper {
     display: block;
+    margin: 0 14vw 100px 14vw;
   }
 }
 

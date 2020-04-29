@@ -127,10 +127,6 @@ body .h2-n::before {
   background-color: #dc726d;
 }
 
-body .page-wrapper {
-  height: 100vw;
-}
-
 body .page-wrapper .first-view {
   display: flex;
   height: 39vw;
@@ -146,7 +142,7 @@ body .page-wrapper .first-view {
 
 @media (max-width: 480px) {
   body .page-wrapper .first-view {
-    height: 83vh;
+    height: auto;
     display: block;
   }
 }
@@ -326,7 +322,6 @@ body .page-wrapper .first-view .fv-i-sp {
   body .page-wrapper .first-view .fv-i-sp {
     display: block;
     width: 100vw;
-    height: 75vh;
     text-align: center;
   }
   body .page-wrapper .first-view .fv-i-sp .pc {
@@ -342,8 +337,28 @@ body .page-wrapper .first-view .fv-i-sp {
     margin-left: 0;
     width: 80vw;
     text-align: left;
-    padding: 0 10vw;
+    padding: 0 10vw 40px 10vw;
   }
+}
+
+body .page-wrapper .first-view .fv-i-sp .fv-intro .fi-mm-sp {
+  background: #4a62e5;
+}
+
+body .page-wrapper .first-view .fv-i-sp .fv-intro .fi-n-sp {
+  background: #dc726d;
+}
+
+body .page-wrapper .first-view .fv-i-sp .fv-intro .fi-pos-sp {
+  background: #f2b43f;
+}
+
+body .page-wrapper .first-view .fv-i-sp .fv-intro .fi-ymgc-sp {
+  background: #c9bad6;
+}
+
+body .page-wrapper .first-view .fv-i-sp .fv-intro .fi-yubi-sp {
+  background: #c05937;
 }
 
 @media (max-width: 480px) {
@@ -1153,6 +1168,12 @@ body .page-wrapper .h2-sp {
 body .page-wrapper .page-nation {
   text-align: center;
   margin-bottom: 200px;
+}
+
+@media (max-width: 480px) {
+  body .page-wrapper .page-nation {
+    margin-bottom: 100px;
+  }
 }
 
 body .page-wrapper .page-nation a {
